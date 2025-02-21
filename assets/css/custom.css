@@ -358,7 +358,11 @@
     }
   
     .swiperDesc {
+      padding: 14px;
       font-size: 0.8em;
+    }
+    .swiper-button-prev, .swiper-button-next {
+      display: none !important;
     }
     
   }
