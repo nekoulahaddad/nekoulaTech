@@ -28,9 +28,9 @@
     border-radius: 35px;
     overflow: hidden;
     position: relative;
-    background-image: url('../img/contact-visual1.png');
     /* background:  linear-gradient(135deg, #0f33ff 20%, #7280ff 60%, #ffffff 100%) */
     /* animation: screen-anim 0.5s forwards; */
+    background: linear-gradient(135deg, #000000 20%, #4d4d4d 60%, #b3b3b3 100%);
 }
 
 .text-container {
