@@ -145,7 +145,7 @@
   }
 
   .swiperDesc {
-    padding: 40px 100px;
+    padding: 0 100px;
 
   }
   .swiper-slide {
@@ -379,7 +379,7 @@
     }
   
     .swiperDesc {
-      padding: 14px;
+      padding: 0 14px;
       font-size: 0.8em;
     }
     .swiper-button-prev, .swiper-button-next {
