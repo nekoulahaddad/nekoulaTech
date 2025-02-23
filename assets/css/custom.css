@@ -145,7 +145,7 @@
   }
 
   .swiperDesc {
-    padding: 40px;
+    padding: 40px 100px;
 
   }
   .swiper-slide {
@@ -190,14 +190,16 @@
         #000
     ); */
     
-    background-image: conic-gradient(
+    /* background-image: conic-gradient(
         from var(--angle),
         #fff,
         rgb(192, 214, 226),
         rgb(140, 199, 233),
         rgb(99, 182, 230),
         rgba(68, 174, 234, 1)
-    );
+    ); */
+    box-shadow: 0px 0px 40px 8px rgba(0, 0, 0, 0.2);
+
     top: 50%;
     left: 50%;
     translate: -50% -50%;
@@ -219,6 +221,9 @@
     }
 }
 
+.swiper-button-next:after, .swiper-button-prev:after {
+  font-size: 30px !important;
+}
 /* ------------------------------------------------------ */
 
 .servicesWrapper {
