@@ -2,6 +2,22 @@
     display: flex !important;
 }
 
+.animationWave {
+position: absolute;
+bottom: 0;
+left: 0;
+transform: rotate(90deg);
+height: 100%;
+}
+
+.heroImage {
+  width: 400px !important;
+  height: 400px !important;
+  margin: 50px auto;
+  transform: rotate(16deg) translateY(-60px);
+
+}
+
 .phone {
     transform: rotate(16deg) translateY(-60px);
     width: 225px;
@@ -114,6 +130,9 @@
 .projectsSection{
     display: flex;
     align-items: center;
+}
+.projectImage{ 
+  position: absolute;
 }
 .swiperWrapper{
     height: 400px;
