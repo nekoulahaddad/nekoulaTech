@@ -265,7 +265,7 @@
   & h3 {
     font-weight: 900;
     font-size: 1rem;
-    border-bottom: 1.5px solid black;
+    border-bottom: 1.5px solid rgb(74, 74, 74);
     padding-bottom: 1rem;
   }
 
