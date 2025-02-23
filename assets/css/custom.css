@@ -20,7 +20,7 @@
     border-radius: 35px;
     overflow: hidden;
     position: relative;
-    background:  linear-gradient(135deg, #0f33ff 20%, #7280ff 60%, #ffffff 100%)
+    background:  linear-gradient(135deg, rgba(68, 174, 234, 1) 20%, #7280ff 60%, #ffffff 100%)
     /* animation: screen-anim 0.5s forwards; */
     /* background: linear-gradient(135deg, #000000 20%, #4d4d4d 60%, #b3b3b3 100%); */
 }
@@ -44,7 +44,7 @@
 @keyframes screen-anim {
     0% { background: #000; }
     /* 50% { background: #ccc; } */
-    100% { background:  linear-gradient(135deg, #0f33ff 20%, #7280ff 60%, #ffffff 100%)    }
+    100% { background:  linear-gradient(135deg, rgba(68, 174, 234, 1) 20%, #b7beff 60%, #ffffff 100%)    }
 }
 
 @keyframes typing {
@@ -150,7 +150,7 @@
   }
   .swiper-slide {
     /* border-radius: 10px; */
-    background: black !important;
+    background-color: rgb(255, 255, 255) !important;
     text-align: center;
     font-size: 18px;
     background: transparent;
@@ -160,7 +160,7 @@
   }
 
   .swiper-button-next, .swiper-button-prev {
-    color: white !important;
+    color: #444 !important;
   }
   .swiper-slide img {
     display: block;
@@ -181,13 +181,22 @@
     position: absolute;
     height: 100%;
     width: 100%;
+    /* background-image: conic-gradient(
+        from var(--angle),
+        #ccc,
+        #928b8b,
+        #444,
+        #201e1e,
+        #000
+    ); */
+    
     background-image: conic-gradient(
         from var(--angle),
-        #ff4545,
-        #00ff99,
-        #006aff,
-        #ff0095,
-        #ff4545
+        #fff,
+        rgb(192, 214, 226),
+        rgb(140, 199, 233),
+        rgb(99, 182, 230),
+        rgba(68, 174, 234, 1)
     );
     top: 50%;
     left: 50%;
@@ -254,18 +263,16 @@
   transform: translateY(-5rem);
 
   & h3 {
-    font-family: helvetica;
     font-weight: 900;
     font-size: 1rem;
-    border-bottom: 1.5px solid white;
+    border-bottom: 1.5px solid black;
     padding-bottom: 1rem;
   }
 
   & p {
-    font-family: helvetica;
     font-weight: 100;
     line-height: 2;
-    color: rgba(255,255,255,0.7);
+    color: #444;
   }
 
   & button {
@@ -322,6 +329,23 @@
 .active .tab-content  { animation: content 0.9s ease-out 0.4s forwards; }
 .active .tab-image    { animation: image 1s ease-out forwards; }
 
+/* ------------------------------ */
+.backgroundCubes1 {
+  z-index: -1;
+  animation: MoveUpDown 2s ease-in-out infinite;
+}
+
+@keyframes MoveUpDown {
+  0% {
+    transform: translate(100px, -150px)
+  }
+  50% {
+    transform: translate(100px, -200px)
+  }
+  100% {
+    transform: translate(100px, -150px)
+  }
+} 
 
 @media only screen and (max-width: 900px) {
     .phone {
