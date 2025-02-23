@@ -135,7 +135,7 @@ height: 100%;
   position: absolute;
 }
 .swiperWrapper{
-    height: 400px;
+    height: 100%;
     position: relative;
     display: -webkit-box;
     display: -webkit-flex;
@@ -193,57 +193,11 @@ height: 100%;
     object-fit: cover;
   }
 
-  @property --angle {
-    syntax: "<angle>";
-    initial-value: 0deg;
-    inherits: false;
-}
-
-  .swiperWrapper::after,
-.swiperWrapper::before {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    /* background-image: conic-gradient(
-        from var(--angle),
-        #ccc,
-        #928b8b,
-        #444,
-        #201e1e,
-        #000
-    ); */
-    
-    /* background-image: conic-gradient(
-        from var(--angle),
-        #fff,
-        rgb(192, 214, 226),
-        rgb(140, 199, 233),
-        rgb(99, 182, 230),
-        rgba(68, 174, 234, 1)
-    ); */
-    box-shadow: 0px 0px 40px 8px rgba(0, 0, 0, 0.2);
-
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
-    z-index: -1;
-    padding: 3px;
-    /* border-radius: 10px; */
-    animation: 3s spin linear infinite;
-}
-.swiperWrapper::before {
-    filter: blur(1.5rem);
-    opacity: 0.5;
-}
-@keyframes spin {
-    from {
-        --angle: 0deg;
-    }
-    to {
-        --angle: 360deg;
-    }
-}
+  .swiper-slide {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+  }
 
 .swiper-button-next:after, .swiper-button-prev:after {
   font-size: 30px !important;
