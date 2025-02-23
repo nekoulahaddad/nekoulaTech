@@ -3,7 +3,7 @@
 }
 
 .phone {
-    transform: translateY(-70px);
+    transform: rotate(16deg) translateY(-60px);
     width: 225px;
     height: 450px;
     background: #444;
@@ -140,8 +140,13 @@
     height: 100%;
   }
 
+  .numberTitle{
+    color: rgba(68, 174, 234, 1);
+  }
   .swiperTitle{
-
+    justify-content: center;
+    display: flex;
+    gap: 24px;
   }
 
   .swiperDesc {
