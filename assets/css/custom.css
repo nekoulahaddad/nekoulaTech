@@ -308,6 +308,10 @@ height: 100%;
   }
 }
 
+.hire {
+  font-family: "Montserrat", sans-serif;
+  color: rgb(74, 74, 74);
+}
 .active .tab          { opacity: 1; z-index: 5; }
 .active .tab-content  { animation: content 0.9s ease-out 0.4s forwards; }
 .active .tab-image    { animation: image 1s ease-out forwards; }
@@ -330,6 +334,9 @@ height: 100%;
   }
 } 
 
+.tab-content h3 {
+    letter-spacing: 2px;
+}
 
 .modal--information {
   font-size: 24px;
@@ -351,6 +358,10 @@ height: 100%;
 
   @media only screen and (max-width: 600px) {
 
+    .servicesWrapper{
+      display: flex;
+      flex-direction: column;
+    }
     .modal--information {
       font-size: 16px;
     }
@@ -389,6 +400,16 @@ height: 100%;
     }
     .swiper-button-prev, .swiper-button-next {
       display: none !important;
+    }
+
+
+    .intro--options {
+      margin-bottom: -45px;
+      display: block;
+  }
+
+    .intro--options>a {
+      margin: 0;
     }
     
   }
