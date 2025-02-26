@@ -428,4 +428,7 @@ height: 100%;
     .hire {
       margin-top: -30px;
     }
+    .servicesWrapper {
+      margin-top: 0;
+    }
   }
