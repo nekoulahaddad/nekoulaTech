@@ -205,7 +205,7 @@ height: 100%;
 /* ------------------------------------------------------ */
 
 .servicesWrapper {
-    margin-top: 40px;
+    margin-top: 10px;
     display: flex;
 }
 
@@ -344,6 +344,11 @@ height: 100%;
   }
 } 
 
+.tab-content img {
+    width: 100%;
+    border-radius: 10px;
+}
+
 .modal--information {
   font-size: 24px;
 }
@@ -367,7 +372,7 @@ height: 100%;
     .intro {
       margin-top: -30px;
     }
-    
+
     .servicesWrapper{
       display: flex;
       flex-direction: column;
