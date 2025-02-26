@@ -234,6 +234,7 @@ height: 100%;
   overflow: hidden;
 }
 
+
 .tab-content {
   position: relative;
   z-index: 5;
@@ -241,7 +242,6 @@ height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 1rem;
   opacity: 0;
   transform: translateY(-5rem);
 
@@ -312,11 +312,21 @@ height: 100%;
   font-family: "Montserrat", sans-serif;
   color: rgb(74, 74, 74);
 }
+
+.hire h2 {
+  text-transform: uppercase;
+}
+
 .active .tab          { opacity: 1; z-index: 5; }
 .active .tab-content  { animation: content 0.9s ease-out 0.4s forwards; }
 .active .tab-image    { animation: image 1s ease-out forwards; }
 
-/* ------------------------------ */
+.tab-content h3 {
+  text-decoration: none;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+ /* ------------------------------ */
 .backgroundCubes1 {
   z-index: -1;
   animation: MoveUpDown 2s ease-in-out infinite;
