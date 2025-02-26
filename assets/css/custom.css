@@ -431,4 +431,7 @@ height: 100%;
     .servicesWrapper {
       margin-top: 0;
     }
+    .tab-content p {
+      margin-top: 0;
+    }
   }
