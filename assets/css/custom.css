@@ -371,7 +371,7 @@ height: 100%;
   @media only screen and (max-width: 600px) {
 
     .intro {
-      margin-top: 43px;
+      margin-top: 20px;
     }
 
     .servicesWrapper{
