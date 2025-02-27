@@ -311,6 +311,7 @@ height: 100%;
 .hire {
   font-family: "Montserrat", sans-serif;
   color: rgb(74, 74, 74);
+  transform: translateY(-100px) !important;
 }
 
 .hire h2 {
