@@ -369,11 +369,6 @@ height: 100%;
   }
 
   @media only screen and (max-width: 600px) {
-
-    /* .intro {
-      margin-top: 10px;
-    } */
-
     .servicesWrapper{
       display: flex;
       flex-direction: column;
@@ -432,7 +427,9 @@ height: 100%;
     .tab-content p {
       margin-top: 0;
     }
-    .tab-content img {
-      display: none;
-  }
+
+    .hire {
+      transform: translateY(-250px) !important;
+    }
+
   }
