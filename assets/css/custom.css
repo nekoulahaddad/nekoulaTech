@@ -370,9 +370,9 @@ height: 100%;
 
   @media only screen and (max-width: 600px) {
 
-    .intro {
+    /* .intro {
       margin-top: 10px;
-    }
+    } */
 
     .servicesWrapper{
       display: flex;
