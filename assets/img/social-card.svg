@@ -1,0 +1,23 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#050505"/>
+      <stop offset="1" stop-color="#161616"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="30" y="30" width="1140" height="570" rx="28" stroke="#FFFFFF" stroke-opacity="0.28" stroke-width="2"/>
+
+  <rect x="95" y="185" width="132" height="132" rx="30" fill="#FFFFFF"/>
+  <path d="M128 282V220H143L180 265V220H194V282H179L143 238V282H128Z" fill="#000000"/>
+  <circle cx="192" cy="286" r="9" fill="#000000"/>
+
+  <text x="265" y="245" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="68" font-weight="700">Nekoula Tech</text>
+  <text x="265" y="305" fill="#D4D4D4" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="400">Automation • AI Agents • Consulting</text>
+  <text x="95" y="430" fill="#F3F3F3" font-family="Arial, Helvetica, sans-serif" font-size="46" font-weight="700">High-performance software with guaranteed delivery.</text>
+  <text x="95" y="488" fill="#C6C6C6" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="400">Масштабируемые IT-решения, автоматизация процессов, AI-агенты.</text>
+
+  <rect x="95" y="525" width="260" height="54" rx="27" fill="#FFFFFF"/>
+  <text x="132" y="560" fill="#0A0A0A" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">tech.nekoula.ru</text>
+</svg>

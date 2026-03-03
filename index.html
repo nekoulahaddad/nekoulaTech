@@ -5,9 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Nekoula Tech | Automation, AI Agents, Consulting</title>
-  <meta name="description" content="Nekoula Tech builds software products, automation systems, and AI agent workflows. We also provide consulting and guarantee our product delivery quality.">
+  <meta id="meta-description" name="description" content="Nekoula Tech builds software products, automation systems, and AI agent workflows. We also provide consulting and guarantee our product delivery quality.">
   <meta name="keywords" content="Nekoula Tech, automation, AI agents, consulting, software development, guaranteed delivery">
   <meta name="author" content="Nekoula Haddad">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="theme-color" content="#060606">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link id="canonical-link" rel="canonical" href="https://tech.nekoula.ru/">
+  <link rel="alternate" hreflang="en" href="https://tech.nekoula.ru/?lang=en">
+  <link rel="alternate" hreflang="ru" href="https://tech.nekoula.ru/?lang=ru">
+  <link rel="alternate" hreflang="x-default" href="https://tech.nekoula.ru/">
+
+  <meta property="og:type" content="website">
+  <meta id="og-site-name" property="og:site_name" content="Nekoula Tech">
+  <meta id="og-locale" property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="ru_RU">
+  <meta id="og-title" property="og:title" content="Nekoula Tech | Automation, AI Agents, Consulting">
+  <meta id="og-description" property="og:description" content="Nekoula Tech builds software products, automation systems, and AI agent workflows. We also provide consulting and guarantee our product delivery quality.">
+  <meta id="og-url" property="og:url" content="https://tech.nekoula.ru/">
+  <meta property="og:image" content="https://tech.nekoula.ru/assets/img/social-card.png">
+  <meta property="og:image:secure_url" content="https://tech.nekoula.ru/assets/img/social-card.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Nekoula Tech - Automation, AI Agents, Consulting">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta id="twitter-title" name="twitter:title" content="Nekoula Tech | Automation, AI Agents, Consulting">
+  <meta id="twitter-description" name="twitter:description" content="Nekoula Tech builds software products, automation systems, and AI agent workflows. We also provide consulting and guarantee our product delivery quality.">
+  <meta name="twitter:image" content="https://tech.nekoula.ru/assets/img/social-card.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Nekoula Tech",
+    "alternateName": "Nekoula Tech - IT automation and AI agents team",
+    "url": "https://tech.nekoula.ru/",
+    "logo": "https://tech.nekoula.ru/assets/img/logo-bw.svg",
+    "description": "Software engineering team focused on automation processes, AI agent implementation, consulting, and guaranteed product delivery."
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Sora:wght@500;700;800&display=swap" rel="stylesheet">
@@ -195,6 +236,18 @@
     const menuToggle = document.querySelector('.menu-toggle');
     const mainNav = document.querySelector('.main-nav');
     const langButtons = document.querySelectorAll('.lang-switch button');
+    const seoMeta = {
+      en: {
+        title: 'Nekoula Tech | Automation, AI Agents, Consulting',
+        description: 'Nekoula Tech builds software products, automation systems, and AI agent workflows. We also provide consulting and guarantee our product delivery quality.',
+        locale: 'en_US'
+      },
+      ru: {
+        title: 'Nekoula Tech | Автоматизация, AI-агенты, Консалтинг',
+        description: 'Nekoula Tech создает программные продукты, автоматизирует бизнес-процессы, внедряет AI-агентов, предоставляет консалтинг и гарантию на результат.',
+        locale: 'ru_RU'
+      }
+    };
 
     const translations = {
       en: {
@@ -326,6 +379,28 @@
         btn.classList.toggle('is-active', btn.dataset.lang === lang);
       });
 
+      const seoLang = seoMeta[lang] ? lang : 'en';
+      const seo = seoMeta[seoLang];
+      const baseUrl = 'https://tech.nekoula.ru/';
+      const url = new URL(window.location.href);
+      if (lang === 'en') {
+        url.searchParams.delete('lang');
+      } else {
+        url.searchParams.set('lang', lang);
+      }
+      history.replaceState({}, '', url);
+      const canonicalUrl = lang === 'en' ? baseUrl : `${baseUrl}?lang=${lang}`;
+
+      document.title = seo.title;
+      document.getElementById('meta-description').setAttribute('content', seo.description);
+      document.getElementById('og-title').setAttribute('content', seo.title);
+      document.getElementById('og-description').setAttribute('content', seo.description);
+      document.getElementById('twitter-title').setAttribute('content', seo.title);
+      document.getElementById('twitter-description').setAttribute('content', seo.description);
+      document.getElementById('og-locale').setAttribute('content', seo.locale);
+      document.getElementById('og-url').setAttribute('content', canonicalUrl);
+      document.getElementById('canonical-link').setAttribute('href', canonicalUrl);
+
       localStorage.setItem('site_lang', lang);
     }
 
@@ -348,8 +423,10 @@
 
     document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
 
+    const urlLang = new URLSearchParams(window.location.search).get('lang');
     const savedLang = localStorage.getItem('site_lang') || 'en';
-    applyLanguage(savedLang);
+    const initialLang = ['en', 'ru', 'ar'].includes(urlLang) ? urlLang : savedLang;
+    applyLanguage(initialLang);
   </script>
 </body>
 </html>
