@@ -1,312 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Nekoula Tech</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="Best It Solutions">
-  <meta name="keywords" content="IT, software, web, mobile, machine learning">
+  <title>Nekoula Tech | Automation, AI Agents, Consulting</title>
+  <meta name="description" content="Nekoula Tech builds software products, automation systems, and AI agent workflows. We also provide consulting and guarantee our product delivery quality.">
+  <meta name="keywords" content="Nekoula Tech, automation, AI agents, consulting, software development, guaranteed delivery">
   <meta name="author" content="Nekoula Haddad">
-  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Sora:wght@500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/custom.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
 </head>
 <body>
+  <div class="bg-grid" aria-hidden="true"></div>
 
-<!-- notification for small viewports and landscape oriented smartphones -->
-<div class="device-notification">
-  <a class="device-notification--logo" href="#0">
-    <img src="assets/img/logo.png" alt="Global">
-    <p>Nekoula Tech</p>
-  </a>
-  <p class="device-notification--message">Global has so much to offer that we must request you orient your device to portrait or find a larger screen. You won't be disappointed.</p>
-</div>
+  <header class="site-header">
+    <a class="brand" href="#home">
+      <img src="assets/img/logo.png" alt="Nekoula Tech logo">
+      <span>Nekoula Tech</span>
+    </a>
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">Menu</button>
+    <nav class="main-nav" id="main-nav">
+      <a href="#home">Home</a>
+      <a href="#projects">Projects</a>
+      <a href="#team">Team</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-<div class="perspective effect-rotate-left">
-  <div class="container"><div class="outer-nav--return"></div>
-    <div id="viewport" class="l-viewport">
-      <div class="l-wrapper">
-        <header class="header">
-          <a class="header--logo" href="#0">
-            <img src="assets/img/logo.png" alt="Global">
-            <p>Nekoula Tech</p>
-          </a>
-          <div class="header--nav-toggle">
-            <span></span>
-          </div>
-        </header>
-        <nav class="l-side-nav">
-          <ul class="side-nav">
-            <li class="is-active"><span>Home</span></li>
-            <li><span>Projects</span></li>
-            <li><span>Team</span></li>
-            <li><span>Services</span></li>
-            <li><span>Contact</span></li>
-          </ul>
-        </nav>
-        <ul class="l-main-content main-content">
-          <li class="l-section section section--is-active">
-            <div class="intro">
-              <div class="intro--banner">
-                <div class="textLeft">
-                  <h1>Transform<br>ideas into<br>products</h1>
-                  <button class="cta">Contact Us
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
-                    <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
-                      <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
-                    </g>
-                    </svg>
-                    <span class="btn-background"></span>
-                  </button>
-                </div>
-                <dotlottie-player class="heroImage" src="https://lottie.host/f968bb10-8087-4f87-8095-69887d4ddea3/qwHlmp6at9.lottie" background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay></dotlottie-player>
-
-                <!-- <div class="phone">
-                  <div class="camera"></div>
-                  <div class="screen">
-                      <div class="text-container">Welcome to Nekoula Tech</div>
-                  </div>
-                  <div class="home-button"></div>
-                  <div class="footer"></div>
-                </div> -->
-                <!-- <img src="assets/img/introduction-visual.png" alt="Welcome"> -->
-              </div>
-              <div class="intro--options">
-                <a href="#0">
-                  <h3>Design</h3>
-                  <p>Where aesthetics meet efficiency: fast, beautiful, maintainable and results-driven solutions</p>
-                </a>
-                <a href="#0">
-                  <h3>Development</h3>
-                  <p>From initial MVP to large-scale systems: modern technologies combined with strong security measures</p>
-                </a>
-                <a href="#0">
-                  <h3>Support</h3>
-                  <p>Monitoring, active updates, and scalability — we ensure your product evolves with your ambitions.</p>
-                </a>
-              </div>
-            </div>
-          </li>
-          <li class="l-section section projectsSection">
-            <div class="swiperWrapper">
-              <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-
-                    <h1 class="swiperTitle"> <div class="numberTitle">1</div>Marketplace for building materials</h1>
-                      <p class="swiperDesc">
-                        We developed a full-fledged marketplace platform for construction materials with comprehensive admin panel and complete feature set. The solution includes mobile applications for iOS and Android, integrated Telegram bots for process automation, and modern tech architecture utilizing Kafka + Redis, OpenSearch. The platform has advanced SEO customization options and offers full flexibility for customization to meet specific business needs. From the technical standpoint, we ensured high performance and scalability using state-of-the-art technologies while maintaining ease of future updates and maintenance.
-                      </p>
-                  </div>
-                  <div class="swiper-slide">
-                    <h1 class="swiperTitle"> <div class="numberTitle">2</div>Social network for designers</h1>
-                    <p class="swiperDesc">
-                      We developed a full-fledged social networking platform tailored specifically for designers, offering an engaging and collaborative environment to showcase work, connect with peers, and share inspiration. The platform provides advanced SEO customization options to maximize visibility and attract potential clients or collaborators. It also offers complete flexibility for customization, allowing businesses or individual users to tailor the experience to their unique needs. From a technical perspective, we ensured high performance and scalability by utilizing cutting-edge technologies while maintaining simplicity for future updates and seamless maintenance.</p>
-                  </div>
-                  <div class="swiper-slide">
-                      <h1 class="swiperTitle"> <div class="numberTitle">3</div>Courier delivery app</h1>
-                      <p class="swiperDesc">A comprehensive courier app that integrates real-time chat functionality for seamless communication between users and delivery agents. It offers features like package tracking, instant notifications, and payment processing for convenience. Users can schedule pickups, view delivery history, and provide feedback directly within the app. Advanced security measures ensure safe transactions and data protection. Additionally, it supports multiple languages and customizable options to enhance user experience.</p>
-                  </div>
-                  <div class="swiper-slide">
-                    <h1 class="swiperTitle"> <div class="numberTitle">4</div>VPN service</h1>
-                    <p class="swiperDesc">
-                      Our VPN service is designed to provide users with a secure, private, and unrestricted internet experience. By leveraging advanced encryption protocols and robust infrastructure, the platform ensures that all online activities remain confidential and protected from prying eyes. The service offers a global network of high-speed servers, enabling users to bypass geo-restrictions and access content from anywhere in the world.</p>
-                  </div>
-                </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-              </div>
-          </div>
-          </li>
-          <li class="l-section section">
-            <div class="work">
-              <h2>Our Team</h2>
-              <div class="work--lockup">
-                <ul class="slider">
-                  <li class="slider--item slider--item-left">
-                    <a href="#0">
-                      <div class="slider--item-image">
-                        <img src="assets/img/work-victory.jpg" alt="Victory">
-                      </div>
-                      <p class="slider--item-title">Ruslan | Tech Lead</p>
-                      <p class="slider--item-description">Experienced developer with expertise in creating and supporting high-load applications.</p>
-                    </a>
-                  </li>
-                  <li class="slider--item slider--item-center">
-                    <a href="#0">
-                      <div class="slider--item-image">
-                        <img src="assets/img/work-metiew-smith.jpg" alt="Metiew and Smith">
-                      </div>
-                      <p class="slider--item-title">Nekoula | CEO, CTO</p>
-                      <p class="slider--item-description">Expert with 9 years of experience in IT, software development and project management</p>
-                    </a>
-                  </li>
-                  <li class="slider--item slider--item-right">
-                    <a href="#0">
-                      <div class="slider--item-image">
-                        <img src="assets/img/work-alex-nowak.jpg" alt="Alex Nowak">
-                      </div>
-                      <p class="slider--item-title">Alexander | COO</p>
-                      <p class="slider--item-description">Director of Business Development, ensures consistency of technical solutions with business goals.</p>
-                    </a>
-                  </li>
-                </ul>
-                <div class="slider--prev">
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                  viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
-                  <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
-                    <path d="M561,1169C525,1155,10,640,3,612c-3-13,1-36,8-52c8-15,134-145,281-289C527,41,562,10,590,10c22,0,41,9,61,29
-                    c55,55,49,64-163,278L296,510h575c564,0,576,0,597,20c46,43,37,109-18,137c-19,10-159,13-590,13l-565,1l182,180
-                    c101,99,187,188,193,199c16,30,12,57-12,84C631,1174,595,1183,561,1169z"/>
-                  </g>
-                  </svg>
-                </div>
-                <div class="slider--next">
-                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
-                  <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
-                    <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
-                  </g>
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="l-section section">
-            <div class="hire">
-              <h2>Our Services</h2>
-              <div class="servicesWrapper">
-                <ul class='indexes'>
-                  <li data-index='0'>01</li>
-                  <li data-index='1'>02</li>
-                  <li data-index='2'>03</li>
-                  <li data-index='3'>04</li>
-                  <li data-index='4'>05</li>
-
-                </ul>
-                <ul class='tabs'>
-                  <li class='tab'>
-                    <article class='tab-content'>
-                      <h3>ML/AI</h3>
-                      <p>We develop and implement innovative algorithms and models that help automate work, optimize processes, and make informed decisions based on data.</p>                      <img src="https://static.tildacdn.com/tild6436-6463-4365-b831-653735653436/iPhone_15_Pro_Mockup.png" />
-                    </article>
-                  </li>
-                  <li class='tab'>
-                    <article class='tab-content'>
-                      <h3>Promo sites</h3>
-                      <p>We create a unique design, conduct audience and competitor analysis, optimize content and website functionality to attract more customers and improve conversion.</p>
-                      <img src="https://optim.tildacdn.com/tild3061-6533-4765-b032-646663323432/-/cover/560x395/center/center/-/format/webp/898.png" />
-                    </article>
-                  </li>
-                  <li class='tab'>
-                    <article class='tab-content'>
-                      <h3>CRM/ERP</h3>
-                      <p>We automate business processes and customer database management, improve interaction with customers and optimize the use of company resources.</p>
-                      <img src="https://optim.tildacdn.com/tild6163-3532-4336-b533-663036633164/-/cover/560x395/center/center/-/format/webp/file_cover_-_1.png" />
-
-                    </article>
-                  </li>
-                  <li class='tab'>
-                    <article class='tab-content'>
-                      <h3>Corporate websites</h3>
-                      <p>We develop individual design, pay attention to ease of use, optimize the site for search engines and integrate the necessary functions.</p>
-                      <img src="https://optim.tildacdn.com/tild6531-3939-4432-a561-653235373964/-/cover/560x395/center/center/-/format/webp/01_Dark_Macbook_Pro_.png" />
-                    </article>
-                  </li>
-                  <li class='tab'>
-                    <article class='tab-content'>
-                      <h3>OutStaff</h3>
-                      <p>We help companies find and hire the right employees who will work directly on customer projects, ensuring flexibility and saving resources. We provide professional and experienced specialists in various fields.</p>
-                      <img src="https://optim.tildacdn.com/tild6438-6465-4561-b366-373166323666/-/cover/560x395/center/center/-/format/webp/MacBook_Air_Mockup.png" />
-                    </article>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </li>
-          <li class="l-section section">
-            <div class="contact">
-              <div class="contact--lockup">
-                <div class="modal">
-                  <!-- <dotlottie-player class="contactUsSVG" src="https://lottie.host/9d63b394-7004-441a-840b-b9ce86a59130/sR6ayTIp4F.lottie" background="transparent" speed="1" style="width: 300px; height: 180px" loop autoplay></dotlottie-player> -->
-                  <div class="modal--information">
-                    <p>Ohio, USA</p>
-                    <a href="mailto:ouremail@gmail.com">contact@nekoula.ru</a>
-                  </div>
-                  <ul class="modal--options">
-                    <!-- <li><a href="#0">Bēhance</a></li>
-                    <li><a href="#0">dribbble</a></li> -->
-                        <!-- <dotlottie-player src="https://lottie.host/35e75d14-4512-45a3-992a-07787b60b052/vwFkGZuVln.lottie" background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay></dotlottie-player> -->
-                    <li><a href="mailto:ouremail@gmail.com">Contact Us</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-          </li>
-
-        </ul>
+  <main>
+    <section id="home" class="hero section reveal">
+      <div class="hero-copy">
+        <p class="eyebrow">Automation-First IT Team</p>
+        <h1>Transform ideas into products with AI agents and automation.</h1>
+        <p class="lead">We design, build, and scale high-performance software. We also provide consulting and product delivery guarantee unlike many other companies.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contact">Start Your Project</a>
+          <a class="btn btn-outline" href="#services">Explore Services</a>
+        </div>
       </div>
-    </div>
-  </div>
-  <ul class="outer-nav">
-    <li class="is-active"><span>Home</span></li>
-    <li><span>Projects</span></li>
-    <li><span>Team</span></li>
-    <li><span>Services</span></li>
-    <li><span>Contact</span></li>
-  </ul>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+      <div class="hero-panel">
+        <article>
+          <h3>Automation Processes</h3>
+          <p>We automate workflows across operations, CRM/ERP, support, and internal delivery pipelines.</p>
+        </article>
+        <article>
+          <h3>AI Agents</h3>
+          <p>We implement practical AI agents for analysis, execution, monitoring, and team productivity.</p>
+        </article>
+        <article>
+          <h3>Guaranteed Delivery</h3>
+          <p>We guarantee the quality and stability of delivered products with accountable post-launch support.</p>
+        </article>
+      </div>
+    </section>
 
-<script>
-    var swiper = new Swiper(".mySwiper", {
-      pagination: {
-        el: ".swiper-pagination",
-        type: "progressbar",
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
+    <section class="metrics section reveal">
+      <article>
+        <h3>9+ years</h3>
+        <p>Hands-on experience in software development and project delivery.</p>
+      </article>
+      <article>
+        <h3>End-to-end</h3>
+        <p>From MVP to high-load architecture, support, and continuous optimization.</p>
+      </article>
+      <article>
+        <h3>Consulting + Build</h3>
+        <p>One team for strategy, implementation, and long-term scaling.</p>
+      </article>
+    </section>
+
+    <section id="projects" class="section reveal">
+      <div class="section-heading">
+        <p class="eyebrow">Projects</p>
+        <h2>Real products delivered</h2>
+      </div>
+      <div class="cards two-col">
+        <article class="card">
+          <h3>Marketplace for building materials</h3>
+          <p>Full-featured marketplace with admin panel, iOS and Android apps, Telegram bots for automation, and architecture based on Kafka, Redis, and OpenSearch.</p>
+        </article>
+        <article class="card">
+          <h3>Social network for designers</h3>
+          <p>Scalable social platform for creative communities with advanced SEO setup, flexible customization, and optimized performance.</p>
+        </article>
+        <article class="card">
+          <h3>Courier delivery app</h3>
+          <p>Courier app with live chat, package tracking, notifications, payments, pickup scheduling, multilingual support, and strong data security.</p>
+        </article>
+        <article class="card">
+          <h3>VPN service</h3>
+          <p>Secure VPN platform with strong encryption and high-speed global server access for private and unrestricted browsing.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="team" class="section reveal">
+      <div class="section-heading">
+        <p class="eyebrow">Team</p>
+        <h2>Leadership</h2>
+      </div>
+      <div class="team-grid">
+        <article class="member-card">
+          <img src="assets/img/work-victory.jpg" alt="Ruslan">
+          <h3>Ruslan | Tech Lead</h3>
+          <p>Experienced developer with expertise in creating and supporting high-load applications.</p>
+        </article>
+        <article class="member-card featured">
+          <img src="assets/img/work-metiew-smith.jpeg" alt="Nekoula">
+          <h3>Nekoula | CEO, CTO</h3>
+          <p>Expert with 9 years of experience in IT, software development, and project management.</p>
+        </article>
+        <article class="member-card">
+          <img src="assets/img/work-alex-nowak.jpg" alt="Alexander">
+          <h3>Alexander | COO</h3>
+          <p>Business development leader ensuring technical solutions stay aligned with business goals.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="services" class="section reveal">
+      <div class="section-heading">
+        <p class="eyebrow">Services</p>
+        <h2>What we deliver</h2>
+      </div>
+      <div class="cards three-col">
+        <article class="card service-card">
+          <h3>ML / AI</h3>
+          <p>We build AI solutions that automate work, optimize processes, and improve decision quality.</p>
+        </article>
+        <article class="card service-card">
+          <h3>CRM / ERP Automation</h3>
+          <p>We automate business processes, improve customer workflows, and optimize resource management.</p>
+        </article>
+        <article class="card service-card">
+          <h3>Corporate & Promo Websites</h3>
+          <p>We create modern websites with strong UX, SEO optimization, and custom functionality.</p>
+        </article>
+        <article class="card service-card">
+          <h3>Outstaff</h3>
+          <p>We provide experienced specialists to integrate into your projects quickly and effectively.</p>
+        </article>
+        <article class="card service-card">
+          <h3>Consulting</h3>
+          <p>Architecture reviews, process diagnostics, technology strategy, and AI adoption roadmaps.</p>
+        </article>
+        <article class="card service-card guarantee">
+          <h3>Product Guarantee</h3>
+          <p>Unlike many companies, we provide a clear guarantee on delivered products and accountable support.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="contact section reveal">
+      <div class="contact-card">
+        <p class="eyebrow">Contact</p>
+        <h2>Build with confidence</h2>
+        <p>Ohio, USA</p>
+        <a class="mail" href="mailto:contact@nekoula.ru">contact@nekoula.ru</a>
+        <p>Tell us your goals. We can lead consulting, build automation processes, and launch AI agent products with guaranteed delivery quality.</p>
+        <a class="btn btn-primary" href="mailto:contact@nekoula.ru">Book Consultation</a>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mainNav = document.querySelector('.main-nav');
+
+    menuToggle.addEventListener('click', function () {
+      const isOpen = mainNav.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
-</script>
-<script>
-  const indexes = document.querySelectorAll('.indexes li');
-const tabs = document.querySelectorAll('.tab');
-const contents = document.querySelectorAll('.tab-content');
 
-function reset() {
-  for (let i = 0; i < tabs.length; i++) {
-    indexes[i].style.borderColor = 'transparent';
-    tabs[i].style.zIndex = 0;
-    tabs[i].classList.remove('active');
-    contents[i].classList.remove('active');
-  }
-}
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.16 });
 
-function showTab(i) {
-  indexes[i].style.borderColor = 'rgba(68, 174, 234, 1)';
-  tabs[i].style.opacity = 1;
-  tabs[i].style.zIndex = 5;
-  tabs[i].classList.add('active');
-  contents[i].classList.add('active');
-}
-
-function activate(e) {
-    if (!e.target.matches('.indexes li')) return;
-    reset();
-    showTab(e.target.dataset.index);
-  }
-
-  const init = () => showTab(0);
-
-  window.addEventListener('load',init,false);
-  window.addEventListener('click',activate,false);
-</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
-<script src="assets/js/functions-min.js"></script>
+    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+  </script>
 </body>
 </html>
