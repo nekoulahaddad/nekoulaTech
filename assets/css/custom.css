@@ -67,6 +67,34 @@ body {
   object-fit: contain;
 }
 
+.header-tools {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.lang-switch {
+  display: inline-flex;
+  border: 1px solid #ffffff30;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.lang-switch button {
+  border: none;
+  background: transparent;
+  color: #d6d6d6;
+  padding: 7px 10px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.lang-switch button.is-active {
+  background: #ffffff;
+  color: #050505;
+}
+
 .main-nav {
   display: flex;
   align-items: center;
@@ -314,6 +342,30 @@ h2 {
   transform: translateY(0);
 }
 
+html[dir="rtl"] body {
+  text-align: right;
+}
+
+html[dir="rtl"] .site-header {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .brand {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .header-tools {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .main-nav {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .hero-actions {
+  flex-direction: row-reverse;
+}
+
 @media (max-width: 1120px) {
   .hero {
     grid-template-columns: 1fr;
@@ -347,6 +399,12 @@ h2 {
 
   .main-nav.open {
     display: flex;
+  }
+
+  html[dir="rtl"] .main-nav {
+    right: auto;
+    left: 6vw;
+    align-items: flex-end;
   }
 
   .metrics,
