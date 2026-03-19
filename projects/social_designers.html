@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>DesignersHub | Project Portfolio</title>
+  <meta name="description" content="DesignersHub is a social network for designers with profiles, portfolios, posts, and messaging.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Sora:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/custom.css">
+  <style>
+    body {
+      background: radial-gradient(circle at 18% 0%, #1b1b22 0%, #0c0c12 45%, #07070c 100%);
+    }
+
+    .project-shell {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 40px 6vw 80px;
+    }
+
+    .project-topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 30px;
+    }
+
+    .topbar-tools {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .project-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: var(--white);
+      font-weight: 700;
+      border: 1px solid #ffffff2a;
+      border-radius: 999px;
+      padding: 8px 14px;
+      transition: transform 0.2s ease, border 0.2s ease;
+    }
+
+    .project-back:hover {
+      transform: translateY(-2px);
+      border-color: #ffffff55;
+    }
+
+    .project-hero {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 26px;
+      align-items: center;
+      margin-bottom: 28px;
+    }
+
+    .project-hero .eyebrow {
+      margin-bottom: 14px;
+    }
+
+    .project-hero h1 {
+      font-size: clamp(2.1rem, 4vw, 3.6rem);
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .meta-pill {
+      border: 1px solid #ffffff2a;
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 0.8rem;
+      color: #e0e0e0;
+      background: #ffffff12;
+    }
+
+    .project-overview {
+      border: 1px solid #20202b;
+      border-radius: var(--radius);
+      background: linear-gradient(160deg, #1a1a24 0%, #10101a 100%);
+      padding: 26px;
+      box-shadow: 0 18px 40px rgba(10, 10, 16, 0.6);
+    }
+
+    .project-overview h3 {
+      margin-bottom: 12px;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .feature-card {
+      border: 1px solid #2a2a38;
+      border-radius: 16px;
+      padding: 20px;
+      background: linear-gradient(155deg, #1f1f2c, #12121b);
+      min-height: 150px;
+    }
+
+    .feature-card p {
+      color: #b8b8c6;
+      margin: 8px 0 0;
+    }
+
+    .flow-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .flow-card {
+      border: 1px solid #2a2a38;
+      border-radius: 16px;
+      padding: 18px;
+      background: linear-gradient(155deg, #1f1f2c, #12121b);
+    }
+
+    .flow-card ul {
+      padding-left: 18px;
+      margin: 12px 0 0;
+      color: #b8b8c6;
+    }
+
+    .interface-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .social-panel {
+      border: 1px solid #2a2a38;
+      border-radius: 18px;
+      background: #12121b;
+      box-shadow: 0 12px 26px rgba(10, 10, 16, 0.6);
+      overflow: hidden;
+    }
+
+    .social-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 16px;
+      background: #191925;
+      border-bottom: 1px solid #2a2a38;
+      color: #f2f2f4;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    .social-body {
+      padding: 14px 16px 16px;
+      color: #f2f2f4;
+      font-family: "Manrope", sans-serif;
+      min-height: 360px;
+    }
+
+    .social-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      background: rgba(154, 132, 255, 0.18);
+      color: #b6a6ff;
+      font-weight: 600;
+      margin-right: 6px;
+    }
+
+    .social-card {
+      background: #1b1b27;
+      border-radius: 12px;
+      padding: 12px;
+      margin-bottom: 10px;
+      border: 1px solid #2a2a38;
+    }
+
+    .social-card h4 {
+      margin: 0 0 6px;
+      font-size: 14px;
+      color: #f2f2f4;
+    }
+
+    .social-card p {
+      margin: 0;
+      color: #b8b8c6;
+      font-size: 12px;
+    }
+
+    .social-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .social-tag {
+      font-weight: 700;
+      color: #8ef0c2;
+      font-size: 12px;
+    }
+
+    .social-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 12px;
+      border-radius: 8px;
+      background: #9a84ff;
+      color: #0b0b12;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .social-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 6px;
+      font-size: 12px;
+    }
+
+    .social-table th,
+    .social-table td {
+      text-align: left;
+      padding: 8px 10px;
+      border-bottom: 1px solid #2a2a38;
+      color: #b8b8c6;
+      background: transparent;
+      line-height: 18px;
+    }
+
+    .social-table th {
+      color: #f2f2f4;
+      font-weight: 700;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .social-table tbody tr:hover td {
+      background: #1b1b27;
+    }
+
+    .stack-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .stack-card {
+      border: 1px solid #2a2a38;
+      border-radius: 16px;
+      padding: 18px;
+      background: linear-gradient(155deg, #1f1f2c, #12121b);
+    }
+
+    .stack-card ul {
+      margin: 10px 0 0;
+      padding-left: 18px;
+      color: #b8b8c6;
+    }
+
+    @media (max-width: 1080px) {
+      .project-hero {
+        grid-template-columns: 1fr;
+      }
+
+      .feature-grid,
+      .interface-grid,
+      .stack-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 780px) {
+      .project-topbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .topbar-tools {
+        width: 100%;
+        justify-content: flex-start;
+      }
+
+      .feature-grid,
+      .flow-grid,
+      .interface-grid,
+      .stack-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <div class="project-shell">
+    <div class="project-topbar">
+      <a class="project-back" href="../index.html" data-i18n="back_link">Back to Nekoula Tech</a>
+      <div class="topbar-tools">
+        <span class="meta-pill" data-i18n="meta_type">Designer Community</span>
+        <div class="lang-switch" role="group" aria-label="Language switcher">
+          <button type="button" data-lang="en" class="is-active">EN</button>
+          <button type="button" data-lang="ru">RU</button>
+          <button type="button" data-lang="ar">AR</button>
+        </div>
+      </div>
+    </div>
+
+    <section class="project-hero">
+      <div>
+        <p class="eyebrow" data-i18n="hero_eyebrow">Social Network for Designers</p>
+        <h1 data-i18n="hero_title">DesignersHub</h1>
+        <p class="lead" data-i18n="hero_lead">
+          DesignersHub is a social platform where designers share portfolios, publish posts, follow peers,
+          and collaborate through messaging. It combines a community feed with professional profiles.
+        </p>
+        <div class="hero-meta">
+          <span class="meta-pill" data-i18n="hero_meta1">Django</span>
+          <span class="meta-pill" data-i18n="hero_meta2">Notifications</span>
+          <span class="meta-pill" data-i18n="hero_meta3">Profiles</span>
+          <span class="meta-pill" data-i18n="hero_meta4">Media</span>
+        </div>
+      </div>
+      <div class="project-overview">
+        <h3 data-i18n="overview_title">Product Overview</h3>
+        <p data-i18n="overview_text">
+          The platform provides designer profiles, blog posts, member directories, and real-time notifications.
+          Users can showcase work, follow creators, and build collaborative networks in one space.
+        </p>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <h3 data-i18n="feature1_title">Profiles & Portfolios</h3>
+            <p data-i18n="feature1_text">Designer pages with work galleries and experience details.</p>
+          </div>
+          <div class="feature-card">
+            <h3 data-i18n="feature2_title">Community Feed</h3>
+            <p data-i18n="feature2_text">Posts, likes, and comments to grow visibility.</p>
+          </div>
+          <div class="feature-card">
+            <h3 data-i18n="feature3_title">Messaging & Alerts</h3>
+            <p data-i18n="feature3_text">Notifications and direct messaging for collaboration.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow" data-i18n="flows_eyebrow">User Flows</p>
+        <h2 data-i18n="flows_title">From profile to collaboration</h2>
+      </div>
+      <div class="flow-grid">
+        <div class="flow-card">
+          <h3 data-i18n="flow1_title">Designer Flow</h3>
+          <ul>
+            <li data-i18n="flow1_item1">Create a profile and upload portfolio projects.</li>
+            <li data-i18n="flow1_item2">Publish posts to the community feed.</li>
+            <li data-i18n="flow1_item3">Receive likes, comments, and notifications.</li>
+            <li data-i18n="flow1_item4">Connect with peers via messages.</li>
+          </ul>
+        </div>
+        <div class="flow-card">
+          <h3 data-i18n="flow2_title">Discovery Flow</h3>
+          <ul>
+            <li data-i18n="flow2_item1">Browse designers by category or skill.</li>
+            <li data-i18n="flow2_item2">Open portfolio cards and saved posts.</li>
+            <li data-i18n="flow2_item3">Follow creators and build a network.</li>
+            <li data-i18n="flow2_item4">Contact designers for collaboration.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow" data-i18n="ui_eyebrow">Interface Highlights</p>
+        <h2 data-i18n="ui_title">Rendered fragments of the community UI</h2>
+      </div>
+      <div class="interface-grid">
+        <div class="social-panel">
+          <div class="social-header">
+            <span data-i18n="ui_profile_title">Designer Profile</span>
+            <span class="social-pill" data-i18n="ui_profile_pill">Portfolio</span>
+          </div>
+          <div class="social-body">
+            <div class="social-card">
+              <h4 data-i18n="ui_profile_card1_title">Noura A.</h4>
+              <p data-i18n="ui_profile_card1_text">Brand designer · 5 years · 24 projects</p>
+            </div>
+            <div class="social-card">
+              <div class="social-row">
+                <h4 data-i18n="ui_profile_card2_title">Featured Work</h4>
+                <span class="social-tag" data-i18n="ui_profile_card2_tag">UI/UX</span>
+              </div>
+              <p data-i18n="ui_profile_card2_text">SaaS dashboard, fintech branding, mobile UX.</p>
+            </div>
+            <div class="social-btn" data-i18n="ui_profile_button">Follow Designer</div>
+          </div>
+        </div>
+        <div class="social-panel">
+          <div class="social-header">
+            <span data-i18n="ui_feed_title">Community Feed</span>
+            <span class="social-pill" data-i18n="ui_feed_pill">Trending</span>
+          </div>
+          <div class="social-body">
+            <div class="social-card">
+              <h4 data-i18n="ui_feed_card1_title">New case study</h4>
+              <p data-i18n="ui_feed_card1_text">“Rebranding for a lifestyle store.”</p>
+            </div>
+            <div class="social-card">
+              <h4 data-i18n="ui_feed_card2_title">Motion mockups</h4>
+              <p data-i18n="ui_feed_card2_text">“Micro-interactions for mobile onboarding.”</p>
+            </div>
+            <div class="social-table">
+              <table class="social-table">
+                <thead>
+                  <tr>
+                    <th data-i18n="ui_feed_head1">Post</th>
+                    <th data-i18n="ui_feed_head2">Likes</th>
+                    <th data-i18n="ui_feed_head3">Saves</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-i18n="ui_feed_row1_col1">Visual identity</td>
+                    <td data-i18n="ui_feed_row1_col2">1.2k</td>
+                    <td data-i18n="ui_feed_row1_col3">320</td>
+                  </tr>
+                  <tr>
+                    <td data-i18n="ui_feed_row2_col1">Mobile UI kit</td>
+                    <td data-i18n="ui_feed_row2_col2">980</td>
+                    <td data-i18n="ui_feed_row2_col3">210</td>
+                  </tr>
+                  <tr>
+                    <td data-i18n="ui_feed_row3_col1">Brand refresh</td>
+                    <td data-i18n="ui_feed_row3_col2">740</td>
+                    <td data-i18n="ui_feed_row3_col3">150</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="social-panel">
+          <div class="social-header">
+            <span data-i18n="ui_message_title">Messages</span>
+            <span class="social-pill" data-i18n="ui_message_pill">New</span>
+          </div>
+          <div class="social-body">
+            <div class="social-card">
+              <h4 data-i18n="ui_message_card1_title">Project invite</h4>
+              <p data-i18n="ui_message_card1_text">“Interested in collaborating on a landing page?”</p>
+            </div>
+            <div class="social-card">
+              <div class="social-row">
+                <h4 data-i18n="ui_message_card2_title">Portfolio request</h4>
+                <span class="social-tag" data-i18n="ui_message_card2_tag">Unread</span>
+              </div>
+              <p data-i18n="ui_message_card2_text">“Can you share your latest brand work?”</p>
+            </div>
+            <div class="social-btn" data-i18n="ui_message_button">Open Inbox</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow" data-i18n="stack_eyebrow">Tech Stack</p>
+        <h2 data-i18n="stack_title">Community-ready architecture</h2>
+      </div>
+      <div class="stack-grid">
+        <div class="stack-card">
+          <h3 data-i18n="stack1_title">Backend</h3>
+          <ul>
+            <li data-i18n="stack1_item1">Django with user auth and profiles</li>
+            <li data-i18n="stack1_item2">Notifications for social activity</li>
+            <li data-i18n="stack1_item3">Media storage for portfolios</li>
+          </ul>
+        </div>
+        <div class="stack-card">
+          <h3 data-i18n="stack2_title">Community</h3>
+          <ul>
+            <li data-i18n="stack2_item1">Blog posts, comments, and likes</li>
+            <li data-i18n="stack2_item2">Member directory and search</li>
+            <li data-i18n="stack2_item3">Messaging workflows</li>
+          </ul>
+        </div>
+        <div class="stack-card">
+          <h3 data-i18n="stack3_title">Operations</h3>
+          <ul>
+            <li data-i18n="stack3_item1">Admin tools and moderation</li>
+            <li data-i18n="stack3_item2">Static assets with optimized delivery</li>
+            <li data-i18n="stack3_item3">Deployable on Heroku</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const langButtons = document.querySelectorAll('.lang-switch button');
+
+    const translations = {
+      en: {
+        back_link: 'Back to Nekoula Tech',
+        meta_type: 'Designer Community',
+        hero_eyebrow: 'Social Network for Designers',
+        hero_title: 'DesignersHub',
+        hero_lead: 'DesignersHub is a social platform where designers share portfolios, publish posts, follow peers, and collaborate through messaging. It combines a community feed with professional profiles.',
+        hero_meta1: 'Django',
+        hero_meta2: 'Notifications',
+        hero_meta3: 'Profiles',
+        hero_meta4: 'Media',
+        overview_title: 'Product Overview',
+        overview_text: 'The platform provides designer profiles, blog posts, member directories, and real-time notifications. Users can showcase work, follow creators, and build collaborative networks in one space.',
+        feature1_title: 'Profiles & Portfolios',
+        feature1_text: 'Designer pages with work galleries and experience details.',
+        feature2_title: 'Community Feed',
+        feature2_text: 'Posts, likes, and comments to grow visibility.',
+        feature3_title: 'Messaging & Alerts',
+        feature3_text: 'Notifications and direct messaging for collaboration.',
+        flows_eyebrow: 'User Flows',
+        flows_title: 'From profile to collaboration',
+        flow1_title: 'Designer Flow',
+        flow1_item1: 'Create a profile and upload portfolio projects.',
+        flow1_item2: 'Publish posts to the community feed.',
+        flow1_item3: 'Receive likes, comments, and notifications.',
+        flow1_item4: 'Connect with peers via messages.',
+        flow2_title: 'Discovery Flow',
+        flow2_item1: 'Browse designers by category or skill.',
+        flow2_item2: 'Open portfolio cards and saved posts.',
+        flow2_item3: 'Follow creators and build a network.',
+        flow2_item4: 'Contact designers for collaboration.',
+        ui_eyebrow: 'Interface Highlights',
+        ui_title: 'Rendered fragments of the community UI',
+        ui_profile_title: 'Designer Profile',
+        ui_profile_pill: 'Portfolio',
+        ui_profile_card1_title: 'Noura A.',
+        ui_profile_card1_text: 'Brand designer · 5 years · 24 projects',
+        ui_profile_card2_title: 'Featured Work',
+        ui_profile_card2_tag: 'UI/UX',
+        ui_profile_card2_text: 'SaaS dashboard, fintech branding, mobile UX.',
+        ui_profile_button: 'Follow Designer',
+        ui_feed_title: 'Community Feed',
+        ui_feed_pill: 'Trending',
+        ui_feed_card1_title: 'New case study',
+        ui_feed_card1_text: '“Rebranding for a lifestyle store.”',
+        ui_feed_card2_title: 'Motion mockups',
+        ui_feed_card2_text: '“Micro-interactions for mobile onboarding.”',
+        ui_feed_head1: 'Post',
+        ui_feed_head2: 'Likes',
+        ui_feed_head3: 'Saves',
+        ui_feed_row1_col1: 'Visual identity',
+        ui_feed_row1_col2: '1.2k',
+        ui_feed_row1_col3: '320',
+        ui_feed_row2_col1: 'Mobile UI kit',
+        ui_feed_row2_col2: '980',
+        ui_feed_row2_col3: '210',
+        ui_feed_row3_col1: 'Brand refresh',
+        ui_feed_row3_col2: '740',
+        ui_feed_row3_col3: '150',
+        ui_message_title: 'Messages',
+        ui_message_pill: 'New',
+        ui_message_card1_title: 'Project invite',
+        ui_message_card1_text: '“Interested in collaborating on a landing page?”',
+        ui_message_card2_title: 'Portfolio request',
+        ui_message_card2_tag: 'Unread',
+        ui_message_card2_text: '“Can you share your latest brand work?”',
+        ui_message_button: 'Open Inbox',
+        stack_eyebrow: 'Tech Stack',
+        stack_title: 'Community-ready architecture',
+        stack1_title: 'Backend',
+        stack1_item1: 'Django with user auth and profiles',
+        stack1_item2: 'Notifications for social activity',
+        stack1_item3: 'Media storage for portfolios',
+        stack2_title: 'Community',
+        stack2_item1: 'Blog posts, comments, and likes',
+        stack2_item2: 'Member directory and search',
+        stack2_item3: 'Messaging workflows',
+        stack3_title: 'Operations',
+        stack3_item1: 'Admin tools and moderation',
+        stack3_item2: 'Static assets with optimized delivery',
+        stack3_item3: 'Deployable on Heroku'
+      },
+      ru: {
+        back_link: 'Назад на Nekoula Tech',
+        meta_type: 'Сообщество дизайнеров',
+        hero_eyebrow: 'Соцсеть для дизайнеров',
+        hero_title: 'ДизайнерХаб',
+        hero_lead: 'ДизайнерХаб — социальная платформа, где дизайнеры публикуют портфолио, посты, подписываются друг на друга и общаются в сообщениях. Это лента + профессиональные профили.',
+        hero_meta1: 'Django',
+        hero_meta2: 'Уведомления',
+        hero_meta3: 'Профили',
+        hero_meta4: 'Медиа',
+        overview_title: 'Обзор продукта',
+        overview_text: 'Платформа включает профили дизайнеров, блог, каталог участников и уведомления. Пользователи демонстрируют работы, находят коллег и строят сети сотрудничества.',
+        feature1_title: 'Профили и портфолио',
+        feature1_text: 'Страницы дизайнеров с галереями работ и опытом.',
+        feature2_title: 'Лента сообщества',
+        feature2_text: 'Посты, лайки и комментарии для роста охвата.',
+        feature3_title: 'Сообщения и уведомления',
+        feature3_text: 'Оповещения и личные сообщения для коллабораций.',
+        flows_eyebrow: 'Сценарии',
+        flows_title: 'От профиля к сотрудничеству',
+        flow1_title: 'Сценарий дизайнера',
+        flow1_item1: 'Создать профиль и загрузить проекты.',
+        flow1_item2: 'Публиковать посты в ленте.',
+        flow1_item3: 'Получать лайки, комментарии и уведомления.',
+        flow1_item4: 'Связываться с коллегами через сообщения.',
+        flow2_title: 'Сценарий поиска',
+        flow2_item1: 'Искать дизайнеров по навыкам и категориям.',
+        flow2_item2: 'Открывать карточки портфолио и посты.',
+        flow2_item3: 'Подписываться и строить сеть.',
+        flow2_item4: 'Связываться для проектов.',
+        ui_eyebrow: 'Интерфейс',
+        ui_title: 'Фрагменты community UI',
+        ui_profile_title: 'Профиль дизайнера',
+        ui_profile_pill: 'Портфолио',
+        ui_profile_card1_title: 'Нура А.',
+        ui_profile_card1_text: 'Бренд-дизайнер · 5 лет · 24 проекта',
+        ui_profile_card2_title: 'Лучшие работы',
+        ui_profile_card2_tag: 'UI/UX',
+        ui_profile_card2_text: 'SaaS-дэшборды, финтех, мобильный UX.',
+        ui_profile_button: 'Подписаться',
+        ui_feed_title: 'Лента сообщества',
+        ui_feed_pill: 'Тренды',
+        ui_feed_card1_title: 'Новый кейс',
+        ui_feed_card1_text: '«Ребрендинг lifestyle-магазина».',
+        ui_feed_card2_title: 'Motion-макеты',
+        ui_feed_card2_text: '«Микровзаимодействия для онбординга».',
+        ui_feed_head1: 'Пост',
+        ui_feed_head2: 'Лайки',
+        ui_feed_head3: 'Сохранения',
+        ui_feed_row1_col1: 'Айдентика',
+        ui_feed_row1_col2: '1.2k',
+        ui_feed_row1_col3: '320',
+        ui_feed_row2_col1: 'Mobile UI kit',
+        ui_feed_row2_col2: '980',
+        ui_feed_row2_col3: '210',
+        ui_feed_row3_col1: 'Обновление бренда',
+        ui_feed_row3_col2: '740',
+        ui_feed_row3_col3: '150',
+        ui_message_title: 'Сообщения',
+        ui_message_pill: 'Новые',
+        ui_message_card1_title: 'Инвайт в проект',
+        ui_message_card1_text: '«Готовы подключиться к лендингу?»',
+        ui_message_card2_title: 'Запрос портфолио',
+        ui_message_card2_tag: 'Не прочитано',
+        ui_message_card2_text: '«Скиньте свежие кейсы по брендингу».',
+        ui_message_button: 'Открыть inbox',
+        stack_eyebrow: 'Технологии',
+        stack_title: 'Архитектура для сообщества',
+        stack1_title: 'Backend',
+        stack1_item1: 'Django с авторизацией и профилями',
+        stack1_item2: 'Уведомления о соц-активности',
+        stack1_item3: 'Хранение медиа для портфолио',
+        stack2_title: 'Сообщество',
+        stack2_item1: 'Блог, комментарии и лайки',
+        stack2_item2: 'Каталог участников и поиск',
+        stack2_item3: 'Сообщения и диалоги',
+        stack3_title: 'Операции',
+        stack3_item1: 'Админ-инструменты и модерация',
+        stack3_item2: 'Оптимизация статики',
+        stack3_item3: 'Развертывание на Heroku'
+      },
+      ar: {
+        back_link: 'العودة إلى Nekoula Tech',
+        meta_type: 'مجتمع المصممين',
+        hero_eyebrow: 'شبكة اجتماعية للمصممين',
+        hero_title: 'DesignersHub',
+        hero_lead: 'DesignersHub منصة اجتماعية يشارك فيها المصممون المحافظ والأعمال وينشرون المنشورات ويتابعون بعضهم ويتعاونون عبر الرسائل.',
+        hero_meta1: 'Django',
+        hero_meta2: 'إشعارات',
+        hero_meta3: 'ملفات',
+        hero_meta4: 'وسائط',
+        overview_title: 'نظرة عامة',
+        overview_text: 'توفر المنصة ملفات للمصممين ومنشورات ومدير أعضاء وإشعارات آنية. يمكن للمستخدمين عرض أعمالهم وبناء شبكات تعاون.',
+        feature1_title: 'الملفات والمحافظ',
+        feature1_text: 'صفحات للمصممين مع معارض الأعمال والخبرة.',
+        feature2_title: 'خلاصة المجتمع',
+        feature2_text: 'منشورات وإعجابات وتعليقات لزيادة الظهور.',
+        feature3_title: 'الرسائل والتنبيهات',
+        feature3_text: 'تنبيهات ورسائل مباشرة للتعاون.',
+        flows_eyebrow: 'المسارات',
+        flows_title: 'من الملف إلى التعاون',
+        flow1_title: 'مسار المصمم',
+        flow1_item1: 'إنشاء ملف ورفع مشاريع المحفظة.',
+        flow1_item2: 'نشر المنشورات في الخلاصة.',
+        flow1_item3: 'تلقي الإعجابات والتعليقات والإشعارات.',
+        flow1_item4: 'التواصل مع الزملاء عبر الرسائل.',
+        flow2_title: 'مسار الاستكشاف',
+        flow2_item1: 'تصفح المصممين حسب المهارات.',
+        flow2_item2: 'فتح بطاقات المحافظ والمنشورات.',
+        flow2_item3: 'متابعة المصممين وبناء شبكة.',
+        flow2_item4: 'التواصل للتعاون في المشاريع.',
+        ui_eyebrow: 'الواجهة',
+        ui_title: 'مقاطع من واجهة المجتمع',
+        ui_profile_title: 'ملف المصمم',
+        ui_profile_pill: 'محفظة',
+        ui_profile_card1_title: 'نورا أ.',
+        ui_profile_card1_text: 'مصممة علامات · 5 سنوات · 24 مشروعًا',
+        ui_profile_card2_title: 'أعمال مميزة',
+        ui_profile_card2_tag: 'UI/UX',
+        ui_profile_card2_text: 'لوحات SaaS، فينتك، وتجربة جوال.',
+        ui_profile_button: 'تابع المصمم',
+        ui_feed_title: 'خلاصة المجتمع',
+        ui_feed_pill: 'رائج',
+        ui_feed_card1_title: 'دراسة حالة جديدة',
+        ui_feed_card1_text: '“إعادة تصميم لمتجر lifestyle.”',
+        ui_feed_card2_title: 'نماذج حركة',
+        ui_feed_card2_text: '“تفاعلات دقيقة لمرحلة التعريف.”',
+        ui_feed_head1: 'المنشور',
+        ui_feed_head2: 'الإعجابات',
+        ui_feed_head3: 'الحفظ',
+        ui_feed_row1_col1: 'هوية بصرية',
+        ui_feed_row1_col2: '1.2k',
+        ui_feed_row1_col3: '320',
+        ui_feed_row2_col1: 'حزمة UI للجوال',
+        ui_feed_row2_col2: '980',
+        ui_feed_row2_col3: '210',
+        ui_feed_row3_col1: 'تحديث علامة',
+        ui_feed_row3_col2: '740',
+        ui_feed_row3_col3: '150',
+        ui_message_title: 'الرسائل',
+        ui_message_pill: 'جديد',
+        ui_message_card1_title: 'دعوة مشروع',
+        ui_message_card1_text: '“هل يمكنك المساعدة في صفحة هبوط؟”',
+        ui_message_card2_title: 'طلب محفظة',
+        ui_message_card2_tag: 'غير مقروء',
+        ui_message_card2_text: '“أرسل أحدث أعمال العلامات.”',
+        ui_message_button: 'فتح البريد',
+        stack_eyebrow: 'التقنيات',
+        stack_title: 'معمارية جاهزة للمجتمع',
+        stack1_title: 'الخلفية',
+        stack1_item1: 'Django مع تسجيل دخول وملفات',
+        stack1_item2: 'إشعارات للنشاط الاجتماعي',
+        stack1_item3: 'تخزين وسائط للمحافظ',
+        stack2_title: 'المجتمع',
+        stack2_item1: 'مدونة وتعليقات وإعجابات',
+        stack2_item2: 'دليل أعضاء وبحث',
+        stack2_item3: 'مراسلات وتواصل',
+        stack3_title: 'العمليات',
+        stack3_item1: 'أدوات إدارة ومراجعة',
+        stack3_item2: 'تحسين الأصول الثابتة',
+        stack3_item3: 'قابل للنشر على Heroku'
+      }
+    };
+
+    function applyLanguage(lang) {
+      const dict = translations[lang] || translations.en;
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+      document.querySelectorAll('[data-i18n]').forEach((el) => {
+        const key = el.dataset.i18n;
+        if (dict[key]) {
+          el.textContent = dict[key];
+        }
+      });
+
+      langButtons.forEach((btn) => {
+        btn.classList.toggle('is-active', btn.dataset.lang === lang);
+      });
+
+      const url = new URL(window.location.href);
+      if (lang === 'en') {
+        url.searchParams.delete('lang');
+      } else {
+        url.searchParams.set('lang', lang);
+      }
+      history.replaceState({}, '', url);
+
+      localStorage.setItem('site_lang', lang);
+    }
+
+    langButtons.forEach((btn) => {
+      btn.addEventListener('click', () => applyLanguage(btn.dataset.lang));
+    });
+
+    const urlLang = new URLSearchParams(window.location.search).get('lang');
+    const savedLang = localStorage.getItem('site_lang') || 'en';
+    const initialLang = ['en', 'ru', 'ar'].includes(urlLang) ? urlLang : savedLang;
+    applyLanguage(initialLang);
+  </script>
+</body>
+</html>

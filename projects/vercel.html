@@ -146,70 +146,113 @@
       margin-top: 18px;
     }
 
-    .phone {
-      border: 1px solid #ffffff2a;
-      border-radius: 28px;
-      background: #0a0a0a;
-      padding: 18px;
-      box-shadow: var(--shadow);
+    .web-panel {
+      border: 1px solid #d9dee5;
+      border-radius: 18px;
+      background: #f5f7fb;
+      box-shadow: 0 12px 24px rgba(19, 36, 60, 0.08);
+      overflow: hidden;
     }
 
-    .phone-screen {
-      background: #f6f7fb;
-      border-radius: 20px;
-      padding: 14px;
-      color: #111;
-      font-family: "Manrope", sans-serif;
-      min-height: 380px;
-    }
-
-    .phone-header {
+    .web-panel-header {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      padding: 12px 16px;
+      background: #ffffff;
+      border-bottom: 1px solid #e2e7ee;
+      color: #292929;
       font-weight: 700;
       font-size: 0.95rem;
-      margin-bottom: 12px;
     }
 
-    .pill {
+    .web-panel-body {
+      padding: 14px 16px 16px;
+      color: #2b333e;
+      font-family: "Manrope", sans-serif;
+      min-height: 360px;
+    }
+
+    .web-pill {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 4px 8px;
+      padding: 4px 10px;
       border-radius: 999px;
       font-size: 0.72rem;
-      background: #e9ecf4;
-      color: #555;
+      background: #e5f1fb;
+      color: #1c84d7;
+      font-weight: 600;
       margin-right: 6px;
     }
 
-    .card-lite {
+    .web-input {
       background: #ffffff;
-      border-radius: 14px;
+      border-radius: 10px;
+      padding: 8px 10px;
+      font-size: 0.82rem;
+      color: #596370;
+      border: 1px solid #d1d7df;
+      margin-bottom: 8px;
+    }
+
+    .web-card {
+      background: #ffffff;
+      border-radius: 12px;
       padding: 12px;
       margin-bottom: 10px;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+      border: 1px solid #e2e7ee;
+      box-shadow: 0 6px 14px rgba(19, 36, 60, 0.06);
     }
 
-    .card-lite h4 {
+    .web-card h4 {
       margin: 0 0 6px;
       font-size: 0.92rem;
+      color: #292929;
     }
 
-    .card-lite p {
+    .web-card p {
       margin: 0;
-      color: #555;
+      color: #596370;
       font-size: 0.82rem;
     }
 
-    .input-lite {
-      background: #f3f4f8;
+    .web-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .web-price {
+      font-weight: 700;
+      color: #1c84d7;
+      font-size: 0.9rem;
+    }
+
+    .web-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 12px;
       border-radius: 10px;
-      padding: 8px 10px;
+      background: #1c84d7;
+      color: #ffffff;
       font-size: 0.8rem;
-      color: #444;
-      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    .web-split {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    .web-summary {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 12px;
+      border: 1px solid #e2e7ee;
     }
 
     .stack-grid {
@@ -351,61 +394,74 @@
         <h2 data-i18n="ui_title">Rendered fragments of the web UI</h2>
       </div>
       <div class="interface-grid">
-        <div class="phone">
-          <div class="phone-screen">
-            <div class="phone-header">
-              <span data-i18n="ui_catalog_title">Catalog</span>
-              <span class="pill" data-i18n="ui_catalog_pill">Filters</span>
+        <div class="web-panel">
+          <div class="web-panel-header">
+            <span data-i18n="ui_catalog_title">Catalog</span>
+            <span class="web-pill" data-i18n="ui_catalog_pill">Filters</span>
+          </div>
+          <div class="web-panel-body">
+            <div class="web-input" data-i18n="ui_catalog_input1">Search: insulation</div>
+            <div class="web-input" data-i18n="ui_catalog_input2">Category: Tools</div>
+            <div style="margin-bottom: 10px;">
+              <span class="web-pill" data-i18n="ui_catalog_tag1">In stock</span>
+              <span class="web-pill" data-i18n="ui_catalog_tag2">Top offers</span>
             </div>
-            <div class="input-lite" data-i18n="ui_catalog_input1">Search: insulation</div>
-            <div class="input-lite" data-i18n="ui_catalog_input2">Category: Tools</div>
-            <div>
-              <span class="pill" data-i18n="ui_catalog_tag1">In stock</span>
-              <span class="pill" data-i18n="ui_catalog_tag2">Top offers</span>
-            </div>
-            <div class="card-lite">
-              <h4 data-i18n="ui_catalog_card1_title">Power drill</h4>
+            <div class="web-card">
+              <div class="web-row">
+                <h4 data-i18n="ui_catalog_card1_title">Power drill</h4>
+                <span class="web-price">₽</span>
+              </div>
               <p data-i18n="ui_catalog_card1_text">From 3,990 RUB · 12 offers</p>
             </div>
-            <div class="card-lite">
-              <h4 data-i18n="ui_catalog_card2_title">Tiles 60×60</h4>
+            <div class="web-card">
+              <div class="web-row">
+                <h4 data-i18n="ui_catalog_card2_title">Tiles 60×60</h4>
+                <span class="web-price">₽</span>
+              </div>
               <p data-i18n="ui_catalog_card2_text">From 1,250 RUB · In stock</p>
             </div>
           </div>
         </div>
-        <div class="phone">
-          <div class="phone-screen">
-            <div class="phone-header">
-              <span data-i18n="ui_product_title">Product</span>
-              <span class="pill" data-i18n="ui_product_pill">Offer</span>
-            </div>
-            <div class="card-lite">
+        <div class="web-panel">
+          <div class="web-panel-header">
+            <span data-i18n="ui_product_title">Product</span>
+            <span class="web-pill" data-i18n="ui_product_pill">Offer</span>
+          </div>
+          <div class="web-panel-body">
+            <div class="web-card">
               <h4 data-i18n="ui_product_card1_title">Laminated plywood</h4>
               <p data-i18n="ui_product_card1_text">4mm · 1.2×2.4m · 1,690 RUB</p>
             </div>
-            <div class="input-lite" data-i18n="ui_product_input1">Shop: KOVKERT Store</div>
-            <div class="input-lite" data-i18n="ui_product_input2">Delivery: 2-3 days</div>
-            <div class="card-lite">
-              <h4 data-i18n="ui_product_card2_title">Specs</h4>
+            <div class="web-input" data-i18n="ui_product_input1">Shop: KOVKERT Store</div>
+            <div class="web-input" data-i18n="ui_product_input2">Delivery: 2-3 days</div>
+            <div class="web-summary">
+              <div class="web-row" style="margin-bottom: 8px;">
+                <span data-i18n="ui_product_card2_title">Specs</span>
+                <span class="web-btn" data-i18n="ui_product_pill">Offer</span>
+              </div>
               <p data-i18n="ui_product_card2_text">Moisture-resistant, indoor use.</p>
             </div>
           </div>
         </div>
-        <div class="phone">
-          <div class="phone-screen">
-            <div class="phone-header">
-              <span data-i18n="ui_basket_title">Basket</span>
-              <span class="pill" data-i18n="ui_basket_pill">Checkout</span>
-            </div>
-            <div class="card-lite">
+        <div class="web-panel">
+          <div class="web-panel-header">
+            <span data-i18n="ui_basket_title">Basket</span>
+            <span class="web-pill" data-i18n="ui_basket_pill">Checkout</span>
+          </div>
+          <div class="web-panel-body">
+            <div class="web-card">
               <h4 data-i18n="ui_basket_card1_title">2 shops selected</h4>
               <p data-i18n="ui_basket_card1_text">Subtotal: 12,400 RUB</p>
             </div>
-            <div class="input-lite" data-i18n="ui_basket_input1">Delivery address</div>
-            <div class="input-lite" data-i18n="ui_basket_input2">Contact phone</div>
-            <div class="card-lite">
-              <h4 data-i18n="ui_basket_card2_title">Discounts</h4>
+            <div class="web-input" data-i18n="ui_basket_input1">Delivery address</div>
+            <div class="web-input" data-i18n="ui_basket_input2">Contact phone</div>
+            <div class="web-summary web-split">
+              <div class="web-row">
+                <span data-i18n="ui_basket_card2_title">Discounts</span>
+                <span class="web-price">-₽</span>
+              </div>
               <p data-i18n="ui_basket_card2_text">Promo applied · -1,200 RUB</p>
+              <div class="web-btn" data-i18n="ui_basket_pill">Checkout</div>
             </div>
           </div>
         </div>
