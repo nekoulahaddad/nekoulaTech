@@ -75,6 +75,7 @@
     <nav class="main-nav" id="main-nav">
       <a href="#home" data-i18n="nav_home">Home</a>
       <a href="#projects" data-i18n="nav_projects">Projects</a>
+      <a href="#portfolio" data-i18n="nav_portfolio">Portfolio</a>
       <a href="#team" data-i18n="nav_team">Team</a>
       <a href="#services" data-i18n="nav_services">Services</a>
       <a href="#contact" data-i18n="nav_contact">Contact</a>
@@ -161,6 +162,36 @@
           <h3 data-i18n="project8_title">Messenger apps</h3>
           <p data-i18n="project8_text">We delivered messenger applications with real-time communication, scalable architecture, and user-focused interfaces for fast, reliable interaction.</p>
         </article>
+      </div>
+    </section>
+
+    <section id="portfolio" class="section reveal">
+      <div class="section-heading">
+        <p class="eyebrow" data-i18n="portfolio_eyebrow">Portfolio</p>
+        <h2 data-i18n="portfolio_title">Selected products you can explore</h2>
+        <p class="section-lead" data-i18n="portfolio_lead">Open a project to see the story, the product flow, and visuals from the interface.</p>
+      </div>
+      <div class="portfolio-grid">
+        <a class="portfolio-card" href="projects/courier_new.html">
+          <div class="portfolio-badge" data-i18n="portfolio_card1_badge">Mobile App</div>
+          <h3 data-i18n="portfolio_card1_title">FindCourier</h3>
+          <p data-i18n="portfolio_card1_text">Courier marketplace app with listings, messaging, and delivery tracking flows.</p>
+          <div class="portfolio-tags">
+            <span data-i18n="portfolio_card1_tag1">React Native</span>
+            <span data-i18n="portfolio_card1_tag2">Marketplace</span>
+            <span data-i18n="portfolio_card1_tag3">Messaging</span>
+          </div>
+        </a>
+        <a class="portfolio-card" href="projects/vercel.html">
+          <div class="portfolio-badge" data-i18n="portfolio_card2_badge">E-commerce</div>
+          <h3 data-i18n="portfolio_card2_title">KOVKERT</h3>
+          <p data-i18n="portfolio_card2_text">Marketplace for building materials with catalog, search, basket, and checkout.</p>
+          <div class="portfolio-tags">
+            <span data-i18n="portfolio_card2_tag1">Next.js</span>
+            <span data-i18n="portfolio_card2_tag2">PWA</span>
+            <span data-i18n="portfolio_card2_tag3">Marketplace</span>
+          </div>
+        </a>
       </div>
     </section>
 
@@ -252,7 +283,7 @@
     const translations = {
       en: {
         menu_toggle: 'Menu',
-        nav_home: 'Home', nav_projects: 'Projects', nav_team: 'Team', nav_services: 'Services', nav_contact: 'Contact',
+        nav_home: 'Home', nav_projects: 'Projects', nav_portfolio: 'Portfolio', nav_team: 'Team', nav_services: 'Services', nav_contact: 'Contact',
         hero_eyebrow: 'Automation-First IT Team',
         hero_title: 'We engineer intelligent systems that automate what matters.',
         hero_lead: 'We design, build, and scale high-performance software. We also provide consulting and product delivery guarantee unlike many other companies.',
@@ -272,6 +303,20 @@
         project6_title: 'Delivery apps', project6_text: 'We developed delivery applications with real-time tracking, smart notifications, and streamlined logistics processes that improve customer experience and speed.',
         project7_title: 'Telegram bots', project7_text: 'We created Telegram bots that automate routine operations, customer communication, and internal workflows to reduce manual work and improve response time.',
         project8_title: 'Messenger apps', project8_text: 'We delivered messenger applications with real-time communication, scalable architecture, and user-focused interfaces for fast, reliable interaction.',
+        portfolio_eyebrow: 'Portfolio', portfolio_title: 'Selected products you can explore',
+        portfolio_lead: 'Open a project to see the story, the product flow, and visuals from the interface.',
+        portfolio_card1_badge: 'Mobile App',
+        portfolio_card1_title: 'FindCourier',
+        portfolio_card1_text: 'Courier marketplace app with listings, messaging, and delivery tracking flows.',
+        portfolio_card1_tag1: 'React Native',
+        portfolio_card1_tag2: 'Marketplace',
+        portfolio_card1_tag3: 'Messaging',
+        portfolio_card2_badge: 'E-commerce',
+        portfolio_card2_title: 'KOVKERT',
+        portfolio_card2_text: 'Marketplace for building materials with catalog, search, basket, and checkout.',
+        portfolio_card2_tag1: 'Next.js',
+        portfolio_card2_tag2: 'PWA',
+        portfolio_card2_tag3: 'Marketplace',
         team_eyebrow: 'Team', team_title: 'Leadership',
         team1_title: 'Nekoula | CEO, CTO', team1_text: 'Expert with 9 years of experience in IT, software development, and project management.',
         team2_title: 'Ruslan | Tech Lead', team2_text: 'Experienced developer with expertise in creating and supporting high-load applications.',
@@ -289,7 +334,7 @@
       },
       ru: {
         menu_toggle: 'Меню',
-        nav_home: 'Главная', nav_projects: 'Проекты', nav_team: 'Команда', nav_services: 'Услуги', nav_contact: 'Контакты',
+        nav_home: 'Главная', nav_projects: 'Проекты', nav_portfolio: 'Портфолио', nav_team: 'Команда', nav_services: 'Услуги', nav_contact: 'Контакты',
         hero_eyebrow: 'IT-команда с фокусом на автоматизацию',
         hero_title: 'Мы проектируем интеллектуальные системы, автоматизирующие самое важное.',
         hero_lead: 'Мы проектируем, разрабатываем и масштабируем высокопроизводительные продукты. Также предоставляем консалтинг и гарантию на результат, в отличие от многих компаний.',
@@ -309,6 +354,20 @@
         project6_title: 'Delivery-приложения', project6_text: 'Разрабатывали сервисы доставки с трекингом в реальном времени, умными уведомлениями и оптимизированной логистикой.',
         project7_title: 'Telegram-боты', project7_text: 'Создавали Telegram-ботов для автоматизации рутины, коммуникации с клиентами и внутренних процессов.',
         project8_title: 'Мессенджер-приложения', project8_text: 'Разрабатывали мессенджеры с коммуникацией в реальном времени, масштабируемой архитектурой и удобным интерфейсом.',
+        portfolio_eyebrow: 'Портфолио', portfolio_title: 'Избранные проекты с подробностями',
+        portfolio_lead: 'Откройте проект, чтобы увидеть историю, пользовательские сценарии и визуальные фрагменты интерфейса.',
+        portfolio_card1_badge: 'Мобильное приложение',
+        portfolio_card1_title: 'FindCourier',
+        portfolio_card1_text: 'Маркетплейс курьеров с объявлениями, чатом и потоками доставки.',
+        portfolio_card1_tag1: 'React Native',
+        portfolio_card1_tag2: 'Маркетплейс',
+        portfolio_card1_tag3: 'Сообщения',
+        portfolio_card2_badge: 'E-commerce',
+        portfolio_card2_title: 'KOVKERT',
+        portfolio_card2_text: 'Маркетплейс стройматериалов с каталогом, поиском, корзиной и оформлением заказа.',
+        portfolio_card2_tag1: 'Next.js',
+        portfolio_card2_tag2: 'PWA',
+        portfolio_card2_tag3: 'Маркетплейс',
         team_eyebrow: 'Команда', team_title: 'Лидеры',
         team1_title: 'Nekoula | CEO, CTO', team1_text: 'Эксперт с 9-летним опытом в IT, разработке программных продуктов и управлении проектами.',
         team2_title: 'Ruslan | Tech Lead', team2_text: 'Опытный разработчик, специализируется на создании и поддержке high-load приложений.',
@@ -326,7 +385,7 @@
       },
       ar: {
         menu_toggle: 'القائمة',
-        nav_home: 'الرئيسية', nav_projects: 'المشاريع', nav_team: 'الفريق', nav_services: 'الخدمات', nav_contact: 'التواصل',
+        nav_home: 'الرئيسية', nav_projects: 'المشاريع', nav_portfolio: 'أعمالنا', nav_team: 'الفريق', nav_services: 'الخدمات', nav_contact: 'التواصل',
         hero_eyebrow: 'فريق تقني يعتمد الأتمتة أولا',
         hero_title: 'نصمم أنظمة ذكية تؤتمت ما هو مهم.',
         hero_lead: 'نصمم ونبني ونوسع منتجات برمجية عالية الأداء. كما نقدم الاستشارات وضمانا على التسليم بخلاف كثير من الشركات.',
@@ -346,6 +405,20 @@
         project6_title: 'تطبيقات التوصيل', project6_text: 'طورنا تطبيقات توصيل بتتبع لحظي وإشعارات ذكية وتدفقات لوجستية أكثر كفاءة.',
         project7_title: 'بوتات تيليجرام', project7_text: 'أنشأنا بوتات تيليجرام لأتمتة المهام المتكررة والتواصل مع العملاء والعمليات الداخلية.',
         project8_title: 'تطبيقات المراسلة', project8_text: 'سلمنا تطبيقات مراسلة بتواصل فوري وهندسة قابلة للتوسع وتجربة استخدام سلسة.',
+        portfolio_eyebrow: 'أعمالنا', portfolio_title: 'منتجات مختارة يمكنك استكشافها',
+        portfolio_lead: 'افتح أي مشروع للاطلاع على القصة ومسار المنتج ولمحات من الواجهة.',
+        portfolio_card1_badge: 'تطبيق جوال',
+        portfolio_card1_title: 'FindCourier',
+        portfolio_card1_text: 'منصة تربط العملاء بالناقلين مع الإعلانات والمراسلة وتدفقات التوصيل.',
+        portfolio_card1_tag1: 'React Native',
+        portfolio_card1_tag2: 'منصة سوق',
+        portfolio_card1_tag3: 'مراسلة',
+        portfolio_card2_badge: 'تجارة إلكترونية',
+        portfolio_card2_title: 'KOVKERT',
+        portfolio_card2_text: 'سوق لمواد البناء مع كتالوج وبحث وسلة وتسوية الطلب.',
+        portfolio_card2_tag1: 'Next.js',
+        portfolio_card2_tag2: 'PWA',
+        portfolio_card2_tag3: 'منصة سوق',
         team_eyebrow: 'الفريق', team_title: 'القيادة',
         team1_title: 'Nekoula | CEO, CTO', team1_text: 'خبير بخبرة 9 سنوات في التقنية وتطوير البرمجيات وإدارة المشاريع.',
         team2_title: 'Ruslan | Tech Lead', team2_text: 'مطور خبير في بناء ودعم التطبيقات عالية التحمل.',

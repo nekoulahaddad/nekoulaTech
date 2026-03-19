@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>FindCourier | Project Portfolio</title>
+  <meta name="description" content="FindCourier is a mobile marketplace that connects people who need delivery with trusted couriers. Explore the product flow, features, and interface highlights.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Sora:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/custom.css">
+  <style>
+    body {
+      background: radial-gradient(circle at 20% 0%, #1d1d1d 0%, #0b0b0b 45%, #060606 100%);
+    }
+
+    .project-shell {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 40px 6vw 80px;
+    }
+
+    .project-topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 30px;
+    }
+
+    .topbar-tools {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .project-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: var(--white);
+      font-weight: 700;
+      border: 1px solid #ffffff2a;
+      border-radius: 999px;
+      padding: 8px 14px;
+      transition: transform 0.2s ease, border 0.2s ease;
+    }
+
+    .project-back:hover {
+      transform: translateY(-2px);
+      border-color: #ffffff55;
+    }
+
+    .project-hero {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 26px;
+      align-items: center;
+      margin-bottom: 28px;
+    }
+
+    .project-hero .eyebrow {
+      margin-bottom: 14px;
+    }
+
+    .project-hero h1 {
+      font-size: clamp(2.1rem, 4vw, 3.6rem);
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .meta-pill {
+      border: 1px solid #ffffff2a;
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 0.8rem;
+      color: #e0e0e0;
+      background: #ffffff12;
+    }
+
+    .project-overview {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: linear-gradient(160deg, #181818 0%, #101010 100%);
+      padding: 26px;
+      box-shadow: var(--shadow);
+    }
+
+    .project-overview h3 {
+      margin-bottom: 12px;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .feature-card {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 20px;
+      background: linear-gradient(155deg, #1a1a1a, #0f0f0f);
+      min-height: 150px;
+    }
+
+    .feature-card p {
+      color: var(--muted);
+      margin: 8px 0 0;
+    }
+
+    .flow-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .flow-card {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 18px;
+      background: linear-gradient(155deg, #1a1a1a, #0f0f0f);
+    }
+
+    .flow-card ul {
+      padding-left: 18px;
+      margin: 12px 0 0;
+      color: var(--muted);
+    }
+
+    .interface-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .phone {
+      border: 1px solid #ffffff2a;
+      border-radius: 28px;
+      background: #0a0a0a;
+      padding: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .phone-screen {
+      background: #f6f7fb;
+      border-radius: 20px;
+      padding: 14px;
+      color: #111;
+      font-family: "Manrope", sans-serif;
+      min-height: 380px;
+    }
+
+    .phone-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-weight: 700;
+      font-size: 0.95rem;
+      margin-bottom: 12px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4px 8px;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      background: #e9ecf4;
+      color: #555;
+      margin-right: 6px;
+    }
+
+    .card-lite {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 12px;
+      margin-bottom: 10px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    }
+
+    .card-lite h4 {
+      margin: 0 0 6px;
+      font-size: 0.92rem;
+    }
+
+    .card-lite p {
+      margin: 0;
+      color: #555;
+      font-size: 0.82rem;
+    }
+
+    .input-lite {
+      background: #f3f4f8;
+      border-radius: 10px;
+      padding: 8px 10px;
+      font-size: 0.8rem;
+      color: #444;
+      margin-bottom: 8px;
+    }
+
+    .stack-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .stack-card {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 18px;
+      background: linear-gradient(155deg, #1a1a1a, #0f0f0f);
+    }
+
+    .stack-card ul {
+      margin: 10px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    @media (max-width: 1080px) {
+      .project-hero {
+        grid-template-columns: 1fr;
+      }
+
+      .feature-grid,
+      .interface-grid,
+      .stack-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 780px) {
+      .project-topbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .topbar-tools {
+        width: 100%;
+        justify-content: flex-start;
+      }
+
+      .feature-grid,
+      .flow-grid,
+      .interface-grid,
+      .stack-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <div class="project-shell">
+    <div class="project-topbar">
+      <a class="project-back" href="../index.html" data-i18n="back_link">Back to Nekoula Tech</a>
+      <div class="topbar-tools">
+        <span class="meta-pill" data-i18n="meta_type">Mobile Marketplace</span>
+        <div class="lang-switch" role="group" aria-label="Language switcher">
+          <button type="button" data-lang="en" class="is-active">EN</button>
+          <button type="button" data-lang="ru">RU</button>
+          <button type="button" data-lang="ar">AR</button>
+        </div>
+      </div>
+    </div>
+
+    <section class="project-hero">
+      <div>
+        <p class="eyebrow" data-i18n="hero_eyebrow">Courier Marketplace App</p>
+        <h1 data-i18n="hero_title">FindCourier</h1>
+        <p class="lead" data-i18n="hero_lead">
+          FindCourier connects people who need delivery with verified couriers.
+          The product focuses on fast listing creation, route-based search, real-time messaging, and trustworthy profiles.
+        </p>
+        <div class="hero-meta">
+          <span class="meta-pill" data-i18n="hero_meta1">React Native + Expo</span>
+          <span class="meta-pill" data-i18n="hero_meta2">Real-time Chat</span>
+          <span class="meta-pill" data-i18n="hero_meta3">Deep Links</span>
+          <span class="meta-pill" data-i18n="hero_meta4">Push Notifications</span>
+        </div>
+      </div>
+      <div class="project-overview">
+        <h3 data-i18n="overview_title">Product Overview</h3>
+        <p data-i18n="overview_text">
+          Users create delivery ads with routes, dates, weight, price, and photos.
+          Couriers discover jobs through a route-based search flow, chat with the requester, and move deliveries through active and completed states.
+        </p>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <h3 data-i18n="feature1_title">Ad Marketplace</h3>
+            <p data-i18n="feature1_text">Active and completed listings with status tracking, photos, and pricing.</p>
+          </div>
+          <div class="feature-card">
+            <h3 data-i18n="feature2_title">Messaging Layer</h3>
+            <p data-i18n="feature2_text">One-to-one conversations, notifications, and real-time updates.</p>
+          </div>
+          <div class="feature-card">
+            <h3 data-i18n="feature3_title">Trust Signals</h3>
+            <p data-i18n="feature3_text">Profiles, reviews, verification, and favorites to build confidence.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow" data-i18n="flows_eyebrow">User Flows</p>
+        <h2 data-i18n="flows_title">Clear paths for requesters and couriers</h2>
+      </div>
+      <div class="flow-grid">
+        <div class="flow-card">
+          <h3 data-i18n="flow1_title">Requester Flow</h3>
+          <ul>
+            <li data-i18n="flow1_item1">Create an ad with route, dates, weight, and budget.</li>
+            <li data-i18n="flow1_item2">Attach photos and comments for package details.</li>
+            <li data-i18n="flow1_item3">Chat with couriers and confirm the delivery.</li>
+            <li data-i18n="flow1_item4">Track active deliveries and close completed jobs.</li>
+          </ul>
+        </div>
+        <div class="flow-card">
+          <h3 data-i18n="flow2_title">Courier Flow</h3>
+          <ul>
+            <li data-i18n="flow2_item1">Search deliveries by route and dates.</li>
+            <li data-i18n="flow2_item2">Open listing details, save favorites, and message customers.</li>
+            <li data-i18n="flow2_item3">Manage active and completed deliveries in one hub.</li>
+            <li data-i18n="flow2_item4">Collect reviews and grow profile reputation.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow" data-i18n="ui_eyebrow">Interface Highlights</p>
+        <h2 data-i18n="ui_title">Rendered fragments of the mobile UI</h2>
+      </div>
+      <div class="interface-grid">
+        <div class="phone">
+          <div class="phone-screen">
+            <div class="phone-header">
+              <span data-i18n="ui_search_title">Search</span>
+              <span class="pill" data-i18n="ui_search_pill">Filters</span>
+            </div>
+            <div class="input-lite" data-i18n="ui_search_input1">From: Moscow</div>
+            <div class="input-lite" data-i18n="ui_search_input2">To: Saint Petersburg</div>
+            <div class="input-lite" data-i18n="ui_search_input3">Date: Apr 22</div>
+            <div>
+              <span class="pill" data-i18n="ui_search_tag1">Up to 5 kg</span>
+              <span class="pill" data-i18n="ui_search_tag2">Today</span>
+            </div>
+            <div class="card-lite">
+              <h4 data-i18n="ui_search_card1_title">Documents delivery</h4>
+              <p data-i18n="ui_search_card1_text">Budget: 2,000 RUB · 4 hours left</p>
+            </div>
+            <div class="card-lite">
+              <h4 data-i18n="ui_search_card2_title">Small package</h4>
+              <p data-i18n="ui_search_card2_text">Budget: 3,500 RUB · Photos attached</p>
+            </div>
+          </div>
+        </div>
+        <div class="phone">
+          <div class="phone-screen">
+            <div class="phone-header">
+              <span data-i18n="ui_create_title">Create Ad</span>
+              <span class="pill" data-i18n="ui_create_pill">Step 1</span>
+            </div>
+            <div class="input-lite" data-i18n="ui_create_input1">Title: Sneakers box</div>
+            <div class="input-lite" data-i18n="ui_create_input2">Weight: 2 kg</div>
+            <div class="input-lite" data-i18n="ui_create_input3">Price: 1,800 RUB</div>
+            <div class="input-lite" data-i18n="ui_create_input4">Deadline: Apr 25</div>
+            <div class="card-lite">
+              <h4 data-i18n="ui_create_card1_title">Photos</h4>
+              <p data-i18n="ui_create_card1_text">3 images uploaded</p>
+            </div>
+            <div class="card-lite">
+              <h4 data-i18n="ui_create_card2_title">Comment</h4>
+              <p data-i18n="ui_create_card2_text">Handle with care, fragile item.</p>
+            </div>
+          </div>
+        </div>
+        <div class="phone">
+          <div class="phone-screen">
+            <div class="phone-header">
+              <span data-i18n="ui_chat_title">Conversation</span>
+              <span class="pill" data-i18n="ui_chat_pill">Online</span>
+            </div>
+            <div class="card-lite">
+              <h4 data-i18n="ui_chat_card1_title">Courier Alex</h4>
+              <p data-i18n="ui_chat_card1_text">Can pick up after 6pm. Confirm?</p>
+            </div>
+            <div class="card-lite">
+              <h4 data-i18n="ui_chat_card2_title">You</h4>
+              <p data-i18n="ui_chat_card2_text">Yes, please. Address shared.</p>
+            </div>
+            <div class="card-lite">
+              <h4 data-i18n="ui_chat_card3_title">Status</h4>
+              <p data-i18n="ui_chat_card3_text">Delivery marked active. ETA 2 hours.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow" data-i18n="stack_eyebrow">Tech Stack</p>
+        <h2 data-i18n="stack_title">Built for fast mobile delivery</h2>
+      </div>
+      <div class="stack-grid">
+        <div class="stack-card">
+          <h3 data-i18n="stack1_title">Frontend</h3>
+          <ul>
+            <li data-i18n="stack1_item1">React Native with Expo tooling</li>
+            <li data-i18n="stack1_item2">React Navigation with deep links</li>
+            <li data-i18n="stack1_item3">Redux Toolkit state management</li>
+          </ul>
+        </div>
+        <div class="stack-card">
+          <h3 data-i18n="stack2_title">Product Features</h3>
+          <ul>
+            <li data-i18n="stack2_item1">OTP and social authentication</li>
+            <li data-i18n="stack2_item2">Route search and calendar selection</li>
+            <li data-i18n="stack2_item3">Image uploads, reviews, favorites</li>
+          </ul>
+        </div>
+        <div class="stack-card">
+          <h3 data-i18n="stack3_title">Realtime</h3>
+          <ul>
+            <li data-i18n="stack3_item1">Socket-driven conversations</li>
+            <li data-i18n="stack3_item2">Push notifications via Expo</li>
+            <li data-i18n="stack3_item3">Localization and multi-language support</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const langButtons = document.querySelectorAll('.lang-switch button');
+
+    const translations = {
+      en: {
+        back_link: 'Back to Nekoula Tech',
+        meta_type: 'Mobile Marketplace',
+        hero_eyebrow: 'Courier Marketplace App',
+        hero_title: 'FindCourier',
+        hero_lead: 'FindCourier connects people who need delivery with verified couriers. The product focuses on fast listing creation, route-based search, real-time messaging, and trustworthy profiles.',
+        hero_meta1: 'React Native + Expo',
+        hero_meta2: 'Real-time Chat',
+        hero_meta3: 'Deep Links',
+        hero_meta4: 'Push Notifications',
+        overview_title: 'Product Overview',
+        overview_text: 'Users create delivery ads with routes, dates, weight, price, and photos. Couriers discover jobs through a route-based search flow, chat with the requester, and move deliveries through active and completed states.',
+        feature1_title: 'Ad Marketplace',
+        feature1_text: 'Active and completed listings with status tracking, photos, and pricing.',
+        feature2_title: 'Messaging Layer',
+        feature2_text: 'One-to-one conversations, notifications, and real-time updates.',
+        feature3_title: 'Trust Signals',
+        feature3_text: 'Profiles, reviews, verification, and favorites to build confidence.',
+        flows_eyebrow: 'User Flows',
+        flows_title: 'Clear paths for requesters and couriers',
+        flow1_title: 'Requester Flow',
+        flow1_item1: 'Create an ad with route, dates, weight, and budget.',
+        flow1_item2: 'Attach photos and comments for package details.',
+        flow1_item3: 'Chat with couriers and confirm the delivery.',
+        flow1_item4: 'Track active deliveries and close completed jobs.',
+        flow2_title: 'Courier Flow',
+        flow2_item1: 'Search deliveries by route and dates.',
+        flow2_item2: 'Open listing details, save favorites, and message customers.',
+        flow2_item3: 'Manage active and completed deliveries in one hub.',
+        flow2_item4: 'Collect reviews and grow profile reputation.',
+        ui_eyebrow: 'Interface Highlights',
+        ui_title: 'Rendered fragments of the mobile UI',
+        ui_search_title: 'Search',
+        ui_search_pill: 'Filters',
+        ui_search_input1: 'From: Moscow',
+        ui_search_input2: 'To: Saint Petersburg',
+        ui_search_input3: 'Date: Apr 22',
+        ui_search_tag1: 'Up to 5 kg',
+        ui_search_tag2: 'Today',
+        ui_search_card1_title: 'Documents delivery',
+        ui_search_card1_text: 'Budget: 2,000 RUB · 4 hours left',
+        ui_search_card2_title: 'Small package',
+        ui_search_card2_text: 'Budget: 3,500 RUB · Photos attached',
+        ui_create_title: 'Create Ad',
+        ui_create_pill: 'Step 1',
+        ui_create_input1: 'Title: Sneakers box',
+        ui_create_input2: 'Weight: 2 kg',
+        ui_create_input3: 'Price: 1,800 RUB',
+        ui_create_input4: 'Deadline: Apr 25',
+        ui_create_card1_title: 'Photos',
+        ui_create_card1_text: '3 images uploaded',
+        ui_create_card2_title: 'Comment',
+        ui_create_card2_text: 'Handle with care, fragile item.',
+        ui_chat_title: 'Conversation',
+        ui_chat_pill: 'Online',
+        ui_chat_card1_title: 'Courier Alex',
+        ui_chat_card1_text: 'Can pick up after 6pm. Confirm?',
+        ui_chat_card2_title: 'You',
+        ui_chat_card2_text: 'Yes, please. Address shared.',
+        ui_chat_card3_title: 'Status',
+        ui_chat_card3_text: 'Delivery marked active. ETA 2 hours.',
+        stack_eyebrow: 'Tech Stack',
+        stack_title: 'Built for fast mobile delivery',
+        stack1_title: 'Frontend',
+        stack1_item1: 'React Native with Expo tooling',
+        stack1_item2: 'React Navigation with deep links',
+        stack1_item3: 'Redux Toolkit state management',
+        stack2_title: 'Product Features',
+        stack2_item1: 'OTP and social authentication',
+        stack2_item2: 'Route search and calendar selection',
+        stack2_item3: 'Image uploads, reviews, favorites',
+        stack3_title: 'Realtime',
+        stack3_item1: 'Socket-driven conversations',
+        stack3_item2: 'Push notifications via Expo',
+        stack3_item3: 'Localization and multi-language support'
+      },
+      ru: {
+        back_link: 'Назад на Nekoula Tech',
+        meta_type: 'Мобильный маркетплейс',
+        hero_eyebrow: 'Маркетплейс курьерских услуг',
+        hero_title: 'FindCourier',
+        hero_lead: 'FindCourier соединяет тех, кому нужна доставка, с проверенными курьерами. Продукт фокусируется на быстром создании объявлений, поиске по маршруту, чатах в реальном времени и надежных профилях.',
+        hero_meta1: 'React Native + Expo',
+        hero_meta2: 'Чат в реальном времени',
+        hero_meta3: 'Deep links',
+        hero_meta4: 'Push-уведомления',
+        overview_title: 'Обзор продукта',
+        overview_text: 'Пользователи создают объявления с маршрутом, датами, весом, ценой и фото. Курьеры находят заказы через поиск по маршруту, общаются с заказчиком и переводят доставки в активные и завершенные.',
+        feature1_title: 'Маркетплейс объявлений',
+        feature1_text: 'Активные и завершенные объявления со статусами, фото и ценой.',
+        feature2_title: 'Слой сообщений',
+        feature2_text: 'Диалоги один-на-один, уведомления и обновления в реальном времени.',
+        feature3_title: 'Доверие и репутация',
+        feature3_text: 'Профили, отзывы, верификация и избранное для уверенности.',
+        flows_eyebrow: 'Сценарии',
+        flows_title: 'Понятные маршруты для заказчиков и курьеров',
+        flow1_title: 'Сценарий заказчика',
+        flow1_item1: 'Создать объявление с маршрутом, датами, весом и бюджетом.',
+        flow1_item2: 'Добавить фото и комментарии о посылке.',
+        flow1_item3: 'Обсудить детали с курьером и подтвердить доставку.',
+        flow1_item4: 'Отслеживать активные доставки и закрывать завершенные.',
+        flow2_title: 'Сценарий курьера',
+        flow2_item1: 'Искать доставки по маршруту и датам.',
+        flow2_item2: 'Открывать детали, сохранять избранное и писать клиентам.',
+        flow2_item3: 'Вести активные и завершенные доставки в одном разделе.',
+        flow2_item4: 'Собирать отзывы и повышать рейтинг профиля.',
+        ui_eyebrow: 'Интерфейс',
+        ui_title: 'Фрагменты мобильного UI',
+        ui_search_title: 'Поиск',
+        ui_search_pill: 'Фильтры',
+        ui_search_input1: 'Откуда: Москва',
+        ui_search_input2: 'Куда: Санкт-Петербург',
+        ui_search_input3: 'Дата: 22 апр',
+        ui_search_tag1: 'До 5 кг',
+        ui_search_tag2: 'Сегодня',
+        ui_search_card1_title: 'Доставка документов',
+        ui_search_card1_text: 'Бюджет: 2 000 ₽ · Осталось 4 часа',
+        ui_search_card2_title: 'Небольшая посылка',
+        ui_search_card2_text: 'Бюджет: 3 500 ₽ · Есть фото',
+        ui_create_title: 'Создать объявление',
+        ui_create_pill: 'Шаг 1',
+        ui_create_input1: 'Название: Коробка кроссовок',
+        ui_create_input2: 'Вес: 2 кг',
+        ui_create_input3: 'Цена: 1 800 ₽',
+        ui_create_input4: 'Срок: 25 апр',
+        ui_create_card1_title: 'Фото',
+        ui_create_card1_text: 'Загружено 3 изображения',
+        ui_create_card2_title: 'Комментарий',
+        ui_create_card2_text: 'Хрупкий груз, аккуратно.',
+        ui_chat_title: 'Диалог',
+        ui_chat_pill: 'Онлайн',
+        ui_chat_card1_title: 'Курьер Алекс',
+        ui_chat_card1_text: 'Смогу забрать после 18:00. Подтверждаем?',
+        ui_chat_card2_title: 'Вы',
+        ui_chat_card2_text: 'Да, подтверждаю. Адрес отправил.',
+        ui_chat_card3_title: 'Статус',
+        ui_chat_card3_text: 'Доставка активна. ETA 2 часа.',
+        stack_eyebrow: 'Технологии',
+        stack_title: 'Собрано для быстрой мобильной доставки',
+        stack1_title: 'Фронтенд',
+        stack1_item1: 'React Native с Expo',
+        stack1_item2: 'React Navigation с deep links',
+        stack1_item3: 'Redux Toolkit для стейта',
+        stack2_title: 'Функции продукта',
+        stack2_item1: 'OTP и соц. авторизация',
+        stack2_item2: 'Поиск маршрутов и календарь',
+        stack2_item3: 'Загрузка фото, отзывы, избранное',
+        stack3_title: 'Realtime',
+        stack3_item1: 'Socket-диалоги',
+        stack3_item2: 'Push-уведомления через Expo',
+        stack3_item3: 'Локализация и многоязычность'
+      },
+      ar: {
+        back_link: 'العودة إلى Nekoula Tech',
+        meta_type: 'سوق عبر الهاتف',
+        hero_eyebrow: 'تطبيق سوق للناقلين',
+        hero_title: 'FindCourier',
+        hero_lead: 'يربط FindCourier بين من يحتاجون إلى التوصيل وبين ناقلين موثوقين. يركز المنتج على إنشاء الإعلانات بسرعة والبحث حسب المسار والمراسلة الفورية وملفات موثوقة.',
+        hero_meta1: 'React Native + Expo',
+        hero_meta2: 'محادثة فورية',
+        hero_meta3: 'روابط عميقة',
+        hero_meta4: 'إشعارات فورية',
+        overview_title: 'نظرة عامة',
+        overview_text: 'ينشئ المستخدمون إعلانات توصيل مع المسار والتواريخ والوزن والسعر والصور. يعثر الناقلون على الطلبات عبر بحث المسارات، ويتواصلون مع العميل، وينقلون التوصيلات بين الحالات النشطة والمنتهية.',
+        feature1_title: 'سوق الإعلانات',
+        feature1_text: 'إعلانات نشطة ومنتهية مع تتبع الحالة والصور والأسعار.',
+        feature2_title: 'طبقة المراسلة',
+        feature2_text: 'محادثات فردية وإشعارات وتحديثات فورية.',
+        feature3_title: 'مؤشرات الثقة',
+        feature3_text: 'ملفات شخصية ومراجعات وتحقق ومفضلات لبناء الثقة.',
+        flows_eyebrow: 'مسارات المستخدمين',
+        flows_title: 'مسارات واضحة للمرسلين والناقلين',
+        flow1_title: 'مسار المرسل',
+        flow1_item1: 'إنشاء إعلان مع المسار والتواريخ والوزن والميزانية.',
+        flow1_item2: 'إرفاق الصور والتعليقات حول الطرد.',
+        flow1_item3: 'المحادثة مع الناقلين وتأكيد التوصيل.',
+        flow1_item4: 'متابعة التوصيلات النشطة وإغلاق المنتهية.',
+        flow2_title: 'مسار الناقل',
+        flow2_item1: 'البحث عن التوصيلات حسب المسار والتواريخ.',
+        flow2_item2: 'فتح التفاصيل وحفظ المفضلات ومراسلة العملاء.',
+        flow2_item3: 'إدارة التوصيلات النشطة والمنتهية في مكان واحد.',
+        flow2_item4: 'جمع المراجعات ورفع سمعة الملف الشخصي.',
+        ui_eyebrow: 'الواجهة',
+        ui_title: 'مقاطع من واجهة الهاتف',
+        ui_search_title: 'بحث',
+        ui_search_pill: 'فلاتر',
+        ui_search_input1: 'من: موسكو',
+        ui_search_input2: 'إلى: سانت بطرسبرغ',
+        ui_search_input3: 'التاريخ: 22 أبريل',
+        ui_search_tag1: 'حتى 5 كغ',
+        ui_search_tag2: 'اليوم',
+        ui_search_card1_title: 'توصيل مستندات',
+        ui_search_card1_text: 'الميزانية: 2,000 روبل · متبقي 4 ساعات',
+        ui_search_card2_title: 'طرد صغير',
+        ui_search_card2_text: 'الميزانية: 3,500 روبل · صور مرفقة',
+        ui_create_title: 'إنشاء إعلان',
+        ui_create_pill: 'الخطوة 1',
+        ui_create_input1: 'العنوان: صندوق أحذية',
+        ui_create_input2: 'الوزن: 2 كغ',
+        ui_create_input3: 'السعر: 1,800 روبل',
+        ui_create_input4: 'الموعد: 25 أبريل',
+        ui_create_card1_title: 'الصور',
+        ui_create_card1_text: 'تم رفع 3 صور',
+        ui_create_card2_title: 'تعليق',
+        ui_create_card2_text: 'يرجى التعامل بحذر، طرد هش.',
+        ui_chat_title: 'محادثة',
+        ui_chat_pill: 'متصل',
+        ui_chat_card1_title: 'الناقل أليكس',
+        ui_chat_card1_text: 'أستطيع الاستلام بعد السادسة مساءً. هل نؤكد؟',
+        ui_chat_card2_title: 'أنت',
+        ui_chat_card2_text: 'نعم من فضلك. تم إرسال العنوان.',
+        ui_chat_card3_title: 'الحالة',
+        ui_chat_card3_text: 'تم تفعيل التوصيل. الوقت المتوقع ساعتان.',
+        stack_eyebrow: 'التقنيات',
+        stack_title: 'مبني لتوصيل سريع عبر الهاتف',
+        stack1_title: 'الواجهة',
+        stack1_item1: 'React Native مع Expo',
+        stack1_item2: 'React Navigation مع روابط عميقة',
+        stack1_item3: 'Redux Toolkit لإدارة الحالة',
+        stack2_title: 'ميزات المنتج',
+        stack2_item1: 'OTP وتسجيل اجتماعي',
+        stack2_item2: 'بحث المسارات واختيار التواريخ',
+        stack2_item3: 'رفع الصور والمراجعات والمفضلات',
+        stack3_title: 'الزمن الحقيقي',
+        stack3_item1: 'محادثات مدفوعة بـ Socket',
+        stack3_item2: 'إشعارات فورية عبر Expo',
+        stack3_item3: 'دعم متعدد اللغات'
+      }
+    };
+
+    function applyLanguage(lang) {
+      const dict = translations[lang] || translations.en;
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+      document.querySelectorAll('[data-i18n]').forEach((el) => {
+        const key = el.dataset.i18n;
+        if (dict[key]) {
+          el.textContent = dict[key];
+        }
+      });
+
+      langButtons.forEach((btn) => {
+        btn.classList.toggle('is-active', btn.dataset.lang === lang);
+      });
+
+      const url = new URL(window.location.href);
+      if (lang === 'en') {
+        url.searchParams.delete('lang');
+      } else {
+        url.searchParams.set('lang', lang);
+      }
+      history.replaceState({}, '', url);
+
+      localStorage.setItem('site_lang', lang);
+    }
+
+    langButtons.forEach((btn) => {
+      btn.addEventListener('click', () => applyLanguage(btn.dataset.lang));
+    });
+
+    const urlLang = new URLSearchParams(window.location.search).get('lang');
+    const savedLang = localStorage.getItem('site_lang') || 'en';
+    const initialLang = ['en', 'ru', 'ar'].includes(urlLang) ? urlLang : savedLang;
+    applyLanguage(initialLang);
+  </script>
+</body>
+</html>
