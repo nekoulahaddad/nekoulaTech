@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>OpenAMRI | Project Portfolio</title>
+  <meta name="description" content="OpenAMRI is an AI-powered news platform that pairs a conversational chat with a curated, multilingual news feed.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Sora:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/custom.css">
+  <style>
+    :root {
+      --text: #0f172a;
+      --muted: #5b6676;
+      --white: #0f172a;
+      --line: #d8dde5;
+      --card: #ffffff;
+      --card-soft: #f4f6fa;
+      --shadow: 0 16px 46px rgba(15, 23, 42, 0.12);
+    }
+
+    body {
+      background: radial-gradient(circle at 15% 0%, #eaf0ff 0%, #f6f7fb 40%, #f2f3f4 100%);
+      color: var(--text);
+    }
+
+    .bg-grid {
+      background-image: linear-gradient(rgba(15, 23, 42, 0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(15, 23, 42, 0.06) 1px, transparent 1px);
+      mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.7) 35%, transparent 100%);
+    }
+
+    .project-shell {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 40px 6vw 80px;
+    }
+
+    .project-topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 30px;
+    }
+
+    .topbar-tools {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .project-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: var(--white);
+      font-weight: 700;
+      border: 1px solid #0f172a33;
+      border-radius: 999px;
+      padding: 8px 14px;
+      background: #ffffff;
+      transition: transform 0.2s ease, border 0.2s ease;
+    }
+
+    .project-back:hover {
+      transform: translateY(-2px);
+      border-color: #0f172a66;
+    }
+
+    .lang-switch {
+      border: 1px solid #0f172a33;
+      background: #ffffff;
+    }
+
+    .lang-switch button {
+      color: #374151;
+    }
+
+    .lang-switch button.is-active {
+      background: #0f172a;
+      color: #ffffff;
+    }
+
+    .project-hero {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 26px;
+      align-items: center;
+      margin-bottom: 28px;
+    }
+
+    .project-hero .eyebrow {
+      margin-bottom: 14px;
+      color: #364152;
+    }
+
+    .project-hero h1 {
+      font-size: clamp(2.1rem, 4vw, 3.4rem);
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .meta-pill {
+      border: 1px solid #0f172a33;
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 0.8rem;
+      color: #1f2937;
+      background: #ffffff;
+    }
+
+    .project-overview {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--card);
+      padding: 26px;
+      box-shadow: var(--shadow);
+    }
+
+    .project-overview h3 {
+      margin-bottom: 12px;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .feature-card {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 20px;
+      background: var(--card-soft);
+      min-height: 150px;
+    }
+
+    .feature-card p {
+      color: var(--muted);
+      margin: 8px 0 0;
+    }
+
+    .flow-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .flow-card {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 18px;
+      background: var(--card);
+      box-shadow: var(--shadow);
+    }
+
+    .flow-card ul {
+      padding-left: 18px;
+      margin: 12px 0 0;
+      color: var(--muted);
+    }
+
+    .interface-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .ui-panel {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--card);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      min-height: 360px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .ui-header {
+      padding: 12px 16px;
+      background: #0f172a;
+      color: #f8fafc;
+      font-weight: 700;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .ui-subtitle {
+      font-size: 0.75rem;
+      color: #9fb1c9;
+      font-weight: 600;
+    }
+
+    .news-body {
+      padding: 16px;
+      flex: 1;
+      background: #ffffff;
+    }
+
+    .news-item {
+      border: 1px solid #e2e6ee;
+      border-radius: 14px;
+      padding: 12px;
+      background: #f8fafc;
+      margin-bottom: 10px;
+    }
+
+    .news-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .news-item h4 {
+      margin: 0 0 6px;
+      font-size: 0.95rem;
+    }
+
+    .news-item p {
+      margin: 0;
+      font-size: 0.82rem;
+      color: #5b6676;
+    }
+
+    .tag-row {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+
+    .tag-pill {
+      border: 1px solid #cbd5e1;
+      border-radius: 999px;
+      padding: 4px 10px;
+      font-size: 0.72rem;
+      color: #334155;
+      background: #ffffff;
+    }
+
+    .chat-body {
+      padding: 16px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      background: #ffffff;
+    }
+
+    .chat-bubble {
+      padding: 10px 12px;
+      border-radius: 12px;
+      font-size: 0.85rem;
+      line-height: 1.5;
+      max-width: 90%;
+    }
+
+    .chat-bubble.user {
+      align-self: flex-end;
+      background: #0f172a;
+      color: #ffffff;
+    }
+
+    .chat-bubble.ai {
+      align-self: flex-start;
+      background: #eef2ff;
+      color: #1f2937;
+      border: 1px solid #d6dcff;
+    }
+
+    .chat-input {
+      margin-top: auto;
+      border: 1px solid #d6dde8;
+      border-radius: 12px;
+      padding: 8px 10px;
+      font-size: 0.8rem;
+      color: #64748b;
+      background: #f8fafc;
+    }
+
+    .article-body {
+      padding: 16px;
+      flex: 1;
+      background: #ffffff;
+    }
+
+    .article-card {
+      border: 1px solid #e2e6ee;
+      border-radius: 16px;
+      padding: 14px;
+      background: #f8fafc;
+    }
+
+    .article-card h4 {
+      margin: 0 0 8px;
+    }
+
+    .article-card p {
+      margin: 0 0 10px;
+      font-size: 0.85rem;
+      color: #5b6676;
+    }
+
+    .article-meta {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      font-size: 0.75rem;
+      color: #64748b;
+    }
+
+    .stack-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .stack-card {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 18px;
+      background: var(--card);
+      box-shadow: var(--shadow);
+    }
+
+    .stack-card ul {
+      margin: 10px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    @media (max-width: 1080px) {
+      .project-hero {
+        grid-template-columns: 1fr;
+      }
+
+      .feature-grid,
+      .interface-grid,
+      .stack-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 780px) {
+      .project-topbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .topbar-tools {
+        width: 100%;
+        justify-content: flex-start;
+      }
+
+      .feature-grid,
+      .flow-grid,
+      .interface-grid,
+      .stack-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <div class="project-shell">
+    <div class="project-topbar">
+      <a class="project-back" href="../index.html" data-i18n="back_link">Back to Nekoula Tech</a>
+      <div class="topbar-tools">
+        <span class="meta-pill" data-i18n="meta_type">AI News Platform</span>
+        <div class="lang-switch" role="group" aria-label="Language switcher">
+          <button type="button" data-lang="en" class="is-active">EN</button>
+          <button type="button" data-lang="ru">RU</button>
+          <button type="button" data-lang="ar">AR</button>
+        </div>
+      </div>
+    </div>
+
+    <section class="project-hero">
+      <div>
+        <p class="eyebrow" data-i18n="hero_eyebrow">Conversational News Experience</p>
+        <h1 data-i18n="hero_title">OpenAMRI</h1>
+        <p class="lead" data-i18n="hero_lead">
+          OpenAMRI is an AI-powered news platform that pairs a conversation-driven assistant
+          with a curated, multilingual news feed and shareable article pages.
+        </p>
+        <div class="hero-meta">
+          <span class="meta-pill" data-i18n="hero_meta1">Chat + News</span>
+          <span class="meta-pill" data-i18n="hero_meta2">Multilingual</span>
+          <span class="meta-pill" data-i18n="hero_meta3">Article Pages</span>
+          <span class="meta-pill" data-i18n="hero_meta4">Web UI</span>
+        </div>
+      </div>
+      <div class="project-overview">
+        <h3 data-i18n="overview_title">Product Overview</h3>
+        <p data-i18n="overview_text">
+          The experience brings together a news listing, language switching, and a focused chat
+          workspace for discovery. Each story can open as a dedicated page with a clean reading view.
+        </p>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <h3 data-i18n="feature1_title">News Feed</h3>
+            <p data-i18n="feature1_text">Structured lists of stories with clear categories and filters.</p>
+          </div>
+          <div class="feature-card">
+            <h3 data-i18n="feature2_title">Chat Assistant</h3>
+            <p data-i18n="feature2_text">Conversational space to ask questions and summarize topics.</p>
+          </div>
+          <div class="feature-card">
+            <h3 data-i18n="feature3_title">Shareable Pages</h3>
+            <p data-i18n="feature3_text">Readable article views with metadata and quick navigation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow" data-i18n="flows_eyebrow">User Flows</p>
+        <h2 data-i18n="flows_title">From discovery to deep reading</h2>
+      </div>
+      <div class="flow-grid">
+        <div class="flow-card">
+          <h3 data-i18n="flow1_title">Reader Journey</h3>
+          <ul>
+            <li data-i18n="flow1_item1">Browse the latest news and select a category.</li>
+            <li data-i18n="flow1_item2">Open a story card to access the dedicated article view.</li>
+            <li data-i18n="flow1_item3">Switch language while keeping the same navigation.</li>
+            <li data-i18n="flow1_item4">Return to the feed with a single back action.</li>
+          </ul>
+        </div>
+        <div class="flow-card">
+          <h3 data-i18n="flow2_title">Chat Journey</h3>
+          <ul>
+            <li data-i18n="flow2_item1">Ask the assistant for a news summary or topic view.</li>
+            <li data-i18n="flow2_item2">Receive a structured response with key points.</li>
+            <li data-i18n="flow2_item3">Follow up with clarifying questions.</li>
+            <li data-i18n="flow2_item4">Jump back to news to verify details.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow" data-i18n="ui_eyebrow">Interface Highlights</p>
+        <h2 data-i18n="ui_title">Rendered fragments of the web UI</h2>
+      </div>
+      <div class="interface-grid">
+        <div class="ui-panel">
+          <div class="ui-header">
+            <span data-i18n="ui_news_title">News</span>
+            <span class="ui-subtitle" data-i18n="ui_news_subtitle">Latest updates</span>
+          </div>
+          <div class="news-body">
+            <div class="tag-row">
+              <span class="tag-pill" data-i18n="ui_news_tag1">All</span>
+              <span class="tag-pill" data-i18n="ui_news_tag2">Tech</span>
+              <span class="tag-pill" data-i18n="ui_news_tag3">Business</span>
+            </div>
+            <div class="news-item">
+              <h4 data-i18n="ui_news_item1_title">AI policy updates in 2026</h4>
+              <p data-i18n="ui_news_item1_text">Briefing on regulations and market impact.</p>
+            </div>
+            <div class="news-item">
+              <h4 data-i18n="ui_news_item2_title">Cloud spending shifts</h4>
+              <p data-i18n="ui_news_item2_text">Enterprises reassess infrastructure stacks.</p>
+            </div>
+            <div class="news-item">
+              <h4 data-i18n="ui_news_item3_title">Emerging AI research</h4>
+              <p data-i18n="ui_news_item3_text">Summaries of new model releases and labs.</p>
+            </div>
+          </div>
+        </div>
+        <div class="ui-panel">
+          <div class="ui-header">
+            <span data-i18n="ui_chat_title">Chat</span>
+            <span class="ui-subtitle" data-i18n="ui_chat_subtitle">Ask the assistant</span>
+          </div>
+          <div class="chat-body">
+            <div class="chat-bubble user" data-i18n="ui_chat_user1">Summarize today’s top stories.</div>
+            <div class="chat-bubble ai" data-i18n="ui_chat_ai1">Here are the key headlines with short takeaways and links to full articles.</div>
+            <div class="chat-bubble user" data-i18n="ui_chat_user2">Focus on AI infrastructure updates.</div>
+            <div class="chat-bubble ai" data-i18n="ui_chat_ai2">Noted. I pulled the latest hardware and datacenter developments.</div>
+            <div class="chat-input" data-i18n="ui_chat_input">Type your question...</div>
+          </div>
+        </div>
+        <div class="ui-panel">
+          <div class="ui-header">
+            <span data-i18n="ui_article_title">Article</span>
+            <span class="ui-subtitle" data-i18n="ui_article_subtitle">Readable view</span>
+          </div>
+          <div class="article-body">
+            <div class="article-card">
+              <h4 data-i18n="ui_article_headline">AI policy updates in 2026</h4>
+              <p data-i18n="ui_article_summary">A clean reading layout with key points, summary, and metadata.</p>
+              <div class="article-meta">
+                <span data-i18n="ui_article_meta1">OpenAMRI News</span>
+                <span data-i18n="ui_article_meta2">6 min read</span>
+                <span data-i18n="ui_article_meta3">ID: 320f6a...</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow" data-i18n="stack_eyebrow">Tech Stack</p>
+        <h2 data-i18n="stack_title">Modern news delivery</h2>
+      </div>
+      <div class="stack-grid">
+        <div class="stack-card">
+          <h3 data-i18n="stack1_title">Frontend</h3>
+          <ul>
+            <li data-i18n="stack1_item1">Responsive single-page layout</li>
+            <li data-i18n="stack1_item2">Clear typography for reading</li>
+            <li data-i18n="stack1_item3">Interactive panels for chat + feed</li>
+          </ul>
+        </div>
+        <div class="stack-card">
+          <h3 data-i18n="stack2_title">Experience</h3>
+          <ul>
+            <li data-i18n="stack2_item1">Language switcher built into the header</li>
+            <li data-i18n="stack2_item2">Dedicated article routes</li>
+            <li data-i18n="stack2_item3">Fast navigation between chat and news</li>
+          </ul>
+        </div>
+        <div class="stack-card">
+          <h3 data-i18n="stack3_title">Content Ops</h3>
+          <ul>
+            <li data-i18n="stack3_item1">Structured categories and filters</li>
+            <li data-i18n="stack3_item2">AI-assisted summaries</li>
+            <li data-i18n="stack3_item3">Shareable story links</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const langButtons = document.querySelectorAll('.lang-switch button');
+
+    const translations = {
+      en: {
+        back_link: 'Back to Nekoula Tech',
+        meta_type: 'AI News Platform',
+        hero_eyebrow: 'Conversational News Experience',
+        hero_title: 'OpenAMRI',
+        hero_lead: 'OpenAMRI is an AI-powered news platform that pairs a conversation-driven assistant with a curated, multilingual news feed and shareable article pages.',
+        hero_meta1: 'Chat + News',
+        hero_meta2: 'Multilingual',
+        hero_meta3: 'Article Pages',
+        hero_meta4: 'Web UI',
+        overview_title: 'Product Overview',
+        overview_text: 'The experience brings together a news listing, language switching, and a focused chat workspace for discovery. Each story can open as a dedicated page with a clean reading view.',
+        feature1_title: 'News Feed',
+        feature1_text: 'Structured lists of stories with clear categories and filters.',
+        feature2_title: 'Chat Assistant',
+        feature2_text: 'Conversational space to ask questions and summarize topics.',
+        feature3_title: 'Shareable Pages',
+        feature3_text: 'Readable article views with metadata and quick navigation.',
+        flows_eyebrow: 'User Flows',
+        flows_title: 'From discovery to deep reading',
+        flow1_title: 'Reader Journey',
+        flow1_item1: 'Browse the latest news and select a category.',
+        flow1_item2: 'Open a story card to access the dedicated article view.',
+        flow1_item3: 'Switch language while keeping the same navigation.',
+        flow1_item4: 'Return to the feed with a single back action.',
+        flow2_title: 'Chat Journey',
+        flow2_item1: 'Ask the assistant for a news summary or topic view.',
+        flow2_item2: 'Receive a structured response with key points.',
+        flow2_item3: 'Follow up with clarifying questions.',
+        flow2_item4: 'Jump back to news to verify details.',
+        ui_eyebrow: 'Interface Highlights',
+        ui_title: 'Rendered fragments of the web UI',
+        ui_news_title: 'News',
+        ui_news_subtitle: 'Latest updates',
+        ui_news_tag1: 'All',
+        ui_news_tag2: 'Tech',
+        ui_news_tag3: 'Business',
+        ui_news_item1_title: 'AI policy updates in 2026',
+        ui_news_item1_text: 'Briefing on regulations and market impact.',
+        ui_news_item2_title: 'Cloud spending shifts',
+        ui_news_item2_text: 'Enterprises reassess infrastructure stacks.',
+        ui_news_item3_title: 'Emerging AI research',
+        ui_news_item3_text: 'Summaries of new model releases and labs.',
+        ui_chat_title: 'Chat',
+        ui_chat_subtitle: 'Ask the assistant',
+        ui_chat_user1: 'Summarize today’s top stories.',
+        ui_chat_ai1: 'Here are the key headlines with short takeaways and links to full articles.',
+        ui_chat_user2: 'Focus on AI infrastructure updates.',
+        ui_chat_ai2: 'Noted. I pulled the latest hardware and datacenter developments.',
+        ui_chat_input: 'Type your question...',
+        ui_article_title: 'Article',
+        ui_article_subtitle: 'Readable view',
+        ui_article_headline: 'AI policy updates in 2026',
+        ui_article_summary: 'A clean reading layout with key points, summary, and metadata.',
+        ui_article_meta1: 'OpenAMRI News',
+        ui_article_meta2: '6 min read',
+        ui_article_meta3: 'ID: 320f6a...',
+        stack_eyebrow: 'Tech Stack',
+        stack_title: 'Modern news delivery',
+        stack1_title: 'Frontend',
+        stack1_item1: 'Responsive single-page layout',
+        stack1_item2: 'Clear typography for reading',
+        stack1_item3: 'Interactive panels for chat + feed',
+        stack2_title: 'Experience',
+        stack2_item1: 'Language switcher built into the header',
+        stack2_item2: 'Dedicated article routes',
+        stack2_item3: 'Fast navigation between chat and news',
+        stack3_title: 'Content Ops',
+        stack3_item1: 'Structured categories and filters',
+        stack3_item2: 'AI-assisted summaries',
+        stack3_item3: 'Shareable story links'
+      },
+      ru: {
+        back_link: 'Назад на Nekoula Tech',
+        meta_type: 'AI-платформа новостей',
+        hero_eyebrow: 'Новости в диалоговом формате',
+        hero_title: 'OpenAMRI',
+        hero_lead: 'OpenAMRI — AI-платформа новостей, объединяющая чат-ассистента, мультиязычную ленту и отдельные страницы статей.',
+        hero_meta1: 'Чат + Новости',
+        hero_meta2: 'Мультиязычность',
+        hero_meta3: 'Страницы статей',
+        hero_meta4: 'Веб-интерфейс',
+        overview_title: 'Обзор продукта',
+        overview_text: 'Опыт сочетает список новостей, переключение языка и чат для поиска. Каждая история открывается на отдельной странице с удобным чтением.',
+        feature1_title: 'Лента новостей',
+        feature1_text: 'Структурированные списки с категориями и фильтрами.',
+        feature2_title: 'Чат-ассистент',
+        feature2_text: 'Диалоговое пространство для вопросов и кратких выводов.',
+        feature3_title: 'Шеринг страниц',
+        feature3_text: 'Отдельные статьи с метаданными и быстрым доступом.',
+        flows_eyebrow: 'Сценарии',
+        flows_title: 'От поиска к чтению',
+        flow1_title: 'Путь читателя',
+        flow1_item1: 'Просмотр ленты и выбор категории.',
+        flow1_item2: 'Открытие карточки и переход в статью.',
+        flow1_item3: 'Смена языка без потери навигации.',
+        flow1_item4: 'Возврат в ленту одним действием.',
+        flow2_title: 'Путь чата',
+        flow2_item1: 'Запрос краткого обзора или темы.',
+        flow2_item2: 'Получение структурированного ответа.',
+        flow2_item3: 'Уточняющие вопросы в продолжении.',
+        flow2_item4: 'Переход к ленте для проверки.',
+        ui_eyebrow: 'Интерфейс',
+        ui_title: 'Фрагменты веб-интерфейса',
+        ui_news_title: 'Новости',
+        ui_news_subtitle: 'Последние обновления',
+        ui_news_tag1: 'Все',
+        ui_news_tag2: 'Технологии',
+        ui_news_tag3: 'Бизнес',
+        ui_news_item1_title: 'AI-политика в 2026',
+        ui_news_item1_text: 'Кратко о регуляторике и влиянии на рынок.',
+        ui_news_item2_title: 'Сдвиги в облачных расходах',
+        ui_news_item2_text: 'Компании пересматривают инфраструктуру.',
+        ui_news_item3_title: 'Новые исследования AI',
+        ui_news_item3_text: 'Сводки по новым моделям и лабораториям.',
+        ui_chat_title: 'Чат',
+        ui_chat_subtitle: 'Спросите ассистента',
+        ui_chat_user1: 'Сделай обзор главных новостей дня.',
+        ui_chat_ai1: 'Вот ключевые заголовки с краткими выводами и ссылками.',
+        ui_chat_user2: 'Сфокусируйся на AI-инфраструктуре.',
+        ui_chat_ai2: 'Понял. Собрал последние обновления по железу и датацентрам.',
+        ui_chat_input: 'Введите вопрос...',
+        ui_article_title: 'Статья',
+        ui_article_subtitle: 'Удобное чтение',
+        ui_article_headline: 'AI-политика в 2026',
+        ui_article_summary: 'Чистый режим чтения с ключевыми тезисами и метаданными.',
+        ui_article_meta1: 'OpenAMRI News',
+        ui_article_meta2: '6 мин чтения',
+        ui_article_meta3: 'ID: 320f6a...',
+        stack_eyebrow: 'Технологии',
+        stack_title: 'Современная подача новостей',
+        stack1_title: 'Фронтенд',
+        stack1_item1: 'Адаптивный одностраничный интерфейс',
+        stack1_item2: 'Читабельная типографика',
+        stack1_item3: 'Панели чата и ленты',
+        stack2_title: 'Опыт',
+        stack2_item1: 'Переключатель языков в хедере',
+        stack2_item2: 'Отдельные маршруты для статей',
+        stack2_item3: 'Быстрая навигация между чатом и лентой',
+        stack3_title: 'Контент',
+        stack3_item1: 'Структурированные категории и фильтры',
+        stack3_item2: 'AI-резюме статей',
+        stack3_item3: 'Ссылки для шаринга'
+      },
+      ar: {
+        back_link: 'العودة إلى Nekoula Tech',
+        meta_type: 'منصة أخبار بالذكاء الاصطناعي',
+        hero_eyebrow: 'تجربة أخبار محادثية',
+        hero_title: 'OpenAMRI',
+        hero_lead: 'OpenAMRI منصة أخبار بالذكاء الاصطناعي تجمع بين مساعد محادثة وخلاصة متعددة اللغات وصفحات مقالات قابلة للمشاركة.',
+        hero_meta1: 'محادثة + أخبار',
+        hero_meta2: 'متعددة اللغات',
+        hero_meta3: 'صفحات مقالات',
+        hero_meta4: 'واجهة ويب',
+        overview_title: 'نظرة عامة',
+        overview_text: 'تجمع التجربة بين قائمة الأخبار وتبديل اللغة ومساحة محادثة للبحث. كل قصة تفتح في صفحة قراءة مستقلة.',
+        feature1_title: 'خلاصة الأخبار',
+        feature1_text: 'قوائم منظمة مع فئات واضحة وفلاتر.',
+        feature2_title: 'مساعد محادثة',
+        feature2_text: 'مساحة حوار لطرح الأسئلة وتلخيص المواضيع.',
+        feature3_title: 'صفحات قابلة للمشاركة',
+        feature3_text: 'صفحات قراءة مع بيانات وصفية وتنقل سريع.',
+        flows_eyebrow: 'المسارات',
+        flows_title: 'من الاكتشاف إلى القراءة المتعمقة',
+        flow1_title: 'رحلة القارئ',
+        flow1_item1: 'تصفح آخر الأخبار واختر الفئة.',
+        flow1_item2: 'افتح بطاقة الخبر للوصول لصفحة المقال.',
+        flow1_item3: 'بدل اللغة مع الحفاظ على نفس التنقل.',
+        flow1_item4: 'ارجع إلى الخلاصة بخطوة واحدة.',
+        flow2_title: 'رحلة المحادثة',
+        flow2_item1: 'اطلب ملخصًا للأخبار أو موضوعًا معينًا.',
+        flow2_item2: 'استلم ردًا منظمًا مع النقاط الرئيسية.',
+        flow2_item3: 'اطرح أسئلة متابعة للتوضيح.',
+        flow2_item4: 'عد للأخبار للتحقق.',
+        ui_eyebrow: 'الواجهة',
+        ui_title: 'مقاطع من واجهة الويب',
+        ui_news_title: 'الأخبار',
+        ui_news_subtitle: 'آخر التحديثات',
+        ui_news_tag1: 'الكل',
+        ui_news_tag2: 'تقنية',
+        ui_news_tag3: 'أعمال',
+        ui_news_item1_title: 'تحديثات سياسات الذكاء الاصطناعي 2026',
+        ui_news_item1_text: 'ملخص عن اللوائح وتأثيرها على السوق.',
+        ui_news_item2_title: 'تحولات الإنفاق السحابي',
+        ui_news_item2_text: 'الشركات تعيد تقييم البنية التحتية.',
+        ui_news_item3_title: 'أبحاث الذكاء الاصطناعي الناشئة',
+        ui_news_item3_text: 'ملخصات عن النماذج الجديدة والمختبرات.',
+        ui_chat_title: 'المحادثة',
+        ui_chat_subtitle: 'اسأل المساعد',
+        ui_chat_user1: 'لخص أهم أخبار اليوم.',
+        ui_chat_ai1: 'إليك العناوين الرئيسية مع خلاصات وروابط للمقالات.',
+        ui_chat_user2: 'ركز على تحديثات البنية التحتية للذكاء الاصطناعي.',
+        ui_chat_ai2: 'تم. جمعت آخر التطورات في العتاد ومراكز البيانات.',
+        ui_chat_input: 'اكتب سؤالك...',
+        ui_article_title: 'مقال',
+        ui_article_subtitle: 'عرض القراءة',
+        ui_article_headline: 'تحديثات سياسات الذكاء الاصطناعي 2026',
+        ui_article_summary: 'واجهة قراءة نظيفة مع نقاط مهمة وبيانات وصفية.',
+        ui_article_meta1: 'OpenAMRI News',
+        ui_article_meta2: '6 دقائق قراءة',
+        ui_article_meta3: 'ID: 320f6a...',
+        stack_eyebrow: 'التقنيات',
+        stack_title: 'توصيل أخبار حديث',
+        stack1_title: 'الواجهة',
+        stack1_item1: 'واجهة متجاوبة بصفحة واحدة',
+        stack1_item2: 'خطوط واضحة للقراءة',
+        stack1_item3: 'لوحات تفاعلية للمحادثة والخلاصة',
+        stack2_title: 'التجربة',
+        stack2_item1: 'مبدل لغة في الترويسة',
+        stack2_item2: 'مسارات مخصصة للمقالات',
+        stack2_item3: 'تنقل سريع بين المحادثة والأخبار',
+        stack3_title: 'المحتوى',
+        stack3_item1: 'فئات وفلاتر منظمة',
+        stack3_item2: 'ملخصات بمساعدة الذكاء الاصطناعي',
+        stack3_item3: 'روابط قابلة للمشاركة'
+      }
+    };
+
+    function applyLanguage(lang) {
+      const dict = translations[lang] || translations.en;
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+      document.querySelectorAll('[data-i18n]').forEach((el) => {
+        const key = el.dataset.i18n;
+        if (dict[key]) {
+          el.textContent = dict[key];
+        }
+      });
+
+      langButtons.forEach((btn) => {
+        btn.classList.toggle('is-active', btn.dataset.lang === lang);
+      });
+
+      const url = new URL(window.location.href);
+      if (lang === 'en') {
+        url.searchParams.delete('lang');
+      } else {
+        url.searchParams.set('lang', lang);
+      }
+      history.replaceState({}, '', url);
+
+      localStorage.setItem('site_lang', lang);
+    }
+
+    langButtons.forEach((btn) => {
+      btn.addEventListener('click', () => applyLanguage(btn.dataset.lang));
+    });
+
+    const urlLang = new URLSearchParams(window.location.search).get('lang');
+    const savedLang = localStorage.getItem('site_lang') || 'en';
+    const initialLang = ['en', 'ru', 'ar'].includes(urlLang) ? urlLang : savedLang;
+    applyLanguage(initialLang);
+  </script>
+</body>
+</html>
