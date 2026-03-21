@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>P300 Matrix | Project Portfolio</title>
+  <meta name="description" content="P300 Matrix is a brain-computer interface speller with configurable stimulus protocols, timing controls, and experiment logs.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Sora:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/custom.css">
+  <style>
+    :root {
+      --text: #1c2026;
+      --muted: #55606b;
+      --white: #0d1117;
+      --line: #d7dbe1;
+      --card: #ffffff;
+      --card-soft: #f6f7f9;
+      --shadow: 0 14px 40px rgba(22, 30, 42, 0.12);
+    }
+
+    body {
+      background: #f2f3f4;
+      color: var(--text);
+    }
+
+    .bg-grid {
+      background-image: linear-gradient(rgba(14, 18, 25, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(14, 18, 25, 0.05) 1px, transparent 1px);
+      mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.7) 35%, transparent 100%);
+    }
+
+    .project-shell {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 40px 6vw 80px;
+    }
+
+    .project-topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 30px;
+    }
+
+    .topbar-tools {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .project-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: var(--white);
+      font-weight: 700;
+      border: 1px solid #0d111733;
+      border-radius: 999px;
+      padding: 8px 14px;
+      background: #ffffff;
+      transition: transform 0.2s ease, border 0.2s ease;
+    }
+
+    .project-back:hover {
+      transform: translateY(-2px);
+      border-color: #0d111766;
+    }
+
+    .lang-switch {
+      border: 1px solid #0d111733;
+      background: #ffffff;
+    }
+
+    .lang-switch button {
+      color: #3d4650;
+    }
+
+    .lang-switch button.is-active {
+      background: #0d1117;
+      color: #ffffff;
+    }
+
+    .project-hero {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 26px;
+      align-items: center;
+      margin-bottom: 28px;
+    }
+
+    .project-hero .eyebrow {
+      margin-bottom: 14px;
+      color: #3f4c5d;
+    }
+
+    .project-hero h1 {
+      font-size: clamp(2.1rem, 4vw, 3.4rem);
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .meta-pill {
+      border: 1px solid #0d111733;
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 0.8rem;
+      color: #2c333b;
+      background: #ffffff;
+    }
+
+    .project-overview {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--card);
+      padding: 26px;
+      box-shadow: var(--shadow);
+    }
+
+    .project-overview h3 {
+      margin-bottom: 12px;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .feature-card {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 20px;
+      background: var(--card-soft);
+      min-height: 150px;
+    }
+
+    .feature-card p {
+      color: var(--muted);
+      margin: 8px 0 0;
+    }
+
+    .flow-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .flow-card {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 18px;
+      background: var(--card);
+      box-shadow: var(--shadow);
+    }
+
+    .flow-card ul {
+      padding-left: 18px;
+      margin: 12px 0 0;
+      color: var(--muted);
+    }
+
+    .interface-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .ui-panel {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--card);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      min-height: 360px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .ui-header {
+      padding: 12px 16px;
+      background: #0d1117;
+      color: #f2f3f4;
+      font-weight: 700;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .ui-subtitle {
+      font-size: 0.75rem;
+      color: #9fb0c3;
+      font-weight: 600;
+    }
+
+    .matrix-body {
+      background: #0a0a0a;
+      padding: 16px;
+      flex: 1;
+    }
+
+    .matrix-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #0a0a0a;
+    }
+
+    .matrix-table td {
+      border: 1px solid #222;
+      text-align: center;
+      color: #bfc6cf;
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-weight: 700;
+      height: 68px;
+    }
+
+    .matrix-active {
+      background: #ffffff;
+      color: #0a0a0a;
+    }
+
+    .controls-body {
+      padding: 16px;
+      flex: 1;
+      background: #ffffff;
+    }
+
+    .control-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 8px 0;
+      border-bottom: 1px dashed #d5dbe2;
+      font-size: 0.9rem;
+    }
+
+    .control-row:last-child {
+      border-bottom: none;
+    }
+
+    .control-label {
+      color: #5b6570;
+      font-weight: 600;
+    }
+
+    .control-select {
+      background: #f3f5f7;
+      border: 1px solid #d5dbe2;
+      border-radius: 10px;
+      padding: 4px 8px;
+      font-size: 0.85rem;
+    }
+
+    .protocol-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .protocol-btn {
+      border: 1px solid #0e5f25;
+      border-radius: 10px;
+      padding: 6px 8px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      background: #98fb98;
+      color: #0e5f25;
+      text-align: center;
+    }
+
+    .protocol-btn.alt {
+      background: #0e5f25;
+      color: #ffffff;
+    }
+
+    .protocol-note {
+      margin-top: 12px;
+      font-size: 0.8rem;
+      color: #6a7280;
+    }
+
+    .output-body {
+      padding: 16px;
+      flex: 1;
+      background: #ffffff;
+      color: #333a43;
+    }
+
+    .output-line {
+      display: flex;
+      gap: 8px;
+      align-items: baseline;
+      margin-bottom: 8px;
+      font-size: 0.9rem;
+    }
+
+    .output-label {
+      color: #5b6570;
+      font-weight: 700;
+    }
+
+    .output-box {
+      border: 1px solid #d5dbe2;
+      border-radius: 12px;
+      background: #f7f9fb;
+      padding: 10px;
+      font-size: 0.85rem;
+      color: #4a5562;
+      margin-bottom: 10px;
+    }
+
+    .doc-list {
+      margin: 0;
+      padding-left: 18px;
+      color: #4a5562;
+      font-size: 0.85rem;
+    }
+
+    .stack-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .stack-card {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 18px;
+      background: var(--card);
+      box-shadow: var(--shadow);
+    }
+
+    .stack-card ul {
+      margin: 10px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    @media (max-width: 1080px) {
+      .project-hero {
+        grid-template-columns: 1fr;
+      }
+
+      .feature-grid,
+      .interface-grid,
+      .stack-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 780px) {
+      .project-topbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .topbar-tools {
+        width: 100%;
+        justify-content: flex-start;
+      }
+
+      .feature-grid,
+      .flow-grid,
+      .interface-grid,
+      .stack-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <div class="project-shell">
+    <div class="project-topbar">
+      <a class="project-back" href="../index.html" data-i18n="back_link">Back to Nekoula Tech</a>
+      <div class="topbar-tools">
+        <span class="meta-pill" data-i18n="meta_type">BCI Research Tool</span>
+        <div class="lang-switch" role="group" aria-label="Language switcher">
+          <button type="button" data-lang="en" class="is-active">EN</button>
+          <button type="button" data-lang="ru">RU</button>
+          <button type="button" data-lang="ar">AR</button>
+        </div>
+      </div>
+    </div>
+
+    <section class="project-hero">
+      <div>
+        <p class="eyebrow" data-i18n="hero_eyebrow">BCI P300 Speller</p>
+        <h1 data-i18n="hero_title">P300 Matrix</h1>
+        <p class="lead" data-i18n="hero_lead">
+          P300 Matrix is a brain-computer interface speller that uses a 4x4 stimulus grid,
+          configurable flashing protocols, and real-time experiment logs to support neuroscience trials.
+        </p>
+        <div class="hero-meta">
+          <span class="meta-pill" data-i18n="hero_meta1">BCI</span>
+          <span class="meta-pill" data-i18n="hero_meta2">8 Protocols</span>
+          <span class="meta-pill" data-i18n="hero_meta3">Timing Control</span>
+          <span class="meta-pill" data-i18n="hero_meta4">Web Interface</span>
+        </div>
+      </div>
+      <div class="project-overview">
+        <h3 data-i18n="overview_title">Product Overview</h3>
+        <p data-i18n="overview_text">
+          The tool presents a speller matrix, lets researchers tune trial counts, stimulus frequency,
+          and color, then runs one of eight protocols to generate reproducible sequences for P300 capture.
+        </p>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <h3 data-i18n="feature1_title">Stimulus Matrix</h3>
+            <p data-i18n="feature1_text">A focused 4x4 grid optimized for row/column stimulation.</p>
+          </div>
+          <div class="feature-card">
+            <h3 data-i18n="feature2_title">Protocol Suite</h3>
+            <p data-i18n="feature2_text">Eight experimental modes including randomized and background flashing.</p>
+          </div>
+          <div class="feature-card">
+            <h3 data-i18n="feature3_title">Experiment Logs</h3>
+            <p data-i18n="feature3_text">Timestamped outputs, selected numbers, and built-in documentation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow" data-i18n="flows_eyebrow">User Flows</p>
+        <h2 data-i18n="flows_title">From setup to recorded session</h2>
+      </div>
+      <div class="flow-grid">
+        <div class="flow-card">
+          <h3 data-i18n="flow1_title">Researcher Setup</h3>
+          <ul>
+            <li data-i18n="flow1_item1">Select the number of trials for the session.</li>
+            <li data-i18n="flow1_item2">Set the stimulus frequency and highlight color.</li>
+            <li data-i18n="flow1_item3">Choose a protocol based on the experiment type.</li>
+            <li data-i18n="flow1_item4">Launch the flashing matrix and monitor timings.</li>
+          </ul>
+        </div>
+        <div class="flow-card">
+          <h3 data-i18n="flow2_title">Session Output</h3>
+          <ul>
+            <li data-i18n="flow2_item1">Track the start time for each protocol run.</li>
+            <li data-i18n="flow2_item2">Review selected row/column sequences.</li>
+            <li data-i18n="flow2_item3">Export stimulus timing for analysis.</li>
+            <li data-i18n="flow2_item4">Use the embedded documentation for protocol mapping.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow" data-i18n="ui_eyebrow">Interface Highlights</p>
+        <h2 data-i18n="ui_title">Rendered fragments of the web UI</h2>
+      </div>
+      <div class="interface-grid">
+        <div class="ui-panel">
+          <div class="ui-header">
+            <span data-i18n="ui_matrix_title">Speller Matrix</span>
+            <span class="ui-subtitle" data-i18n="ui_matrix_subtitle">4x4 grid</span>
+          </div>
+          <div class="matrix-body">
+            <table class="matrix-table" aria-label="P300 speller matrix">
+              <tr>
+                <td class="matrix-active">A</td>
+                <td>B</td>
+                <td>C</td>
+                <td>D</td>
+              </tr>
+              <tr>
+                <td>E</td>
+                <td class="matrix-active">F</td>
+                <td>G</td>
+                <td>H</td>
+              </tr>
+              <tr>
+                <td>I</td>
+                <td>J</td>
+                <td class="matrix-active">K</td>
+                <td>L</td>
+              </tr>
+              <tr>
+                <td>M</td>
+                <td>N</td>
+                <td>O</td>
+                <td class="matrix-active">P</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="ui-panel">
+          <div class="ui-header">
+            <span data-i18n="ui_controls_title">Session Controls</span>
+            <span class="ui-subtitle" data-i18n="ui_controls_subtitle">Protocol set</span>
+          </div>
+          <div class="controls-body">
+            <div class="control-row">
+              <span class="control-label" data-i18n="ui_controls_trials">Trials</span>
+              <span class="control-select">10</span>
+            </div>
+            <div class="control-row">
+              <span class="control-label" data-i18n="ui_controls_freq">Frequency</span>
+              <span class="control-select" data-i18n="ui_controls_freq_value">4 Hz</span>
+            </div>
+            <div class="control-row">
+              <span class="control-label" data-i18n="ui_controls_color">Stimulus Color</span>
+              <span class="control-select" data-i18n="ui_controls_color_value">White</span>
+            </div>
+            <div class="protocol-grid" aria-label="Protocol buttons">
+              <div class="protocol-btn" data-i18n="ui_controls_p1">Protocol 1</div>
+              <div class="protocol-btn alt" data-i18n="ui_controls_p2">Protocol 2</div>
+              <div class="protocol-btn" data-i18n="ui_controls_p3">Protocol 3</div>
+              <div class="protocol-btn alt" data-i18n="ui_controls_p4">Protocol 4</div>
+              <div class="protocol-btn" data-i18n="ui_controls_p5">Protocol 5</div>
+              <div class="protocol-btn alt" data-i18n="ui_controls_p6">Protocol 6</div>
+              <div class="protocol-btn" data-i18n="ui_controls_p7">Protocol 7</div>
+              <div class="protocol-btn alt" data-i18n="ui_controls_p8">Protocol 8</div>
+            </div>
+            <p class="protocol-note" data-i18n="ui_controls_note">Random and background flashing modes included.</p>
+          </div>
+        </div>
+        <div class="ui-panel">
+          <div class="ui-header">
+            <span data-i18n="ui_output_title">Output + Docs</span>
+            <span class="ui-subtitle" data-i18n="ui_output_subtitle">Experiment log</span>
+          </div>
+          <div class="output-body">
+            <div class="output-line">
+              <span class="output-label" data-i18n="ui_output_time_label">Start Time:</span>
+              <span data-i18n="ui_output_time_value">12:41:08</span>
+            </div>
+            <div class="output-box" data-i18n="ui_output_numbers_value">Selected numbers: 5, 8, 1, 6, 2, 7</div>
+            <div class="output-box" data-i18n="ui_output_times_value">Stimulus times: 00:00.230, 00:00.460, 00:00.690</div>
+            <div class="output-line">
+              <span class="output-label" data-i18n="ui_output_doc_label">Protocol notes</span>
+            </div>
+            <ul class="doc-list">
+              <li data-i18n="ui_output_doc1">Rows 1-4 map to the first four outputs.</li>
+              <li data-i18n="ui_output_doc2">Columns 5-8 map to column flashes.</li>
+              <li data-i18n="ui_output_doc3">Protocols 2/4/6/8 use a linear 1-16 order.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow" data-i18n="stack_eyebrow">Tech Stack</p>
+        <h2 data-i18n="stack_title">Lightweight experimental tooling</h2>
+      </div>
+      <div class="stack-grid">
+        <div class="stack-card">
+          <h3 data-i18n="stack1_title">Frontend</h3>
+          <ul>
+            <li data-i18n="stack1_item1">HTML/CSS with Bootstrap 4 layouts</li>
+            <li data-i18n="stack1_item2">jQuery + jQuery UI helpers</li>
+            <li data-i18n="stack1_item3">Responsive layout for lab setups</li>
+          </ul>
+        </div>
+        <div class="stack-card">
+          <h3 data-i18n="stack2_title">Protocol Logic</h3>
+          <ul>
+            <li data-i18n="stack2_item1">Eight scripted stimulation modes</li>
+            <li data-i18n="stack2_item2">Randomized flashing sequences</li>
+            <li data-i18n="stack2_item3">Timing + stimulus color control</li>
+          </ul>
+        </div>
+        <div class="stack-card">
+          <h3 data-i18n="stack3_title">Utilities</h3>
+          <ul>
+            <li data-i18n="stack3_item1">Downloadable stimulus logs</li>
+            <li data-i18n="stack3_item2">Embedded protocol documentation</li>
+            <li data-i18n="stack3_item3">Minimal dependencies for easy deployment</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const langButtons = document.querySelectorAll('.lang-switch button');
+
+    const translations = {
+      en: {
+        back_link: 'Back to Nekoula Tech',
+        meta_type: 'BCI Research Tool',
+        hero_eyebrow: 'BCI P300 Speller',
+        hero_title: 'P300 Matrix',
+        hero_lead: 'P300 Matrix is a brain-computer interface speller that uses a 4x4 stimulus grid, configurable flashing protocols, and real-time experiment logs to support neuroscience trials.',
+        hero_meta1: 'BCI',
+        hero_meta2: '8 Protocols',
+        hero_meta3: 'Timing Control',
+        hero_meta4: 'Web Interface',
+        overview_title: 'Product Overview',
+        overview_text: 'The tool presents a speller matrix, lets researchers tune trial counts, stimulus frequency, and color, then runs one of eight protocols to generate reproducible sequences for P300 capture.',
+        feature1_title: 'Stimulus Matrix',
+        feature1_text: 'A focused 4x4 grid optimized for row/column stimulation.',
+        feature2_title: 'Protocol Suite',
+        feature2_text: 'Eight experimental modes including randomized and background flashing.',
+        feature3_title: 'Experiment Logs',
+        feature3_text: 'Timestamped outputs, selected numbers, and built-in documentation.',
+        flows_eyebrow: 'User Flows',
+        flows_title: 'From setup to recorded session',
+        flow1_title: 'Researcher Setup',
+        flow1_item1: 'Select the number of trials for the session.',
+        flow1_item2: 'Set the stimulus frequency and highlight color.',
+        flow1_item3: 'Choose a protocol based on the experiment type.',
+        flow1_item4: 'Launch the flashing matrix and monitor timings.',
+        flow2_title: 'Session Output',
+        flow2_item1: 'Track the start time for each protocol run.',
+        flow2_item2: 'Review selected row/column sequences.',
+        flow2_item3: 'Export stimulus timing for analysis.',
+        flow2_item4: 'Use the embedded documentation for protocol mapping.',
+        ui_eyebrow: 'Interface Highlights',
+        ui_title: 'Rendered fragments of the web UI',
+        ui_matrix_title: 'Speller Matrix',
+        ui_matrix_subtitle: '4x4 grid',
+        ui_controls_title: 'Session Controls',
+        ui_controls_subtitle: 'Protocol set',
+        ui_controls_trials: 'Trials',
+        ui_controls_freq: 'Frequency',
+        ui_controls_color: 'Stimulus Color',
+        ui_controls_freq_value: '4 Hz',
+        ui_controls_color_value: 'White',
+        ui_controls_p1: 'Protocol 1',
+        ui_controls_p2: 'Protocol 2',
+        ui_controls_p3: 'Protocol 3',
+        ui_controls_p4: 'Protocol 4',
+        ui_controls_p5: 'Protocol 5',
+        ui_controls_p6: 'Protocol 6',
+        ui_controls_p7: 'Protocol 7',
+        ui_controls_p8: 'Protocol 8',
+        ui_controls_note: 'Random and background flashing modes included.',
+        ui_output_title: 'Output + Docs',
+        ui_output_subtitle: 'Experiment log',
+        ui_output_time_label: 'Start Time:',
+        ui_output_time_value: '12:41:08',
+        ui_output_numbers_value: 'Selected numbers: 5, 8, 1, 6, 2, 7',
+        ui_output_times_value: 'Stimulus times: 00:00.230, 00:00.460, 00:00.690',
+        ui_output_doc_label: 'Protocol notes',
+        ui_output_doc1: 'Rows 1-4 map to the first four outputs.',
+        ui_output_doc2: 'Columns 5-8 map to column flashes.',
+        ui_output_doc3: 'Protocols 2/4/6/8 use a linear 1-16 order.',
+        stack_eyebrow: 'Tech Stack',
+        stack_title: 'Lightweight experimental tooling',
+        stack1_title: 'Frontend',
+        stack1_item1: 'HTML/CSS with Bootstrap 4 layouts',
+        stack1_item2: 'jQuery + jQuery UI helpers',
+        stack1_item3: 'Responsive layout for lab setups',
+        stack2_title: 'Protocol Logic',
+        stack2_item1: 'Eight scripted stimulation modes',
+        stack2_item2: 'Randomized flashing sequences',
+        stack2_item3: 'Timing + stimulus color control',
+        stack3_title: 'Utilities',
+        stack3_item1: 'Downloadable stimulus logs',
+        stack3_item2: 'Embedded protocol documentation',
+        stack3_item3: 'Minimal dependencies for easy deployment'
+      },
+      ru: {
+        back_link: 'Назад на Nekoula Tech',
+        meta_type: 'BCI-инструмент',
+        hero_eyebrow: 'P300 спеллер BCI',
+        hero_title: 'P300 Matrix',
+        hero_lead: 'P300 Matrix — BCI-спеллер с матрицей 4x4, настраиваемыми протоколами вспышек и журналом эксперимента в реальном времени для нейроисследований.',
+        hero_meta1: 'BCI',
+        hero_meta2: '8 протоколов',
+        hero_meta3: 'Контроль тайминга',
+        hero_meta4: 'Веб-интерфейс',
+        overview_title: 'Обзор продукта',
+        overview_text: 'Инструмент показывает спеллер-матрицу, позволяет задать число испытаний, частоту и цвет стимула, а затем запускает один из восьми протоколов для воспроизводимых последовательностей P300.',
+        feature1_title: 'Матрица стимулов',
+        feature1_text: 'Фокусированная сетка 4x4 для стимуляции строк и колонок.',
+        feature2_title: 'Набор протоколов',
+        feature2_text: 'Восемь режимов, включая случайный порядок и фоновые вспышки.',
+        feature3_title: 'Логи эксперимента',
+        feature3_text: 'Таймстемпы, выбранные числа и встроенная документация.',
+        flows_eyebrow: 'Сценарии',
+        flows_title: 'От настройки до записи сессии',
+        flow1_title: 'Настройка исследователя',
+        flow1_item1: 'Выберите число испытаний для сессии.',
+        flow1_item2: 'Задайте частоту стимула и цвет подсветки.',
+        flow1_item3: 'Выберите протокол под тип эксперимента.',
+        flow1_item4: 'Запустите матрицу и отслеживайте тайминг.',
+        flow2_title: 'Вывод сессии',
+        flow2_item1: 'Фиксируйте время старта каждой сессии.',
+        flow2_item2: 'Проверяйте последовательности строк и колонок.',
+        flow2_item3: 'Экспортируйте тайминги для анализа.',
+        flow2_item4: 'Используйте встроенные подсказки по протоколам.',
+        ui_eyebrow: 'Интерфейс',
+        ui_title: 'Фрагменты веб-интерфейса',
+        ui_matrix_title: 'Матрица спеллера',
+        ui_matrix_subtitle: 'Сетка 4x4',
+        ui_controls_title: 'Панель управления',
+        ui_controls_subtitle: 'Набор протоколов',
+        ui_controls_trials: 'Испытания',
+        ui_controls_freq: 'Частота',
+        ui_controls_color: 'Цвет стимула',
+        ui_controls_freq_value: '4 Гц',
+        ui_controls_color_value: 'Белый',
+        ui_controls_p1: 'Протокол 1',
+        ui_controls_p2: 'Протокол 2',
+        ui_controls_p3: 'Протокол 3',
+        ui_controls_p4: 'Протокол 4',
+        ui_controls_p5: 'Протокол 5',
+        ui_controls_p6: 'Протокол 6',
+        ui_controls_p7: 'Протокол 7',
+        ui_controls_p8: 'Протокол 8',
+        ui_controls_note: 'Включены случайные и фоновые режимы.',
+        ui_output_title: 'Вывод + документация',
+        ui_output_subtitle: 'Журнал эксперимента',
+        ui_output_time_label: 'Время старта:',
+        ui_output_time_value: '12:41:08',
+        ui_output_numbers_value: 'Выбранные числа: 5, 8, 1, 6, 2, 7',
+        ui_output_times_value: 'Время стимулов: 00:00.230, 00:00.460, 00:00.690',
+        ui_output_doc_label: 'Заметки по протоколу',
+        ui_output_doc1: 'Строки 1-4 соответствуют первым четырём выходам.',
+        ui_output_doc2: 'Колонки 5-8 соответствуют вспышкам по столбцам.',
+        ui_output_doc3: 'Протоколы 2/4/6/8 используют линейный порядок 1-16.',
+        stack_eyebrow: 'Технологии',
+        stack_title: 'Лёгкий инструментарий для экспериментов',
+        stack1_title: 'Фронтенд',
+        stack1_item1: 'HTML/CSS с Bootstrap 4',
+        stack1_item2: 'jQuery + jQuery UI',
+        stack1_item3: 'Адаптивная верстка для лабораторий',
+        stack2_title: 'Логика протоколов',
+        stack2_item1: 'Восемь сценариев стимуляции',
+        stack2_item2: 'Случайные последовательности вспышек',
+        stack2_item3: 'Контроль тайминга и цвета',
+        stack3_title: 'Утилиты',
+        stack3_item1: 'Скачивание логов стимулов',
+        stack3_item2: 'Встроенная документация протоколов',
+        stack3_item3: 'Минимум зависимостей для деплоя'
+      },
+      ar: {
+        back_link: 'العودة إلى Nekoula Tech',
+        meta_type: 'أداة أبحاث BCI',
+        hero_eyebrow: 'مصفوفة تهجئة P300',
+        hero_title: 'P300 Matrix',
+        hero_lead: 'P300 Matrix هو مُهجّي BCI يستخدم شبكة 4x4، بروتوكولات وميض قابلة للضبط، وسجل تجارب لحظي لدعم أبحاث الأعصاب.',
+        hero_meta1: 'BCI',
+        hero_meta2: '8 بروتوكولات',
+        hero_meta3: 'تحكم بالزمن',
+        hero_meta4: 'واجهة ويب',
+        overview_title: 'نظرة عامة',
+        overview_text: 'تعرض الأداة مصفوفة التهجئة، وتتيح ضبط عدد التجارب وتردد التحفيز ولونه، ثم تشغيل أحد ثمانية بروتوكولات لتوليد تسلسلات قابلة لإعادة الاستخدام لالتقاط P300.',
+        feature1_title: 'مصفوفة التحفيز',
+        feature1_text: 'شبكة 4x4 مركزة لمحفزات الصفوف والأعمدة.',
+        feature2_title: 'حزمة البروتوكولات',
+        feature2_text: 'ثمانية أوضاع تشمل الترتيب العشوائي والوميض الخلفي.',
+        feature3_title: 'سجلات التجربة',
+        feature3_text: 'طوابع زمنية وأرقام مختارة وتوثيق مدمج.',
+        flows_eyebrow: 'المسارات',
+        flows_title: 'من الإعداد إلى تسجيل الجلسة',
+        flow1_title: 'إعداد الباحث',
+        flow1_item1: 'تحديد عدد التجارب للجلسة.',
+        flow1_item2: 'ضبط تردد التحفيز ولون الإبراز.',
+        flow1_item3: 'اختيار البروتوكول حسب نوع التجربة.',
+        flow1_item4: 'تشغيل المصفوفة ومراقبة التوقيت.',
+        flow2_title: 'مخرجات الجلسة',
+        flow2_item1: 'تتبع وقت بدء كل تشغيل.',
+        flow2_item2: 'مراجعة تسلسلات الصفوف والأعمدة.',
+        flow2_item3: 'تصدير توقيتات التحفيز للتحليل.',
+        flow2_item4: 'استخدام التوثيق المدمج لربط البروتوكولات.',
+        ui_eyebrow: 'الواجهة',
+        ui_title: 'مقاطع من واجهة الويب',
+        ui_matrix_title: 'مصفوفة التهجئة',
+        ui_matrix_subtitle: 'شبكة 4x4',
+        ui_controls_title: 'لوحة التحكم',
+        ui_controls_subtitle: 'حزمة البروتوكولات',
+        ui_controls_trials: 'التجارب',
+        ui_controls_freq: 'التردد',
+        ui_controls_color: 'لون التحفيز',
+        ui_controls_freq_value: '4 هرتز',
+        ui_controls_color_value: 'أبيض',
+        ui_controls_p1: 'بروتوكول 1',
+        ui_controls_p2: 'بروتوكول 2',
+        ui_controls_p3: 'بروتوكول 3',
+        ui_controls_p4: 'بروتوكول 4',
+        ui_controls_p5: 'بروتوكول 5',
+        ui_controls_p6: 'بروتوكول 6',
+        ui_controls_p7: 'بروتوكول 7',
+        ui_controls_p8: 'بروتوكول 8',
+        ui_controls_note: 'يشمل أوضاعاً عشوائية ووميضاً خلفياً.',
+        ui_output_title: 'المخرجات + التوثيق',
+        ui_output_subtitle: 'سجل التجربة',
+        ui_output_time_label: 'وقت البدء:',
+        ui_output_time_value: '12:41:08',
+        ui_output_numbers_value: 'الأرقام المختارة: 5، 8، 1، 6، 2، 7',
+        ui_output_times_value: 'أوقات التحفيز: 00:00.230، 00:00.460، 00:00.690',
+        ui_output_doc_label: 'ملاحظات البروتوكول',
+        ui_output_doc1: 'الصفوف 1-4 تقابل أول أربع نتائج.',
+        ui_output_doc2: 'الأعمدة 5-8 تقابل ومضات الأعمدة.',
+        ui_output_doc3: 'البروتوكولات 2/4/6/8 تستخدم ترتيباً خطياً 1-16.',
+        stack_eyebrow: 'التقنيات',
+        stack_title: 'أدوات تجريبية خفيفة',
+        stack1_title: 'الواجهة',
+        stack1_item1: 'HTML/CSS مع تخطيطات Bootstrap 4',
+        stack1_item2: 'jQuery + jQuery UI',
+        stack1_item3: 'تصميم متجاوب لمعامل البحث',
+        stack2_title: 'منطق البروتوكول',
+        stack2_item1: 'ثمانية أنماط تحفيز مكتوبة',
+        stack2_item2: 'تسلسلات وميض عشوائية',
+        stack2_item3: 'تحكم بالتوقيت ولون التحفيز',
+        stack3_title: 'الأدوات',
+        stack3_item1: 'تنزيل سجلات التحفيز',
+        stack3_item2: 'توثيق البروتوكولات المدمج',
+        stack3_item3: 'اعتماديات بسيطة لسهولة النشر'
+      }
+    };
+
+    function applyLanguage(lang) {
+      const dict = translations[lang] || translations.en;
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+      document.querySelectorAll('[data-i18n]').forEach((el) => {
+        const key = el.dataset.i18n;
+        if (dict[key]) {
+          el.textContent = dict[key];
+        }
+      });
+
+      langButtons.forEach((btn) => {
+        btn.classList.toggle('is-active', btn.dataset.lang === lang);
+      });
+
+      const url = new URL(window.location.href);
+      if (lang === 'en') {
+        url.searchParams.delete('lang');
+      } else {
+        url.searchParams.set('lang', lang);
+      }
+      history.replaceState({}, '', url);
+
+      localStorage.setItem('site_lang', lang);
+    }
+
+    langButtons.forEach((btn) => {
+      btn.addEventListener('click', () => applyLanguage(btn.dataset.lang));
+    });
+
+    const urlLang = new URLSearchParams(window.location.search).get('lang');
+    const savedLang = localStorage.getItem('site_lang') || 'en';
+    const initialLang = ['en', 'ru', 'ar'].includes(urlLang) ? urlLang : savedLang;
+    applyLanguage(initialLang);
+  </script>
+</body>
+</html>
