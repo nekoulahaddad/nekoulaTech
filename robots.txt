@@ -1,4 +1,4 @@
 ﻿User-agent: *
 Allow: /
 
-Sitemap: https://tech.nekoula.ru/sitemap.xml
+Sitemap: https://tech.nmax.ru/sitemap.xml
