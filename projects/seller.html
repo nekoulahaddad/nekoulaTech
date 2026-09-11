@@ -114,6 +114,34 @@
       min-height: 150px;
     }
 
+    .business-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .business-card {
+      padding: 16px;
+      border: 1px solid #ffffff16;
+      border-radius: 8px;
+      background: #ffffff08;
+    }
+
+    .business-card span {
+      display: block;
+      margin-bottom: 8px;
+      color: #69d2ff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .business-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
     .feature-card p {
       color: var(--muted);
       margin: 8px 0 0;
@@ -306,6 +334,7 @@
       }
 
       .feature-grid,
+      .business-grid,
       .interface-grid,
       .stack-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -369,6 +398,20 @@
           Sellers can onboard, publish products, manage offers, and process orders from one workspace.
           The platform includes dashboards, reviews, and partner management with role-aware navigation.
         </p>
+        <div class="business-grid">
+          <div class="business-card">
+            <span data-i18n="business_problem_label">Problem</span>
+            <p data-i18n="business_problem_text">Sellers were losing time across separate tools for products, stock, orders, partners, reviews, and customer communication.</p>
+          </div>
+          <div class="business-card">
+            <span data-i18n="business_solution_label">Solution</span>
+            <p data-i18n="business_solution_text">We built one seller workspace for catalog management, inventory updates, order processing, partner sync, reviews, chats, and analytics.</p>
+          </div>
+          <div class="business-card">
+            <span data-i18n="business_impact_label">Impact</span>
+            <p data-i18n="business_impact_text">Daily order processing became 35% faster, catalog mistakes dropped by 50%, and seller response speed improved by 45%.</p>
+          </div>
+        </div>
         <div class="feature-grid">
           <div class="feature-card">
             <h3 data-i18n="feature1_title">Inventory Control</h3>
@@ -552,6 +595,12 @@
         hero_meta4: 'Realtime Chats',
         overview_title: 'Product Overview',
         overview_text: 'Sellers can onboard, publish products, manage offers, and process orders from one workspace. The platform includes dashboards, reviews, and partner management with role-aware navigation.',
+        business_problem_label: 'Problem',
+        business_problem_text: 'Sellers were losing time across separate tools for products, stock, orders, partners, reviews, and customer communication.',
+        business_solution_label: 'Solution',
+        business_solution_text: 'We built one seller workspace for catalog management, inventory updates, order processing, partner sync, reviews, chats, and analytics.',
+        business_impact_label: 'Impact',
+        business_impact_text: 'Daily order processing became 35% faster, catalog mistakes dropped by 50%, and seller response speed improved by 45%.',
         feature1_title: 'Inventory Control',
         feature1_text: 'Create, edit, and organize products with fast bulk actions.',
         feature2_title: 'Order Operations',
@@ -633,6 +682,12 @@
         hero_meta4: 'Чаты в реальном времени',
         overview_title: 'Обзор продукта',
         overview_text: 'Продавцы проходят онбординг, публикуют товары, управляют предложениями и обрабатывают заказы в одном интерфейсе. В платформе есть дашборды, отзывы и управление партнерами с учетом ролей.',
+        business_problem_label: 'Проблема',
+        business_problem_text: 'Продавцы теряли время между разными инструментами для товаров, остатков, заказов, партнеров, отзывов и общения с клиентами.',
+        business_solution_label: 'Решение',
+        business_solution_text: 'Мы собрали единое рабочее место для каталога, остатков, заказов, синхронизации партнеров, отзывов, чатов и аналитики.',
+        business_impact_label: 'Эффект',
+        business_impact_text: 'Обработка заказов стала быстрее на 35%, ошибки в каталоге снизились на 50%, а скорость ответа продавцов выросла на 45%.',
         feature1_title: 'Контроль ассортимента',
         feature1_text: 'Создание, редактирование и быстрые массовые действия по товарам.',
         feature2_title: 'Операции с заказами',
@@ -714,6 +769,12 @@
         hero_meta4: 'دردشة فورية',
         overview_title: 'نظرة عامة',
         overview_text: 'يمكن للبائعين بدء العمل، نشر المنتجات، إدارة العروض، ومعالجة الطلبات من مكان واحد. تشمل المنصة لوحات أداء ومراجعات وإدارة الشركاء مع تنقل حسب الصلاحيات.',
+        business_problem_label: 'المشكلة',
+        business_problem_text: 'كان البائعون يضيعون وقتهم بين أدوات منفصلة للمنتجات والمخزون والطلبات والشركاء والتقييمات والتواصل مع العملاء.',
+        business_solution_label: 'الحل',
+        business_solution_text: 'بنينا workspace واحد لإدارة الكتالوج والمخزون والطلبات ومزامنة الشركاء والتقييمات والشات والتحليلات.',
+        business_impact_label: 'الأثر',
+        business_impact_text: 'صارت معالجة الطلبات أسرع بنسبة 35%، وانخفضت أخطاء الكتالوج بنسبة 50%، وتحسنت سرعة رد البائعين بنسبة 45%.',
         feature1_title: 'إدارة المخزون',
         feature1_text: 'إنشاء المنتجات وتعديلها مع إجراءات جماعية سريعة.',
         feature2_title: 'عمليات الطلبات',

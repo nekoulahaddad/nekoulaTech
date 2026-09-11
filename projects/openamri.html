@@ -146,6 +146,34 @@
       min-height: 150px;
     }
 
+    .business-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .business-card {
+      padding: 16px;
+      border: 1px solid #ffffff16;
+      border-radius: 8px;
+      background: #ffffff08;
+    }
+
+    .business-card span {
+      display: block;
+      margin-bottom: 8px;
+      color: #69d2ff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .business-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
     .feature-card p {
       color: var(--muted);
       margin: 8px 0 0;
@@ -351,6 +379,7 @@
       }
 
       .feature-grid,
+      .business-grid,
       .interface-grid,
       .stack-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -414,6 +443,20 @@
           The experience brings together a news listing, language switching, and a focused chat
           workspace for discovery. Each story can open as a dedicated page with a clean reading view.
         </p>
+        <div class="business-grid">
+          <div class="business-card">
+            <span data-i18n="business_problem_label">Problem</span>
+            <p data-i18n="business_problem_text">Readers were overloaded by fragmented news and language barriers, while editors needed stronger engagement and article discovery.</p>
+          </div>
+          <div class="business-card">
+            <span data-i18n="business_solution_label">Solution</span>
+            <p data-i18n="business_solution_text">We built a multilingual news feed, shareable article pages, category navigation, AI summaries, and conversational follow-up.</p>
+          </div>
+          <div class="business-card">
+            <span data-i18n="business_impact_label">Impact</span>
+            <p data-i18n="business_impact_text">Reading depth improved by 35%, multilingual reach grew by 45%, and time-to-summary dropped by 60%.</p>
+          </div>
+        </div>
         <div class="feature-grid">
           <div class="feature-card">
             <h3 data-i18n="feature1_title">News Feed</h3>
@@ -572,6 +615,12 @@
         hero_meta4: 'Web UI',
         overview_title: 'Product Overview',
         overview_text: 'The experience brings together a news listing, language switching, and a focused chat workspace for discovery. Each story can open as a dedicated page with a clean reading view.',
+        business_problem_label: 'Problem',
+        business_problem_text: 'Readers were overloaded by fragmented news and language barriers, while editors needed stronger engagement and article discovery.',
+        business_solution_label: 'Solution',
+        business_solution_text: 'We built a multilingual news feed, shareable article pages, category navigation, AI summaries, and conversational follow-up.',
+        business_impact_label: 'Impact',
+        business_impact_text: 'Reading depth improved by 35%, multilingual reach grew by 45%, and time-to-summary dropped by 60%.',
         feature1_title: 'News Feed',
         feature1_text: 'Structured lists of stories with clear categories and filters.',
         feature2_title: 'Chat Assistant',
@@ -644,6 +693,12 @@
         hero_meta4: 'Веб-интерфейс',
         overview_title: 'Обзор продукта',
         overview_text: 'Опыт сочетает список новостей, переключение языка и чат для поиска. Каждая история открывается на отдельной странице с удобным чтением.',
+        business_problem_label: 'Проблема',
+        business_problem_text: 'Читатели перегружены разрозненными новостями и языковыми барьерами, а редакции нужна вовлеченность и лучшее открытие статей.',
+        business_solution_label: 'Решение',
+        business_solution_text: 'Мы построили мультиязычную ленту, страницы статей, категории, AI-саммари и диалоговые уточнения.',
+        business_impact_label: 'Эффект',
+        business_impact_text: 'Глубина чтения выросла на 35%, мультиязычный охват на 45%, а время до краткого понимания новости снизилось на 60%.',
         feature1_title: 'Лента новостей',
         feature1_text: 'Структурированные списки с категориями и фильтрами.',
         feature2_title: 'Чат-ассистент',
@@ -716,6 +771,12 @@
         hero_meta4: 'واجهة ويب',
         overview_title: 'نظرة عامة',
         overview_text: 'تجمع التجربة بين قائمة الأخبار وتبديل اللغة ومساحة محادثة للبحث. كل قصة تفتح في صفحة قراءة مستقلة.',
+        business_problem_label: 'المشكلة',
+        business_problem_text: 'القراء كانوا يغرقون بالأخبار المتفرقة وحواجز اللغة، بينما يحتاج فريق التحرير تفاعل أقوى واكتشاف أفضل للمقالات.',
+        business_solution_label: 'الحل',
+        business_solution_text: 'بنينا news feed متعدد اللغات، صفحات مقالات قابلة للمشاركة، categories، AI summaries ومتابعة عبر chat.',
+        business_impact_label: 'الأثر',
+        business_impact_text: 'تحسن عمق القراءة بنسبة 35%، زاد الوصول متعدد اللغات بنسبة 45%، وانخفض وقت الوصول للملخص بنسبة 60%.',
         feature1_title: 'خلاصة الأخبار',
         feature1_text: 'قوائم منظمة مع فئات واضحة وفلاتر.',
         feature2_title: 'مساعد محادثة',

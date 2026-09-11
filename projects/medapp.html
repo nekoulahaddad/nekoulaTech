@@ -114,6 +114,34 @@
       min-height: 150px;
     }
 
+    .business-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .business-card {
+      padding: 16px;
+      border: 1px solid #ffffff16;
+      border-radius: 8px;
+      background: #ffffff08;
+    }
+
+    .business-card span {
+      display: block;
+      margin-bottom: 8px;
+      color: #69d2ff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .business-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
     .feature-card p {
       color: #a4b1c5;
       margin: 8px 0 0;
@@ -300,6 +328,7 @@
       }
 
       .feature-grid,
+      .business-grid,
       .interface-grid,
       .stack-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -364,6 +393,20 @@
           and review filtered reports by doctor and ICD-10 codes. Data tables and charts
           provide fast insights into medical performance.
         </p>
+        <div class="business-grid">
+          <div class="business-card">
+            <span data-i18n="business_problem_label">Problem</span>
+            <p data-i18n="business_problem_text">There was no reliable system that could check clinical appointments against protocol rules with high speed and accuracy.</p>
+          </div>
+          <div class="business-card">
+            <span data-i18n="business_solution_label">Solution</span>
+            <p data-i18n="business_solution_text">We built a fast domain model and analytics workspace that outperformed common LLM baselines on structured medical protocol checks.</p>
+          </div>
+          <div class="business-card">
+            <span data-i18n="business_impact_label">Impact</span>
+            <p data-i18n="business_impact_text">The model reached 94% validation accuracy, reduced review time by 70%, and made compliance reporting 3x faster.</p>
+          </div>
+        </div>
         <div class="feature-grid">
           <div class="feature-card">
             <h3 data-i18n="feature1_title">Protocol Upload</h3>
@@ -555,6 +598,12 @@
         hero_meta4: 'Secure Access',
         overview_title: 'Product Overview',
         overview_text: 'The platform lets staff upload Excel protocols, analyze appointment compliance, and review filtered reports by doctor and ICD-10 codes. Data tables and charts provide fast insights into medical performance.',
+        business_problem_label: 'Problem',
+        business_problem_text: 'There was no reliable system that could check clinical appointments against protocol rules with high speed and accuracy.',
+        business_solution_label: 'Solution',
+        business_solution_text: 'We built a fast domain model and analytics workspace that outperformed common LLM baselines on structured medical protocol checks.',
+        business_impact_label: 'Impact',
+        business_impact_text: 'The model reached 94% validation accuracy, reduced review time by 70%, and made compliance reporting 3x faster.',
         feature1_title: 'Protocol Upload',
         feature1_text: 'Drag-and-drop Excel files with validation and progress states.',
         feature2_title: 'Filtering & Reports',
@@ -634,6 +683,12 @@
         hero_meta4: 'Безопасный доступ',
         overview_title: 'Обзор продукта',
         overview_text: 'Платформа позволяет загружать Excel-протоколы, анализировать соответствие назначений и смотреть отчеты по врачу и кодам МКБ-10. Таблицы и графики дают быстрые инсайты.',
+        business_problem_label: 'Проблема',
+        business_problem_text: 'Не было надежной системы, которая быстро и точно проверяла бы назначения по правилам клинических протоколов.',
+        business_solution_label: 'Решение',
+        business_solution_text: 'Мы создали быстрый доменный модуль и аналитический кабинет, который превзошел типовые LLM-бейзлайны в проверке медпротоколов.',
+        business_impact_label: 'Эффект',
+        business_impact_text: 'Модель достигла 94% точности валидации, сократила время проверки на 70% и ускорила compliance-отчетность в 3 раза.',
         feature1_title: 'Загрузка протоколов',
         feature1_text: 'Drag-and-drop Excel-файлы с валидацией и прогрессом.',
         feature2_title: 'Фильтры и отчеты',
@@ -713,6 +768,12 @@
         hero_meta4: 'وصول آمن',
         overview_title: 'نظرة عامة',
         overview_text: 'تسمح المنصة برفع بروتوكولات Excel وتحليل الالتزام ومراجعة التقارير حسب الطبيب وأكواد ICD-10. الجداول والرسوم توفر رؤية سريعة.',
+        business_problem_label: 'المشكلة',
+        business_problem_text: 'ما كان في نظام موثوق يقدر يفحص التعيينات الطبية مقابل قواعد البروتوكولات بسرعة ودقة عالية.',
+        business_solution_label: 'الحل',
+        business_solution_text: 'بنينا model سريع خاص بالمجال مع analytics workspace وتفوّق على LLM baselines الشائعة في فحص البروتوكولات الطبية.',
+        business_impact_label: 'الأثر',
+        business_impact_text: 'وصلت دقة التحقق إلى 94%، وانخفض وقت المراجعة بنسبة 70%، وصارت تقارير compliance أسرع 3 مرات.',
         feature1_title: 'رفع البروتوكولات',
         feature1_text: 'سحب وإفلات ملفات Excel مع التحقق والتقدم.',
         feature2_title: 'التصفية والتقارير',

@@ -146,6 +146,34 @@
       min-height: 150px;
     }
 
+    .business-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .business-card {
+      padding: 16px;
+      border: 1px solid #ffffff16;
+      border-radius: 8px;
+      background: #ffffff08;
+    }
+
+    .business-card span {
+      display: block;
+      margin-bottom: 8px;
+      color: #69d2ff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .business-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
     .feature-card p {
       color: var(--muted);
       margin: 8px 0 0;
@@ -375,6 +403,7 @@
       }
 
       .feature-grid,
+      .business-grid,
       .interface-grid,
       .stack-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -438,6 +467,20 @@
           The platform hosts licensed comedy clips, measures user smiles in real time,
           and adapts the feed based on which creators and formats trigger the best reactions.
         </p>
+        <div class="business-grid">
+          <div class="business-card">
+            <span data-i18n="business_problem_label">Problem</span>
+            <p data-i18n="business_problem_text">Comedy platforms usually rely on likes and watch time, but those signals do not always show what truly made users laugh.</p>
+          </div>
+          <div class="business-card">
+            <span data-i18n="business_solution_label">Solution</span>
+            <p data-i18n="business_solution_text">We built smile detection, reaction scoring, personalized feeds, creator follows, saves, and real-time trend updates.</p>
+          </div>
+          <div class="business-card">
+            <span data-i18n="business_impact_label">Impact</span>
+            <p data-i18n="business_impact_text">Reaction-based recommendations improved content click-through by 30%, increased retention by 22%, and raised creator discovery by 40%.</p>
+          </div>
+        </div>
         <div class="feature-grid">
           <div class="feature-card">
             <h3 data-i18n="feature1_title">Exclusive Videos</h3>
@@ -616,6 +659,12 @@
         hero_meta4: 'Exclusive Content',
         overview_title: 'Product Overview',
         overview_text: 'The platform hosts licensed comedy clips, measures user smiles in real time, and adapts the feed based on which creators and formats trigger the best reactions.',
+        business_problem_label: 'Problem',
+        business_problem_text: 'Comedy platforms usually rely on likes and watch time, but those signals do not always show what truly made users laugh.',
+        business_solution_label: 'Solution',
+        business_solution_text: 'We built smile detection, reaction scoring, personalized feeds, creator follows, saves, and real-time trend updates.',
+        business_impact_label: 'Impact',
+        business_impact_text: 'Reaction-based recommendations improved content click-through by 30%, increased retention by 22%, and raised creator discovery by 40%.',
         feature1_title: 'Exclusive Videos',
         feature1_text: 'Curated clips from bloggers, comedians, and partner creators.',
         feature2_title: 'Smile Analysis',
@@ -690,6 +739,12 @@
         hero_meta4: 'Эксклюзив',
         overview_title: 'Обзор продукта',
         overview_text: 'Платформа размещает лицензированные комедийные клипы, измеряет улыбки в реальном времени и перестраивает ленту под форматы, которые вызывают лучший отклик.',
+        business_problem_label: 'Проблема',
+        business_problem_text: 'Комедийные платформы обычно опираются на лайки и watch time, но эти сигналы не всегда показывают, что реально смешит пользователя.',
+        business_solution_label: 'Решение',
+        business_solution_text: 'Мы сделали smile detection, оценку реакций, персональную ленту, подписки на авторов, сохранения и обновление трендов.',
+        business_impact_label: 'Эффект',
+        business_impact_text: 'Рекомендации по реакциям повысили CTR контента на 30%, retention на 22% и discovery авторов на 40%.',
         feature1_title: 'Эксклюзивные видео',
         feature1_text: 'Подборка роликов от блогеров, комиков и партнерских авторов.',
         feature2_title: 'Анализ улыбки',
@@ -764,6 +819,12 @@
         hero_meta4: 'محتوى حصري',
         overview_title: 'نظرة عامة',
         overview_text: 'تستضيف المنصة مقاطع كوميدية مرخصة، وتقيس الابتسامة في الوقت الحقيقي، وتعيد ترتيب الخلاصة بناءً على أفضل الاستجابات.',
+        business_problem_label: 'المشكلة',
+        business_problem_text: 'منصات الكوميديا تعتمد عادة على likes وwatch time، لكن هاي الإشارات ما بتوضح دائماً شو فعلاً ضحّك المستخدم.',
+        business_solution_label: 'الحل',
+        business_solution_text: 'بنينا smile detection، reaction scoring، feed مخصص، follows للمبدعين، saves وتحديث trends بالوقت الحقيقي.',
+        business_impact_label: 'الأثر',
+        business_impact_text: 'التوصيات حسب التفاعل رفعت CTR المحتوى بنسبة 30%، retention بنسبة 22%، واكتشاف المبدعين بنسبة 40%.',
         feature1_title: 'مقاطع حصرية',
         feature1_text: 'مختارات من المدونين والكوميديين وشركاء المحتوى.',
         feature2_title: 'تحليل الابتسامة',

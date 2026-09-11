@@ -114,6 +114,34 @@
       min-height: 150px;
     }
 
+    .business-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .business-card {
+      padding: 16px;
+      border: 1px solid #ffffff16;
+      border-radius: 8px;
+      background: #ffffff08;
+    }
+
+    .business-card span {
+      display: block;
+      margin-bottom: 8px;
+      color: #69d2ff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .business-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
     .feature-card p {
       color: var(--muted);
       margin: 8px 0 0;
@@ -281,6 +309,7 @@
       }
 
       .feature-grid,
+      .business-grid,
       .interface-grid,
       .stack-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -344,6 +373,20 @@
           The platform delivers a full e-commerce flow: category browsing, product detail pages, basket management,
           and a multi-step checkout. Users can track orders, manage profiles, save favorites, and chat with shops.
         </p>
+        <div class="business-grid">
+          <div class="business-card">
+            <span data-i18n="business_problem_label">Problem</span>
+            <p data-i18n="business_problem_text">The existing marketplace made it hard for buyers to find the right materials quickly, compare offers, and return through a growth loop.</p>
+          </div>
+          <div class="business-card">
+            <span data-i18n="business_solution_label">Solution</span>
+            <p data-i18n="business_solution_text">We improved product discovery with catalog structure, global search, filters, checkout improvements, favorites, shop chat, and a referral program.</p>
+          </div>
+          <div class="business-card">
+            <span data-i18n="business_impact_label">Impact</span>
+            <p data-i18n="business_impact_text">Search time dropped by 60%, referral-driven traffic grew by 35%, and marketplace sales increased by 45%.</p>
+          </div>
+        </div>
         <div class="feature-grid">
           <div class="feature-card">
             <h3 data-i18n="feature1_title">Catalog & Search</h3>
@@ -518,6 +561,12 @@
         hero_meta4: 'SEO / SSR',
         overview_title: 'Product Overview',
         overview_text: 'The platform delivers a full e-commerce flow: category browsing, product detail pages, basket management, and a multi-step checkout. Users can track orders, manage profiles, save favorites, and chat with shops.',
+        business_problem_label: 'Problem',
+        business_problem_text: 'The existing marketplace made it hard for buyers to find the right materials quickly, compare offers, and return through a growth loop.',
+        business_solution_label: 'Solution',
+        business_solution_text: 'We improved product discovery with catalog structure, global search, filters, checkout improvements, favorites, shop chat, and a referral program.',
+        business_impact_label: 'Impact',
+        business_impact_text: 'Search time dropped by 60%, referral-driven traffic grew by 35%, and marketplace sales increased by 45%.',
         feature1_title: 'Catalog & Search',
         feature1_text: 'Category navigation, filters, and offer blocks for fast discovery.',
         feature2_title: 'Basket & Checkout',
@@ -591,6 +640,12 @@
         hero_meta4: 'SEO / SSR',
         overview_title: 'Обзор продукта',
         overview_text: 'Платформа обеспечивает полный e-commerce сценарий: категории, карточки товаров, корзина и поэтапное оформление. Пользователи отслеживают заказы, управляют профилем, избранным и общаются с магазинами.',
+        business_problem_label: 'Проблема',
+        business_problem_text: 'В существующем маркетплейсе покупателям было сложно быстро находить материалы, сравнивать предложения и возвращаться через growth-механику.',
+        business_solution_label: 'Решение',
+        business_solution_text: 'Мы улучшили поиск товаров через каталог, общий поиск, фильтры, checkout, избранное, чат с магазинами и referral-программу.',
+        business_impact_label: 'Эффект',
+        business_impact_text: 'Время поиска снизилось на 60%, referral-трафик вырос на 35%, а продажи маркетплейса увеличились на 45%.',
         feature1_title: 'Каталог и поиск',
         feature1_text: 'Навигация по категориям, фильтры и блоки предложений для быстрого выбора.',
         feature2_title: 'Корзина и оформление',
@@ -664,6 +719,12 @@
         hero_meta4: 'SEO / SSR',
         overview_title: 'نظرة عامة',
         overview_text: 'تقدم المنصة تجربة تجارة إلكترونية كاملة: تصفح الفئات، صفحات المنتجات، إدارة السلة، وإتمام الطلب. يمكن للمستخدمين متابعة الطلبات وإدارة الملفات والمفضلة والدردشة مع المتاجر.',
+        business_problem_label: 'المشكلة',
+        business_problem_text: 'كان في marketplace موجود، لكن الزبائن كانوا يتعبوا ليلاقوا البضاعة المناسبة بسرعة ويقارنوا العروض ويرجعوا عبر growth loop.',
+        business_solution_label: 'الحل',
+        business_solution_text: 'حسّنا اكتشاف المنتجات عبر catalog واضح، global search، فلاتر، checkout أفضل، مفضلة، شات مع المتاجر وبرنامج referral.',
+        business_impact_label: 'الأثر',
+        business_impact_text: 'انخفض وقت البحث بنسبة 60%، زاد الترافيك من referral بنسبة 35%، وارتفعت مبيعات الـmarketplace بنسبة 45%.',
         feature1_title: 'الكتالوج والبحث',
         feature1_text: 'تنقل بالفئات وفلاتر وكتل عروض للاختيار السريع.',
         feature2_title: 'السلة وإتمام الطلب',

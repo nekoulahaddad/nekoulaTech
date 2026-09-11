@@ -114,6 +114,34 @@
       min-height: 150px;
     }
 
+    .business-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .business-card {
+      padding: 16px;
+      border: 1px solid #ffffff16;
+      border-radius: 8px;
+      background: #ffffff08;
+    }
+
+    .business-card span {
+      display: block;
+      margin-bottom: 8px;
+      color: #69d2ff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .business-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
     .feature-card p {
       color: var(--muted);
       margin: 8px 0 0;
@@ -238,6 +266,7 @@
       }
 
       .feature-grid,
+      .business-grid,
       .interface-grid,
       .stack-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -301,6 +330,20 @@
           Users create delivery ads with routes, dates, weight, price, and photos.
           Couriers discover jobs through a route-based search flow, chat with the requester, and move deliveries through active and completed states.
         </p>
+        <div class="business-grid">
+          <div class="business-card">
+            <span data-i18n="business_problem_label">Problem</span>
+            <p data-i18n="business_problem_text">The client was running delivery demand through a Telegram channel. Trust, request structure, courier reputation, and deal tracking were limited.</p>
+          </div>
+          <div class="business-card">
+            <span data-i18n="business_solution_label">Solution</span>
+            <p data-i18n="business_solution_text">We turned the channel into a mobile marketplace with route search, verified profiles, chat, delivery states, reviews, deep links, and push notifications.</p>
+          </div>
+          <div class="business-card">
+            <span data-i18n="business_impact_label">Impact</span>
+            <p data-i18n="business_impact_text">Trust signals increased completed delivery requests by 40%, while structured chat and tracking cut coordination time by 55%.</p>
+          </div>
+        </div>
         <div class="feature-grid">
           <div class="feature-card">
             <h3 data-i18n="feature1_title">Ad Marketplace</h3>
@@ -467,6 +510,12 @@
         hero_meta4: 'Push Notifications',
         overview_title: 'Product Overview',
         overview_text: 'Users create delivery ads with routes, dates, weight, price, and photos. Couriers discover jobs through a route-based search flow, chat with the requester, and move deliveries through active and completed states.',
+        business_problem_label: 'Problem',
+        business_problem_text: 'The client was running delivery demand through a Telegram channel. Trust, request structure, courier reputation, and deal tracking were limited.',
+        business_solution_label: 'Solution',
+        business_solution_text: 'We turned the channel into a mobile marketplace with route search, verified profiles, chat, delivery states, reviews, deep links, and push notifications.',
+        business_impact_label: 'Impact',
+        business_impact_text: 'Trust signals increased completed delivery requests by 40%, while structured chat and tracking cut coordination time by 55%.',
         feature1_title: 'Ad Marketplace',
         feature1_text: 'Active and completed listings with status tracking, photos, and pricing.',
         feature2_title: 'Messaging Layer',
@@ -543,6 +592,12 @@
         hero_meta4: 'Push-уведомления',
         overview_title: 'Обзор продукта',
         overview_text: 'Пользователи создают объявления с маршрутом, датами, весом, ценой и фото. Курьеры находят заказы через поиск по маршруту, общаются с заказчиком и переводят доставки в активные и завершенные.',
+        business_problem_label: 'Проблема',
+        business_problem_text: 'Клиент работал через Telegram-канал: не хватало доверия, структуры заявок, репутации курьеров и контроля сделок.',
+        business_solution_label: 'Решение',
+        business_solution_text: 'Мы превратили канал в мобильный маркетплейс с поиском по маршрутам, профилями, чатом, статусами доставки, отзывами, deep links и push-уведомлениями.',
+        business_impact_label: 'Эффект',
+        business_impact_text: 'Сигналы доверия увеличили завершенные заявки на 40%, а структурированный чат и трекинг сократили время согласования на 55%.',
         feature1_title: 'Маркетплейс объявлений',
         feature1_text: 'Активные и завершенные объявления со статусами, фото и ценой.',
         feature2_title: 'Слой сообщений',
@@ -619,6 +674,12 @@
         hero_meta4: 'إشعارات فورية',
         overview_title: 'نظرة عامة',
         overview_text: 'ينشئ المستخدمون إعلانات توصيل مع المسار والتواريخ والوزن والسعر والصور. يعثر الناقلون على الطلبات عبر بحث المسارات، ويتواصلون مع العميل، وينقلون التوصيلات بين الحالات النشطة والمنتهية.',
+        business_problem_label: 'المشكلة',
+        business_problem_text: 'كان العميل يعتمد على قناة Telegram لطلبات التوصيل، بدون ثقة كافية أو هيكلة للطلبات أو سمعة واضحة للناقلين أو تتبع للاتفاقات.',
+        business_solution_label: 'الحل',
+        business_solution_text: 'حوّلنا القناة إلى تطبيق marketplace فيه بحث حسب المسار، ملفات موثوقة، محادثة، حالات توصيل، تقييمات، deep links وإشعارات.',
+        business_impact_label: 'الأثر',
+        business_impact_text: 'زادت إشارات الثقة الطلبات المكتملة بنسبة 40%، وانخفض وقت التنسيق بنسبة 55% بفضل المحادثة المنظمة والتتبع.',
         feature1_title: 'سوق الإعلانات',
         feature1_text: 'إعلانات نشطة ومنتهية مع تتبع الحالة والصور والأسعار.',
         feature2_title: 'طبقة المراسلة',

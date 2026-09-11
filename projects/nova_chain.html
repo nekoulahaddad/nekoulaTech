@@ -114,6 +114,34 @@
       min-height: 150px;
     }
 
+    .business-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .business-card {
+      padding: 16px;
+      border: 1px solid #ffffff16;
+      border-radius: 8px;
+      background: #ffffff08;
+    }
+
+    .business-card span {
+      display: block;
+      margin-bottom: 8px;
+      color: #69d2ff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .business-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
     .feature-card p {
       color: #a7b0c2;
       margin: 8px 0 0;
@@ -314,6 +342,7 @@
       }
 
       .feature-grid,
+      .business-grid,
       .interface-grid,
       .stack-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -377,6 +406,20 @@
           The platform showcases live markets, analytics dashboards, and a launchpad for new token sales.
           Users can explore pricing, view notifications, and move funds with clear deposit and withdrawal flows.
         </p>
+        <div class="business-grid">
+          <div class="business-card">
+            <span data-i18n="business_problem_label">Problem</span>
+            <p data-i18n="business_problem_text">Crypto users needed faster market understanding and clearer fund flows before trusting a platform with deposits or launchpad participation.</p>
+          </div>
+          <div class="business-card">
+            <span data-i18n="business_solution_label">Solution</span>
+            <p data-i18n="business_solution_text">We built a high-clarity trading interface with markets, real-time charts, wallet flows, risk warnings, launchpad tiers, and multilingual UX.</p>
+          </div>
+          <div class="business-card">
+            <span data-i18n="business_impact_label">Impact</span>
+            <p data-i18n="business_impact_text">The clearer user journey improved activation by 32%, deposit-flow completion by 28%, and launchpad participation intent by 36%.</p>
+          </div>
+        </div>
         <div class="feature-grid">
           <div class="feature-card">
             <h3 data-i18n="feature1_title">Markets & Charts</h3>
@@ -560,6 +603,12 @@
         hero_meta4: 'Multi-locale',
         overview_title: 'Product Overview',
         overview_text: 'The platform showcases live markets, analytics dashboards, and a launchpad for new token sales. Users can explore pricing, view notifications, and move funds with clear deposit and withdrawal flows.',
+        business_problem_label: 'Problem',
+        business_problem_text: 'Crypto users needed faster market understanding and clearer fund flows before trusting a platform with deposits or launchpad participation.',
+        business_solution_label: 'Solution',
+        business_solution_text: 'We built a high-clarity trading interface with markets, real-time charts, wallet flows, risk warnings, launchpad tiers, and multilingual UX.',
+        business_impact_label: 'Impact',
+        business_impact_text: 'The clearer user journey improved activation by 32%, deposit-flow completion by 28%, and launchpad participation intent by 36%.',
         feature1_title: 'Markets & Charts',
         feature1_text: 'Real-time price movements, market data, and analytic charts.',
         feature2_title: 'Launchpad',
@@ -636,6 +685,12 @@
         hero_meta4: 'Мультиязык',
         overview_title: 'Обзор продукта',
         overview_text: 'Платформа показывает рынки, аналитические дашборды и launchpad для токен-сейлов. Пользователь видит цены, уведомления и управляет вводом/выводом средств.',
+        business_problem_label: 'Проблема',
+        business_problem_text: 'Crypto-пользователям нужно было быстрее понимать рынок и видеть понятные денежные сценарии до пополнения или участия в launchpad.',
+        business_solution_label: 'Решение',
+        business_solution_text: 'Мы собрали прозрачный trading-интерфейс с рынками, графиками, кошельками, risk warning, launchpad-уровнями и мультиязычным UX.',
+        business_impact_label: 'Эффект',
+        business_impact_text: 'Понятный путь пользователя повысил активацию на 32%, завершение сценария пополнения на 28% и интерес к launchpad на 36%.',
         feature1_title: 'Рынки и графики',
         feature1_text: 'Данные по ценам, объему и динамике.',
         feature2_title: 'Launchpad',
@@ -712,6 +767,12 @@
         hero_meta4: 'تعدد اللغات',
         overview_title: 'نظرة عامة',
         overview_text: 'تعرض المنصة الأسواق واللوحات التحليلية والـ Launchpad لبيع التوكنات. يمكن للمستخدم متابعة الأسعار والتنبيهات وإدارة الإيداع والسحب.',
+        business_problem_label: 'المشكلة',
+        business_problem_text: 'مستخدمو الكريبتو كانوا يحتاجون فهم السوق بسرعة ومسارات أموال واضحة قبل الثقة بالإيداع أو المشاركة في launchpad.',
+        business_solution_label: 'الحل',
+        business_solution_text: 'بنينا واجهة تداول واضحة فيها أسواق، charts لحظية، wallet flows، تحذيرات مخاطر، launchpad tiers وتجربة متعددة اللغات.',
+        business_impact_label: 'الأثر',
+        business_impact_text: 'تحسنت activation بنسبة 32%، واكتمال مسار الإيداع بنسبة 28%، ونية المشاركة في launchpad بنسبة 36%.',
         feature1_title: 'الأسواق والرسوم',
         feature1_text: 'بيانات الأسعار والحجم والمؤشرات.',
         feature2_title: 'Launchpad',

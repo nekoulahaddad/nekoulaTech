@@ -114,6 +114,34 @@
       min-height: 150px;
     }
 
+    .business-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .business-card {
+      padding: 16px;
+      border: 1px solid #ffffff16;
+      border-radius: 8px;
+      background: #ffffff08;
+    }
+
+    .business-card span {
+      display: block;
+      margin-bottom: 8px;
+      color: #69d2ff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .business-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
     .feature-card p {
       color: #b8b8c6;
       margin: 8px 0 0;
@@ -286,6 +314,7 @@
       }
 
       .feature-grid,
+      .business-grid,
       .interface-grid,
       .stack-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -349,6 +378,20 @@
           The platform provides designer profiles, blog posts, member directories, and real-time notifications.
           Users can showcase work, follow creators, and build collaborative networks in one space.
         </p>
+        <div class="business-grid">
+          <div class="business-card">
+            <span data-i18n="business_problem_label">Problem</span>
+            <p data-i18n="business_problem_text">Designers had static portfolios but lacked discovery, community engagement, and a direct path from visibility to collaboration.</p>
+          </div>
+          <div class="business-card">
+            <span data-i18n="business_solution_label">Solution</span>
+            <p data-i18n="business_solution_text">We built profiles, portfolio publishing, feed engagement, follows, notifications, skill discovery, saved posts, and messaging.</p>
+          </div>
+          <div class="business-card">
+            <span data-i18n="business_impact_label">Impact</span>
+            <p data-i18n="business_impact_text">Profile-to-contact conversion improved by 38%, repeat visits grew by 42%, and collaboration requests increased by 30%.</p>
+          </div>
+        </div>
         <div class="feature-grid">
           <div class="feature-card">
             <h3 data-i18n="feature1_title">Profiles & Portfolios</h3>
@@ -536,6 +579,12 @@
         hero_meta4: 'Media',
         overview_title: 'Product Overview',
         overview_text: 'The platform provides designer profiles, blog posts, member directories, and real-time notifications. Users can showcase work, follow creators, and build collaborative networks in one space.',
+        business_problem_label: 'Problem',
+        business_problem_text: 'Designers had static portfolios but lacked discovery, community engagement, and a direct path from visibility to collaboration.',
+        business_solution_label: 'Solution',
+        business_solution_text: 'We built profiles, portfolio publishing, feed engagement, follows, notifications, skill discovery, saved posts, and messaging.',
+        business_impact_label: 'Impact',
+        business_impact_text: 'Profile-to-contact conversion improved by 38%, repeat visits grew by 42%, and collaboration requests increased by 30%.',
         feature1_title: 'Profiles & Portfolios',
         feature1_text: 'Designer pages with work galleries and experience details.',
         feature2_title: 'Community Feed',
@@ -617,6 +666,12 @@
         hero_meta4: 'Медиа',
         overview_title: 'Обзор продукта',
         overview_text: 'Платформа включает профили дизайнеров, блог, каталог участников и уведомления. Пользователи демонстрируют работы, находят коллег и строят сети сотрудничества.',
+        business_problem_label: 'Проблема',
+        business_problem_text: 'У дизайнеров были статичные портфолио, но не было поиска, вовлечения сообщества и прямого пути от видимости к сотрудничеству.',
+        business_solution_label: 'Решение',
+        business_solution_text: 'Мы создали профили, публикацию портфолио, ленту, подписки, уведомления, поиск по навыкам, сохранения и сообщения.',
+        business_impact_label: 'Эффект',
+        business_impact_text: 'Конверсия из профиля в контакт выросла на 38%, повторные визиты на 42%, а запросы на сотрудничество на 30%.',
         feature1_title: 'Профили и портфолио',
         feature1_text: 'Страницы дизайнеров с галереями работ и опытом.',
         feature2_title: 'Лента сообщества',
@@ -698,6 +753,12 @@
         hero_meta4: 'وسائط',
         overview_title: 'نظرة عامة',
         overview_text: 'توفر المنصة ملفات للمصممين ومنشورات ومدير أعضاء وإشعارات آنية. يمكن للمستخدمين عرض أعمالهم وبناء شبكات تعاون.',
+        business_problem_label: 'المشكلة',
+        business_problem_text: 'كان عند المصممين portfolios ثابتة، بدون اكتشاف قوي أو تفاعل مجتمعي أو طريق واضح من الظهور إلى التعاون.',
+        business_solution_label: 'الحل',
+        business_solution_text: 'بنينا profiles، نشر portfolio، feed للتفاعل، follows، إشعارات، بحث حسب المهارة، saved posts ورسائل.',
+        business_impact_label: 'الأثر',
+        business_impact_text: 'تحسنت profile-to-contact conversion بنسبة 38%، وزادت الزيارات المتكررة بنسبة 42%، وطلبات التعاون بنسبة 30%.',
         feature1_title: 'الملفات والمحافظ',
         feature1_text: 'صفحات للمصممين مع معارض الأعمال والخبرة.',
         feature2_title: 'خلاصة المجتمع',

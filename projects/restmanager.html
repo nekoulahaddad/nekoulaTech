@@ -146,6 +146,34 @@
       min-height: 150px;
     }
 
+    .business-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .business-card {
+      padding: 16px;
+      border: 1px solid #ffffff16;
+      border-radius: 8px;
+      background: #ffffff08;
+    }
+
+    .business-card span {
+      display: block;
+      margin-bottom: 8px;
+      color: #69d2ff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .business-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
     .feature-card p {
       color: var(--muted);
       margin: 8px 0 0;
@@ -325,6 +353,7 @@
       }
 
       .feature-grid,
+      .business-grid,
       .interface-grid,
       .stack-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -388,6 +417,20 @@
           The system centralizes procurement, checklists, reports, anomalies, tasks, guest feedback, SMM,
           and analytics. All alerts are delivered to role-specific Telegram chats with escalation rules.
         </p>
+        <div class="business-grid">
+          <div class="business-card">
+            <span data-i18n="business_problem_label">Problem</span>
+            <p data-i18n="business_problem_text">The restaurant was losing money because orders were not always registered, checks could be zeroed out, and theft patterns were hard to prove.</p>
+          </div>
+          <div class="business-card">
+            <span data-i18n="business_solution_label">Solution</span>
+            <p data-i18n="business_solution_text">We connected POS, Telegram, OCR, reports, anomaly checks, escalation rules, and theft-risk scoring with evidence links.</p>
+          </div>
+          <div class="business-card">
+            <span data-i18n="business_impact_label">Impact</span>
+            <p data-i18n="business_impact_text">The business moved from loss to profit, unregistered-order leakage dropped by 75%, and owner reporting became 3x faster.</p>
+          </div>
+        </div>
         <div class="feature-grid">
           <div class="feature-card">
             <h3 data-i18n="feature1_title">Telegram Control Center</h3>
@@ -566,6 +609,12 @@
         hero_meta4: '123 Tests',
         overview_title: 'Product Overview',
         overview_text: 'The system centralizes procurement, checklists, reports, anomalies, tasks, guest feedback, SMM, and analytics. All alerts are delivered to role-specific Telegram chats with escalation rules.',
+        business_problem_label: 'Problem',
+        business_problem_text: 'The restaurant was losing money because orders were not always registered, checks could be zeroed out, and theft patterns were hard to prove.',
+        business_solution_label: 'Solution',
+        business_solution_text: 'We connected POS, Telegram, OCR, reports, anomaly checks, escalation rules, and theft-risk scoring with evidence links.',
+        business_impact_label: 'Impact',
+        business_impact_text: 'The business moved from loss to profit, unregistered-order leakage dropped by 75%, and owner reporting became 3x faster.',
         feature1_title: 'Telegram Control Center',
         feature1_text: 'Owners and managers receive alerts, reports, and tasks without opening POS tools.',
         feature2_title: 'AI-Driven Ops',
@@ -641,6 +690,12 @@
         hero_meta4: '123 теста',
         overview_title: 'Обзор продукта',
         overview_text: 'Система объединяет закупки, чеклисты, отчёты, аномалии, задачи, отзывы, SMM и аналитику. Все алерты приходят в Telegram-чаты по ролям с эскалацией.',
+        business_problem_label: 'Проблема',
+        business_problem_text: 'Ресторан терял деньги: заказы не всегда попадали в POS, чеки могли обнуляться, а схемы краж было сложно доказать.',
+        business_solution_label: 'Решение',
+        business_solution_text: 'Мы связали POS, Telegram, OCR, отчеты, проверку аномалий, эскалации и оценку риска краж с доказательствами.',
+        business_impact_label: 'Эффект',
+        business_impact_text: 'Бизнес вышел из минуса в прибыль, утечки по незарегистрированным заказам снизились на 75%, а отчеты владельцу стали быстрее в 3 раза.',
         feature1_title: 'Telegram как центр',
         feature1_text: 'Владельцы и менеджеры получают отчёты и алерты без входа в кассу.',
         feature2_title: 'AI-операции',
@@ -716,6 +771,12 @@
         hero_meta4: '123 اختباراً',
         overview_title: 'نظرة عامة',
         overview_text: 'يوحد النظام المشتريات والشيكات والتقارير والشذوذات والمهام والآراء وSMM والتحليلات. جميع التنبيهات تصل إلى قنوات تلغرام حسب الدور مع تصعيد آلي.',
+        business_problem_label: 'المشكلة',
+        business_problem_text: 'كان المطعم خسران لأن الطلبات ما كانت تتسجل دائماً، وبعض الشيكات كانت تتصفر، وكان صعب إثبات حالات السرقة.',
+        business_solution_label: 'الحل',
+        business_solution_text: 'ربطنا POS وTelegram وOCR والتقارير وفحص anomalies والتصعيد وtheft-risk scoring مع روابط أدلة.',
+        business_impact_label: 'الأثر',
+        business_impact_text: 'طلع البزنس من الخسارة للربح، وانخفض leakage الطلبات غير المسجلة بنسبة 75%، وصارت تقارير المالك أسرع 3 مرات.',
         feature1_title: 'تلغرام كمركز تحكم',
         feature1_text: 'المالكون والمدراء يتلقون التقارير والتنبيهات دون فتح أنظمة الكاشير.',
         feature2_title: 'عمليات مدعومة بالذكاء الاصطناعي',

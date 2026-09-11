@@ -114,6 +114,34 @@
       min-height: 150px;
     }
 
+    .business-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .business-card {
+      padding: 16px;
+      border: 1px solid #ffffff16;
+      border-radius: 8px;
+      background: #ffffff08;
+    }
+
+    .business-card span {
+      display: block;
+      margin-bottom: 8px;
+      color: #69d2ff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .business-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
     .feature-card p {
       color: #b3c2bf;
       margin: 8px 0 0;
@@ -286,6 +314,7 @@
       }
 
       .feature-grid,
+      .business-grid,
       .interface-grid,
       .stack-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -350,6 +379,20 @@
           content with scheduling and tracking. It supports payments, subscriptions, and localized
           interfaces through i18n.
         </p>
+        <div class="business-grid">
+          <div class="business-card">
+            <span data-i18n="business_problem_label">Problem</span>
+            <p data-i18n="business_problem_text">Teams needed several tools and long forms to prepare one post for multiple social networks, rewrite copy, generate descriptions, add tags, and publish everywhere.</p>
+          </div>
+          <div class="business-card">
+            <span data-i18n="business_solution_label">Solution</span>
+            <p data-i18n="business_solution_text">We built one-button content automation: upload one post, then AI adapts the copy, generates descriptions and tags, validates platform rules, and publishes to connected networks.</p>
+          </div>
+          <div class="business-card">
+            <span data-i18n="business_impact_label">Impact</span>
+            <p data-i18n="business_impact_text">Publishing time dropped from 2-3 minutes per post to a few seconds, manual effort fell by 85%, and one operator could manage 4x more channels.</p>
+          </div>
+        </div>
         <div class="feature-grid">
           <div class="feature-card">
             <h3 data-i18n="feature1_title">AI Rewriting</h3>
@@ -540,6 +583,12 @@
         hero_meta4: 'Telegram Bot',
         overview_title: 'Product Overview',
         overview_text: 'The platform connects social accounts, rewrites posts by platform rules, and publishes content with scheduling and tracking. It supports payments, subscriptions, and localized interfaces through i18n.',
+        business_problem_label: 'Problem',
+        business_problem_text: 'Teams needed several tools and long forms to prepare one post for multiple social networks, rewrite copy, generate descriptions, add tags, and publish everywhere.',
+        business_solution_label: 'Solution',
+        business_solution_text: 'We built one-button content automation: upload one post, then AI adapts the copy, generates descriptions and tags, validates platform rules, and publishes to connected networks.',
+        business_impact_label: 'Impact',
+        business_impact_text: 'Publishing time dropped from 2-3 minutes per post to a few seconds, manual effort fell by 85%, and one operator could manage 4x more channels.',
         feature1_title: 'AI Rewriting',
         feature1_text: 'Platform-specific prompts, limits, and hashtag policies.',
         feature2_title: 'Publishing Hub',
@@ -622,6 +671,12 @@
         hero_meta4: 'Telegram Bot',
         overview_title: 'Обзор продукта',
         overview_text: 'Платформа подключает аккаунты, переписывает посты по правилам платформ и публикует контент по расписанию. Поддерживает оплату, подписки и локализацию через i18n.',
+        business_problem_label: 'Проблема',
+        business_problem_text: 'Командам приходилось использовать несколько инструментов и длинные формы, чтобы подготовить один пост для разных соцсетей, переписать текст, сгенерировать описания, теги и опубликовать.',
+        business_solution_label: 'Решение',
+        business_solution_text: 'Мы сделали автоматизацию в одну кнопку: пользователь загружает пост, а AI адаптирует текст, генерирует описания и теги, проверяет правила платформ и публикует в подключенные соцсети.',
+        business_impact_label: 'Эффект',
+        business_impact_text: 'Время публикации снизилось с 2-3 минут до нескольких секунд, ручная работа сократилась на 85%, а один оператор стал вести в 4 раза больше каналов.',
         feature1_title: 'AI‑переписывание',
         feature1_text: 'Промпты, лимиты и хэштеги под каждую платформу.',
         feature2_title: 'Центр публикаций',
@@ -704,6 +759,12 @@
         hero_meta4: 'بوت تيليجرام',
         overview_title: 'نظرة عامة',
         overview_text: 'تربط المنصة الحسابات وتعاد صياغة المنشورات وفق قواعد المنصات وتُنشر بجدولة مع تتبع. تدعم الاشتراكات والدفع واللغات عبر i18n.',
+        business_problem_label: 'المشكلة',
+        business_problem_text: 'كانت الفرق تحتاج عدة أدوات وforms طويلة لتجهيز post واحد لأكثر من social network، تعديل النص، توليد description، توليد tags، والنشر بكل مكان.',
+        business_solution_label: 'الحل',
+        business_solution_text: 'بنينا automation بكبسة زر: المستخدم يرفع post واحد، والـAI يعدل النص، يولد description وtags، يراعي قواعد كل platform، وينشر على كل الشبكات المربوطة.',
+        business_impact_label: 'الأثر',
+        business_impact_text: 'انخفض وقت النشر من 2-3 دقائق إلى بضع ثواني، قل الجهد اليدوي بنسبة 85%، وصار مشغل واحد يدير قنوات أكثر بـ4 مرات.',
         feature1_title: 'إعادة صياغة ذكية',
         feature1_text: 'قواعد وحدود ووسوم لكل منصة.',
         feature2_title: 'مركز النشر',

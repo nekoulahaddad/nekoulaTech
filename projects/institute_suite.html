@@ -114,6 +114,34 @@
       min-height: 150px;
     }
 
+    .business-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .business-card {
+      padding: 16px;
+      border: 1px solid #ffffff16;
+      border-radius: 8px;
+      background: #ffffff08;
+    }
+
+    .business-card span {
+      display: block;
+      margin-bottom: 8px;
+      color: #69d2ff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .business-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
     .feature-card p {
       color: #a4b1c5;
       margin: 8px 0 0;
@@ -292,6 +320,7 @@
       }
 
       .feature-grid,
+      .business-grid,
       .stack-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
@@ -356,6 +385,20 @@
           registration, profiles, and QR identity for students and staff. The admin web manages approvals, user status,
           branches, and attendance analytics. The backend provides secure APIs and data storage.
         </p>
+        <div class="business-grid">
+          <div class="business-card">
+            <span data-i18n="business_problem_label">Problem</span>
+            <p data-i18n="business_problem_text">Unregistered students were entering branches, teacher and student attendance was unreliable, and owners could not analyze activity per branch.</p>
+          </div>
+          <div class="business-card">
+            <span data-i18n="business_solution_label">Solution</span>
+            <p data-i18n="business_solution_text">We built QR entry control, registration approval, student and teacher tracking, branch analytics, and admin reports.</p>
+          </div>
+          <div class="business-card">
+            <span data-i18n="business_impact_label">Impact</span>
+            <p data-i18n="business_impact_text">Unauthorized access was reduced, hidden lessons became visible, attendance control improved by 85%, and revenue grew by around 150%.</p>
+          </div>
+        </div>
         <div class="feature-grid">
           <div class="feature-card">
             <h3 data-i18n="feature1_title">QR Scanning</h3>
@@ -549,6 +592,12 @@
         hero_meta4: 'QR Attendance',
         overview_title: 'System Overview',
         overview_text: 'The scanner app registers arrivals with QR codes and branch selection. The institute app manages news, registration, profiles, and QR identity for students and staff. The admin web manages approvals, user status, branches, and attendance analytics. The backend provides secure APIs and data storage.',
+        business_problem_label: 'Problem',
+        business_problem_text: 'Unregistered students were entering branches, teacher and student attendance was unreliable, and owners could not analyze activity per branch.',
+        business_solution_label: 'Solution',
+        business_solution_text: 'We built QR entry control, registration approval, student and teacher tracking, branch analytics, and admin reports.',
+        business_impact_label: 'Impact',
+        business_impact_text: 'Unauthorized access was reduced, hidden lessons became visible, attendance control improved by 85%, and revenue grew by around 150%.',
         feature1_title: 'QR Scanning',
         feature1_text: 'Fast in/out scans with branch control and status feedback.',
         feature2_title: 'User Profiles',
@@ -632,6 +681,12 @@
         hero_meta4: 'QR‑посещаемость',
         overview_title: 'Обзор системы',
         overview_text: 'Сканер фиксирует вход/выход по QR с привязкой к филиалу. Мобильное приложение управляет регистрацией, профилем и QR‑идентичностью, показывает новости. Админ‑веб — утверждение заявок, статусы, филиалы и аналитика. Бэкенд обеспечивает безопасные API.',
+        business_problem_label: 'Проблема',
+        business_problem_text: 'Незарегистрированные студенты проходили в филиалы, посещаемость студентов и преподавателей была ненадежной, а владелец не видел аналитику по филиалам.',
+        business_solution_label: 'Решение',
+        business_solution_text: 'Мы сделали QR-контроль входа, утверждение регистраций, учет студентов и преподавателей, аналитику по филиалам и отчеты для администрации.',
+        business_impact_label: 'Эффект',
+        business_impact_text: 'Несанкционированный доступ снизился, скрытые занятия стали видны, контроль посещаемости вырос на 85%, а доход увеличился примерно на 150%.',
         feature1_title: 'QR‑сканирование',
         feature1_text: 'Быстрая фиксация входа/выхода и статус.',
         feature2_title: 'Профили пользователей',
@@ -715,6 +770,12 @@
         hero_meta4: 'حضور عبر QR',
         overview_title: 'نظرة عامة',
         overview_text: 'تطبيق الماسح يسجل الدخول والخروج عبر QR وربط الفرع. التطبيق المحمول يدير التسجيل والملف والهوية عبر QR ويعرض الأخبار. لوحة الإدارة تتحكم بالموافقات والفروع والتحليلات. الباك‑إند يوفر واجهات آمنة.',
+        business_problem_label: 'المشكلة',
+        business_problem_text: 'كان في طلاب غير مسجلين يدخلوا الفروع، ودوام الطلاب والأساتذة غير مضبوط، وصاحب العمل ما عنده analysis واضح لكل فرع.',
+        business_solution_label: 'الحل',
+        business_solution_text: 'بنينا QR entry control، موافقات تسجيل، تتبع دوام الطلاب والأساتذة، analytics لكل فرع وتقارير للإدارة.',
+        business_impact_label: 'الأثر',
+        business_impact_text: 'انخفض الدخول غير المصرح، انكشفت الدروس غير المسجلة، تحسن ضبط الحضور بنسبة 85%، وارتفع الدخل حوالي 150%.',
         feature1_title: 'مسح QR',
         feature1_text: 'تسجيل سريع للدخول والخروج مع حالة واضحة.',
         feature2_title: 'ملفات المستخدمين',

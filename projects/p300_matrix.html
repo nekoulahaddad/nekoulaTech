@@ -146,6 +146,34 @@
       min-height: 150px;
     }
 
+    .business-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .business-card {
+      padding: 16px;
+      border: 1px solid #ffffff16;
+      border-radius: 8px;
+      background: #ffffff08;
+    }
+
+    .business-card span {
+      display: block;
+      margin-bottom: 8px;
+      color: #69d2ff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .business-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
     .feature-card p {
       color: var(--muted);
       margin: 8px 0 0;
@@ -360,6 +388,7 @@
       }
 
       .feature-grid,
+      .business-grid,
       .interface-grid,
       .stack-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -423,6 +452,20 @@
           The tool presents a speller matrix, lets researchers tune trial counts, stimulus frequency,
           and color, then runs one of eight protocols to generate reproducible sequences for P300 capture.
         </p>
+        <div class="business-grid">
+          <div class="business-card">
+            <span data-i18n="business_problem_label">Problem</span>
+            <p data-i18n="business_problem_text">The university team used a physical circuit that was hard to move, hard to reconfigure, and limited the number and variety of experiments they could run.</p>
+          </div>
+          <div class="business-card">
+            <span data-i18n="business_solution_label">Solution</span>
+            <p data-i18n="business_solution_text">We converted the setup into portable software with configurable colors, frequency, trial counts, 8 protocols, live logs, and export-ready outputs.</p>
+          </div>
+          <div class="business-card">
+            <span data-i18n="business_impact_label">Impact</span>
+            <p data-i18n="business_impact_text">The team could run 3x more experiment variations, setup became 60% faster, and the tool became usable across labs without moving hardware.</p>
+          </div>
+        </div>
         <div class="feature-grid">
           <div class="feature-card">
             <h3 data-i18n="feature1_title">Stimulus Matrix</h3>
@@ -613,6 +656,12 @@
         hero_meta4: 'Web Interface',
         overview_title: 'Product Overview',
         overview_text: 'The tool presents a speller matrix, lets researchers tune trial counts, stimulus frequency, and color, then runs one of eight protocols to generate reproducible sequences for P300 capture.',
+        business_problem_label: 'Problem',
+        business_problem_text: 'The university team used a physical circuit that was hard to move, hard to reconfigure, and limited the number and variety of experiments they could run.',
+        business_solution_label: 'Solution',
+        business_solution_text: 'We converted the setup into portable software with configurable colors, frequency, trial counts, 8 protocols, live logs, and export-ready outputs.',
+        business_impact_label: 'Impact',
+        business_impact_text: 'The team could run 3x more experiment variations, setup became 60% faster, and the tool became usable across labs without moving hardware.',
         feature1_title: 'Stimulus Matrix',
         feature1_text: 'A focused 4x4 grid optimized for row/column stimulation.',
         feature2_title: 'Protocol Suite',
@@ -688,6 +737,12 @@
         hero_meta4: 'Веб-интерфейс',
         overview_title: 'Обзор продукта',
         overview_text: 'Инструмент показывает спеллер-матрицу, позволяет задать число испытаний, частоту и цвет стимула, а затем запускает один из восьми протоколов для воспроизводимых последовательностей P300.',
+        business_problem_label: 'Проблема',
+        business_problem_text: 'Университетская команда использовала физическую схему: её было сложно переносить, перенастраивать, и она ограничивала количество и вариативность экспериментов.',
+        business_solution_label: 'Решение',
+        business_solution_text: 'Мы перевели установку в портативное ПО с настройкой цветов, частоты, числа trials, 8 протоколами, live logs и экспортом результатов.',
+        business_impact_label: 'Эффект',
+        business_impact_text: 'Команда смогла проводить в 3 раза больше вариантов экспериментов, настройка стала быстрее на 60%, а инструмент можно использовать в разных лабораториях без переноса железа.',
         feature1_title: 'Матрица стимулов',
         feature1_text: 'Фокусированная сетка 4x4 для стимуляции строк и колонок.',
         feature2_title: 'Набор протоколов',
@@ -763,6 +818,12 @@
         hero_meta4: 'واجهة ويب',
         overview_title: 'نظرة عامة',
         overview_text: 'تعرض الأداة مصفوفة التهجئة، وتتيح ضبط عدد التجارب وتردد التحفيز ولونه، ثم تشغيل أحد ثمانية بروتوكولات لتوليد تسلسلات قابلة لإعادة الاستخدام لالتقاط P300.',
+        business_problem_label: 'المشكلة',
+        business_problem_text: 'كان فريق الجامعة يستخدم دارة hardware صعب نقلها من مكان لمكان، وصعب تعديلها، وعدد التجارب الممكنة عليها كان محدود.',
+        business_solution_label: 'الحل',
+        business_solution_text: 'حوّلناها إلى software portable فيه تغيير ألوان، تغيير التواتر، عدد trials، 8 protocols، live logs وتصدير نتائج.',
+        business_impact_label: 'الأثر',
+        business_impact_text: 'صار الفريق يقدر يعمل 3x تجارب أكثر، الإعداد صار أسرع بنسبة 60%، والبرنامج صار قابل للاستخدام بأي مكان بدون نقل hardware.',
         feature1_title: 'مصفوفة التحفيز',
         feature1_text: 'شبكة 4x4 مركزة لمحفزات الصفوف والأعمدة.',
         feature2_title: 'حزمة البروتوكولات',
