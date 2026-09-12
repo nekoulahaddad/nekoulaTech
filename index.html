@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -69,6 +69,7 @@
         <button type="button" data-lang="ru">RU</button>
         <button type="button" data-lang="ar">AR</button>
       </div>
+      <button class="theme-toggle" type="button" aria-label="Switch to light theme" title="Switch theme" data-theme-toggle>☀</button>
       <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" data-i18n="menu_toggle">Menu</button>
     </div>
 
@@ -309,7 +310,7 @@
         <article class="member-card">
           <img src="assets/img/team-andrey.png" alt="Andrey">
           <h3 data-i18n="team2_title">Andrey | CSO</h3>
-          <p data-i18n="team2_text">8 years in consulting: international structuring, compliance, and market-entry strategy for Asia and MENA.</p>
+          <p data-i18n="team2_text">Expert with 8 years of experience in consulting, B2B/B2G sales, and M&A deals.</p>
         </article>
         <article class="member-card">
           <img src="assets/img/work-alex-nowak3.jpg" alt="Maxim">
@@ -367,6 +368,12 @@
     const menuToggle = document.querySelector('.menu-toggle');
     const mainNav = document.querySelector('.main-nav');
     const langButtons = document.querySelectorAll('.lang-switch button');
+    const themeToggle = document.querySelector('[data-theme-toggle]');
+    const themeMeta = document.querySelector('meta[name="theme-color"]');
+    const themeLabels = {
+      dark: 'Switch to light theme',
+      light: 'Switch to dark theme'
+    };
     const seoMeta = {
       en: {
         title: 'NMAX Tech | Automation, AI Agents, Consulting',
@@ -479,7 +486,7 @@
         portfolio_card12_tag3: 'AI Ops',
         team_eyebrow: 'Team', team_title: 'Leadership',
         team1_title: 'Nekoula | CEO, CTO', team1_text: 'Expert with more than 10 years of experience in IT, software development, and project management.',
-        team2_title: 'Andrey | CSO', team2_text: '8 years in consulting: international structuring, compliance, and market-entry strategy for Asia and MENA.',
+        team2_title: 'Andrey | CSO', team2_text: 'Expert with 8 years of experience in consulting, B2B/B2G sales, and M&A deals.',
         team3_title: 'Maxim | COO', team3_text: 'Business development leader ensuring technical solutions stay aligned with business goals.',
         services_eyebrow: 'Services', services_title: 'What we deliver',
         service1_title: 'Mobile Apps (iOS / Android)', service1_text: 'We design and build high-performance mobile apps for iOS and Android, from MVP to production-scale products.',
@@ -590,7 +597,7 @@
         portfolio_card12_tag3: 'AI Ops',
         team_eyebrow: 'Команда', team_title: 'Лидеры',
         team1_title: 'Nekoula | CEO, CTO', team1_text: 'Эксперт с опытом более 10 лет в IT, разработке программных продуктов и управлении проектами.',
-        team2_title: 'Андрей | CSO', team2_text: '8 лет в консалтинге: международное структурирование, комплаенс и стратегия выхода на рынки Азии и MENA.',
+        team2_title: 'Андрей | CSO', team2_text: 'Эксперт с 8-летним опытом в консалтинге, B2B/B2G-продажах и сделках M&A.',
         team3_title: 'Maxim | COO', team3_text: 'Руководитель развития бизнеса, обеспечивает соответствие технических решений бизнес-целям.',
         services_eyebrow: 'Услуги', services_title: 'Что мы делаем',
         service1_title: 'Мобильные приложения (iOS / Android)', service1_text: 'Проектируем и разрабатываем высокопроизводительные мобильные приложения от MVP до масштабного продукта.',
@@ -757,6 +764,17 @@
       localStorage.setItem('site_lang', lang);
     }
 
+    function applyTheme(theme) {
+      const isLight = theme === 'light';
+      const activeTheme = isLight ? 'light' : 'dark';
+      const nextLabel = isLight ? themeLabels.light : themeLabels.dark;
+      document.documentElement.dataset.theme = activeTheme;
+      themeToggle.textContent = isLight ? '☾' : '☀';
+      themeToggle.setAttribute('aria-label', nextLabel);
+      themeMeta.setAttribute('content', isLight ? '#f6f8fb' : '#060606');
+      localStorage.setItem('site_theme', activeTheme);
+    }
+
     menuToggle.addEventListener('click', function () {
       const isOpen = mainNav.classList.toggle('open');
       menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
@@ -764,6 +782,12 @@
 
     langButtons.forEach((btn) => {
       btn.addEventListener('click', () => applyLanguage(btn.dataset.lang));
+    });
+
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = document.documentElement.dataset.theme;
+      const nextTheme = currentTheme === 'light' ? 'dark' : 'light';
+      applyTheme(nextTheme);
     });
 
     const observer = new IntersectionObserver((entries) => {
@@ -779,6 +803,9 @@
     const urlLang = new URLSearchParams(window.location.search).get('lang');
     const savedLang = localStorage.getItem('site_lang') || 'en';
     const initialLang = ['en', 'ru', 'ar'].includes(urlLang) ? urlLang : savedLang;
+    const savedTheme = localStorage.getItem('site_theme') || 'dark';
+    const initialTheme = savedTheme === 'light' ? 'light' : 'dark';
+    applyTheme(initialTheme);
     applyLanguage(initialLang);
   </script>
 </body>
