@@ -121,6 +121,10 @@ body {
   object-fit: contain;
 }
 
+.brand-short {
+  display: none;
+}
+
 html[data-theme="light"] .brand img {
   filter: invert(1);
 }
@@ -553,6 +557,14 @@ html[dir="rtl"] .hero-actions {
 
   .main-nav.open {
     display: flex;
+  }
+
+  .brand-full {
+    display: none;
+  }
+
+  .brand-short {
+    display: inline;
   }
 
   html[dir="rtl"] .main-nav {
