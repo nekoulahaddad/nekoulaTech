@@ -1,0 +1,94 @@
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  padding: 12px 24px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  transition: transform var(--motion-fast) ease, background var(--motion-fast) ease;
+}
+
+.btn-primary {
+  color: var(--primary-text);
+  background: var(--accent);
+}
+
+.btn-outline {
+  color: var(--text);
+  border-color: var(--line);
+  background: var(--pill-bg);
+}
+
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 2px;
+  padding: 4px;
+  border: 1px solid var(--switch-line);
+  border-radius: 12px;
+  background: var(--bg-soft);
+}
+
+.lang-switch button {
+  min-width: 30px;
+  min-height: 32px;
+  padding: 4px 6px;
+  border: 0;
+  border-radius: 8px;
+  color: var(--switch-text);
+  background: transparent;
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+.lang-switch button.is-active {
+  color: var(--switch-active-text);
+  background: var(--switch-active-bg);
+}
+
+.theme-toggle,
+.menu-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 1px solid var(--switch-line);
+  border-radius: 12px;
+  color: var(--text);
+  background: var(--bg-soft);
+  font-size: 0.8rem;
+}
+
+.theme-toggle {
+  width: 44px;
+  padding: 0;
+  font-size: 1.1rem;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .btn:hover {
+    transform: translateY(-3px);
+  }
+
+  .btn-outline:hover {
+    background: var(--accent-soft);
+    border-color: var(--toggle-line);
+  }
+}

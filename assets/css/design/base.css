@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 120px;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background: var(--body-bg);
+  font-family: "Manrope", "Segoe UI", sans-serif;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+img,
+svg {
+  max-width: 100%;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 5px;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-family: "Sora", "Manrope", sans-serif;
+  font-weight: 500;
+  line-height: 1.2;
+  text-wrap: balance;
+  overflow-wrap: anywhere;
+}
+
+h1 {
+  max-width: 900px;
+  font-size: clamp(2.6rem, 4.7vw, 4.7rem);
+  letter-spacing: -0.055em;
+}
+
+h2 {
+  font-size: clamp(2rem, 3.5vw, 3.4rem);
+  letter-spacing: -0.045em;
+}
+
+h3 {
+  font-size: 1.2rem;
+  letter-spacing: -0.025em;
+}
+
+main {
+  max-width: var(--page-width);
+  margin-inline: auto;
+  padding: 0 var(--page-gutter) 40px;
+}
+
+.bg-grid {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(#000, transparent 85%);
+}
+
+.eyebrow {
+  margin: 0 0 18px;
+  color: var(--eyebrow);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.lead,
+.section-lead {
+  max-width: 720px;
+  color: var(--muted);
+  text-wrap: pretty;
+}
+
+.lead {
+  margin: 24px 0 32px;
+  font-size: clamp(1rem, 1.3vw, 1.12rem);
+}
+
+.section-lead {
+  margin: 20px 0 0;
+}
+
+html[dir="rtl"] body {
+  text-align: right;
+}
+
+html[dir="rtl"] :is(h1, h2, h3, .eyebrow) {
+  letter-spacing: 0;
+}

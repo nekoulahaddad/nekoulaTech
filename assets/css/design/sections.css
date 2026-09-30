@@ -1,0 +1,128 @@
+.section:not(.hero, .metrics) {
+  margin-top: var(--section-space);
+}
+
+.section-heading {
+  position: relative;
+  margin-bottom: 32px;
+  padding-top: 28px;
+  padding-inline-end: 72px;
+  border-top: 1px solid var(--line);
+}
+
+.section-heading[data-section-index]::after {
+  content: attr(data-section-index);
+  position: absolute;
+  inset-inline-end: 0;
+  top: 28px;
+  color: var(--accent);
+  font-family: monospace;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+}
+
+.cards {
+  display: grid;
+  gap: var(--grid-gap);
+  counter-reset: card;
+}
+
+.two-col {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.three-col {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.card {
+  position: relative;
+  padding: var(--card-padding);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--portfolio-bg);
+  counter-increment: card;
+}
+
+.card::before {
+  content: counter(card, decimal-leading-zero) " /";
+  display: block;
+  margin-bottom: 32px;
+  color: var(--accent);
+  font-family: monospace;
+  font-size: 0.8rem;
+}
+
+.card p {
+  margin: 16px 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.service-card.guarantee {
+  border-color: var(--guarantee-line);
+  background: var(--guarantee-bg);
+}
+
+.process {
+  padding-block: 0;
+}
+
+.process .section-heading {
+  margin-bottom: 48px;
+}
+
+.process .process-number {
+  color: var(--toggle-line);
+  font-weight: 500;
+}
+
+.process .process-card {
+  border-radius: var(--radius);
+  background: var(--portfolio-bg);
+}
+
+.process .process-icon {
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-color: var(--pill-line);
+}
+
+.process .process-actions {
+  margin-top: 48px;
+}
+
+@media (min-width: 1200px) {
+  #projects .two-col {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  #projects .card {
+    padding: 24px;
+  }
+
+  #projects .card p {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .three-col {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .two-col,
+  .three-col {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading {
+    padding-inline-end: 38px;
+  }
+
+  .card::before {
+    margin-bottom: 22px;
+  }
+}

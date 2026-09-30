@@ -1,0 +1,108 @@
+.project-page {
+  background: var(--body-bg);
+  color: var(--text);
+}
+
+.project-page .bg-grid {
+  background-image: linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  mask-image: linear-gradient(#000, transparent 85%);
+}
+
+.project-page .project-shell {
+  max-width: var(--page-width);
+  padding: 32px var(--page-gutter) 80px;
+}
+
+.project-page .project-topbar {
+  gap: 24px;
+  margin-bottom: 64px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--line);
+}
+
+.project-page .project-hero {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 48px;
+  margin-bottom: 0;
+}
+
+.project-page .project-hero > div:first-child {
+  max-width: 880px;
+}
+
+.project-page .project-hero h1 {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  letter-spacing: -0.055em;
+}
+
+.project-page .project-hero .eyebrow {
+  color: var(--accent);
+}
+
+.project-page .project-hero .lead {
+  max-width: 820px;
+}
+
+.project-page .hero-meta {
+  gap: 8px;
+}
+
+.project-page .section-heading {
+  max-width: none;
+}
+
+.project-page .business-grid,
+.project-page .feature-grid,
+.project-page .stack-grid,
+.project-page .flow-grid,
+.project-page .interface-grid {
+  gap: var(--grid-gap);
+}
+
+.project-page .feature-grid,
+.project-page .business-grid,
+.project-page .stack-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.project-page .interface-grid > * {
+  min-width: 0;
+}
+
+.project-page ul {
+  padding-inline-start: 20px;
+  padding-inline-end: 0;
+}
+
+.project-page li + li {
+  margin-top: 8px;
+}
+
+html[dir="rtl"] .project-page .project-hero h1 {
+  letter-spacing: 0;
+}
+
+@media (max-width: 900px) {
+  .project-page .feature-grid,
+  .project-page .business-grid,
+  .project-page .stack-grid,
+  .project-page .interface-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-page .project-topbar {
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .project-page .flow-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-page .topbar-tools {
+    justify-content: flex-start;
+  }
+}

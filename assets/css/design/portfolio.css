@@ -1,0 +1,97 @@
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--grid-gap);
+}
+
+.portfolio-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 22px;
+  min-width: 0;
+  min-height: 320px;
+  padding: var(--card-padding);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  color: var(--text);
+  background: var(--portfolio-bg);
+  text-decoration: none;
+}
+
+.portfolio-card::after {
+  content: "↗";
+  position: absolute;
+  inset-inline-end: 24px;
+  top: 22px;
+  color: var(--accent);
+  font-size: 1.35rem;
+  transition: transform var(--motion-fast) ease;
+}
+
+html[dir="rtl"] .portfolio-card::after {
+  content: "↖";
+}
+
+.portfolio-card h3 {
+  font-size: clamp(1.45rem, 2vw, 1.85rem);
+}
+
+.portfolio-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.portfolio-badge {
+  max-width: calc(100% - 32px);
+  color: var(--accent);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.portfolio-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  width: 100%;
+  margin-top: auto;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.portfolio-tags span {
+  padding: 4px 8px;
+  border: 1px solid var(--pill-line);
+  border-radius: 6px;
+  color: var(--tag-text);
+  background: var(--pill-bg);
+  font-family: monospace;
+  font-size: 0.68rem;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .portfolio-card:hover::after {
+    transform: translateY(-3px);
+  }
+}
+
+@media (max-width: 1050px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-card {
+    min-height: 280px;
+  }
+}

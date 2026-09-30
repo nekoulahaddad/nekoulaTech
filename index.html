@@ -10,7 +10,7 @@
   <meta name="author" content="NMAX Haddad">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-  <meta name="theme-color" content="#060606">
+  <meta name="theme-color" content="#0c0f0d">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
@@ -52,9 +52,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Sora:wght@500;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/custom.css">
   <link rel="stylesheet" href="assets/css/how-we-work.css">
   <link rel="stylesheet" href="assets/css/how-we-work-motion.css">
+  <link rel="stylesheet" href="assets/css/custom.css">
+  <script type="module" src="assets/js/site-reveal.js"></script>
+  <script type="module" src="assets/js/site-navigation.js"></script>
 </head>
 <body>
   <div class="bg-grid" aria-hidden="true"></div>
@@ -73,7 +75,7 @@
         <button type="button" data-lang="ar">AR</button>
       </div>
       <button class="theme-toggle" type="button" aria-label="Switch to light theme" title="Switch theme" data-theme-toggle>☀</button>
-      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" data-i18n="menu_toggle">Menu</button>
+      <button class="menu-toggle" type="button" aria-controls="main-nav" aria-label="Toggle menu" aria-expanded="false" data-i18n="menu_toggle">Menu</button>
     </div>
 
     <nav class="main-nav" id="main-nav">
@@ -116,7 +118,7 @@
 
     <section class="metrics section reveal">
       <article>
-        <h3 data-i18n="metric1_title">9+ years</h3>
+        <h3 data-i18n="metric1_title">10+ years</h3>
         <p data-i18n="metric1_text">Hands-on experience in software development and project delivery.</p>
       </article>
       <article>
@@ -130,48 +132,48 @@
     </section>
 
     <section id="projects" class="section reveal">
-      <div class="section-heading">
+      <div class="section-heading" data-section-index="01 /">
         <p class="eyebrow" data-i18n="projects_eyebrow">Projects</p>
-        <h2 data-i18n="projects_title">Real products delivered</h2>
+        <h2 data-i18n="projects_title">Products delivered</h2>
       </div>
       <div class="cards two-col">
         <article class="card">
           <h3 data-i18n="project1_title">Banking systems</h3>
-          <p data-i18n="project1_text">We delivered secure and scalable banking software with strong architecture, reliable transaction flows, and operational stability built for critical financial workloads.</p>
+          <p data-i18n="project1_text">We develop secure and scalable banking software with strong architecture, reliable transaction flows, and operational stability built for critical financial workloads.</p>
         </article>
         <article class="card">
           <h3 data-i18n="project2_title">Crypto platforms</h3>
-          <p data-i18n="project2_text">From crypto product modules to full platforms, we built performance-focused systems with resilient backend infrastructure and clean user journeys for fast-moving markets.</p>
+          <p data-i18n="project2_text">From crypto product modules to full platforms, we build performance-focused systems with resilient backend infrastructure and clean user journeys for fast-moving markets.</p>
         </article>
         <article class="card">
           <h3 data-i18n="project3_title">CRM systems</h3>
-          <p data-i18n="project3_text">We implemented custom CRM systems that automate sales and support processes, centralize business data, and give teams full visibility for faster execution.</p>
+          <p data-i18n="project3_text">We develop custom CRM systems that automate sales and support processes, centralize business data, and give teams full visibility for faster execution.</p>
         </article>
         <article class="card">
           <h3 data-i18n="project4_title">Decision support systems</h3>
-          <p data-i18n="project4_text">We built data-driven decision support solutions that transform complex inputs into clear, actionable insights for leadership and operations teams.</p>
+          <p data-i18n="project4_text">We build data-driven decision support solutions that transform complex inputs into clear, actionable insights for leadership and operations teams.</p>
         </article>
         <article class="card">
           <h3 data-i18n="project5_title">Marketplaces</h3>
-          <p data-i18n="project5_text">We launched full-featured marketplace products with powerful admin tools, scalable catalog architecture, and automation-ready workflows.</p>
+          <p data-i18n="project5_text">We build full-featured marketplace products with powerful admin tools, scalable catalog architecture, and automation-ready workflows.</p>
         </article>
         <article class="card">
           <h3 data-i18n="project6_title">Delivery apps</h3>
-          <p data-i18n="project6_text">We developed delivery applications with real-time tracking, smart notifications, and streamlined logistics processes that improve customer experience and speed.</p>
+          <p data-i18n="project6_text">We develop delivery applications with real-time tracking, smart notifications, and streamlined logistics processes that improve customer experience and speed.</p>
         </article>
         <article class="card">
           <h3 data-i18n="project7_title">Telegram bots</h3>
-          <p data-i18n="project7_text">We created Telegram bots that automate routine operations, customer communication, and internal workflows to reduce manual work and improve response time.</p>
+          <p data-i18n="project7_text">We create Telegram bots that automate routine operations, customer communication, and internal workflows to reduce manual work and improve response time.</p>
         </article>
         <article class="card">
           <h3 data-i18n="project8_title">Messenger apps</h3>
-          <p data-i18n="project8_text">We delivered messenger applications with real-time communication, scalable architecture, and user-focused interfaces for fast, reliable interaction.</p>
+          <p data-i18n="project8_text">We develop messenger applications with real-time communication, scalable architecture, and user-focused interfaces for fast, reliable interaction.</p>
         </article>
       </div>
     </section>
 
     <section id="how-we-work" class="process section" aria-labelledby="how-we-work-title">
-      <div class="section-heading">
+      <div class="section-heading" data-section-index="02 /">
         <h2 id="how-we-work-title" data-i18n="process_title">How we work</h2>
         <p class="section-lead" data-i18n="process_lead">We have helped many companies optimize their business processes — our portfolio shows examples. This experience gives us confidence in the value of our solutions. We cover the cost of the assessment and pilot development, and propose a paid engagement after the results are confirmed.</p>
       </div>
@@ -228,11 +230,10 @@
       <div class="process-actions">
         <a class="btn btn-primary" href="#contact" data-i18n="process_cta">Discuss my business process</a>
       </div>
-      <p class="section-lead" data-i18n="process_note">The assessment and pilot do not obligate you to sign a contract.</p>
     </section>
 
     <section id="portfolio" class="section reveal">
-      <div class="section-heading">
+      <div class="section-heading" data-section-index="03 /">
         <p class="eyebrow" data-i18n="portfolio_eyebrow">Portfolio</p>
         <h2 data-i18n="portfolio_title">Selected products you can explore</h2>
         <p class="section-lead" data-i18n="portfolio_lead">Open a project to see the story, the product flow, and visuals from the interface.</p>
@@ -362,7 +363,7 @@
     </section>
 
     <section id="team" class="section reveal">
-      <div class="section-heading">
+      <div class="section-heading" data-section-index="04 /">
         <p class="eyebrow" data-i18n="team_eyebrow">Team</p>
         <h2 data-i18n="team_title">Leadership</h2>
       </div>
@@ -386,7 +387,7 @@
     </section>
 
     <section id="services" class="section reveal">
-      <div class="section-heading">
+      <div class="section-heading" data-section-index="05 /">
         <p class="eyebrow" data-i18n="services_eyebrow">Services</p>
         <h2 data-i18n="services_title">What we deliver</h2>
       </div>
@@ -428,6 +429,10 @@
       </div>
     </section>
   </main>
+  <footer class="site-footer">
+    <a href="#home">NMAX Tech</a>
+    <span data-i18n="hero_eyebrow">Automation-First IT Team</span>
+  </footer>
 
   <script>
     const menuToggle = document.querySelector('.menu-toggle');
@@ -464,18 +469,18 @@
         hero_card1_title: 'Automation Processes', hero_card1_text: 'We automate workflows across operations, CRM/ERP, support, and internal delivery pipelines.',
         hero_card2_title: 'AI Agents', hero_card2_text: 'We implement practical AI agents for analysis, execution, monitoring, and team productivity.',
         hero_card3_title: 'Guaranteed Delivery', hero_card3_text: 'We guarantee the quality and stability of delivered products with accountable post-launch support.',
-        metric1_title: '9+ years', metric1_text: 'Hands-on experience in software development and project delivery.',
+        metric1_title: '10+ years', metric1_text: 'Hands-on experience in software development and project delivery.',
         metric2_title: 'End-to-end', metric2_text: 'From MVP to high-load architecture, support, and continuous optimization.',
         metric3_title: 'Consulting + Build', metric3_text: 'One team for strategy, implementation, and long-term scaling.',
-        projects_eyebrow: 'Projects', projects_title: 'Real products delivered',
-        project1_title: 'Banking systems', project1_text: 'We delivered secure and scalable banking software with strong architecture, reliable transaction flows, and operational stability built for critical financial workloads.',
-        project2_title: 'Crypto platforms', project2_text: 'From crypto product modules to full platforms, we built performance-focused systems with resilient backend infrastructure and clean user journeys for fast-moving markets.',
-        project3_title: 'CRM systems', project3_text: 'We implemented custom CRM systems that automate sales and support processes, centralize business data, and give teams full visibility for faster execution.',
-        project4_title: 'Decision support systems', project4_text: 'We built data-driven decision support solutions that transform complex inputs into clear, actionable insights for leadership and operations teams.',
-        project5_title: 'Marketplaces', project5_text: 'We launched full-featured marketplace products with powerful admin tools, scalable catalog architecture, and automation-ready workflows.',
-        project6_title: 'Delivery apps', project6_text: 'We developed delivery applications with real-time tracking, smart notifications, and streamlined logistics processes that improve customer experience and speed.',
-        project7_title: 'Telegram bots', project7_text: 'We created Telegram bots that automate routine operations, customer communication, and internal workflows to reduce manual work and improve response time.',
-        project8_title: 'Messenger apps', project8_text: 'We delivered messenger applications with real-time communication, scalable architecture, and user-focused interfaces for fast, reliable interaction.',
+        projects_eyebrow: 'Projects', projects_title: 'Products delivered',
+        project1_title: 'Banking systems', project1_text: 'We develop secure and scalable banking software with strong architecture, reliable transaction flows, and operational stability built for critical financial workloads.',
+        project2_title: 'Crypto platforms', project2_text: 'From crypto product modules to full platforms, we build performance-focused systems with resilient backend infrastructure and clean user journeys for fast-moving markets.',
+        project3_title: 'CRM systems', project3_text: 'We develop custom CRM systems that automate sales and support processes, centralize business data, and give teams full visibility for faster execution.',
+        project4_title: 'Decision support systems', project4_text: 'We build data-driven decision support solutions that transform complex inputs into clear, actionable insights for leadership and operations teams.',
+        project5_title: 'Marketplaces', project5_text: 'We build full-featured marketplace products with powerful admin tools, scalable catalog architecture, and automation-ready workflows.',
+        project6_title: 'Delivery apps', project6_text: 'We develop delivery applications with real-time tracking, smart notifications, and streamlined logistics processes that improve customer experience and speed.',
+        project7_title: 'Telegram bots', project7_text: 'We create Telegram bots that automate routine operations, customer communication, and internal workflows to reduce manual work and improve response time.',
+        project8_title: 'Messenger apps', project8_text: 'We develop messenger applications with real-time communication, scalable architecture, and user-focused interfaces for fast, reliable interaction.',
         portfolio_eyebrow: 'Portfolio', portfolio_title: 'Selected products you can explore',
         portfolio_lead: 'Open a project to see the story, the product flow, and visuals from the interface.',
         portfolio_card1_badge: 'Mobile App',
@@ -575,7 +580,6 @@
         process_step3_text: 'We develop a solution for the selected process and test it in your business operations.',
         process_step4_title: 'Verify the impact and discuss next steps',
         process_step4_text: 'We compare the metrics before and after. Once the results are confirmed and you are ready to continue, we sign a contract for further implementation and development.',
-        process_note: 'The assessment and pilot do not obligate you to sign a contract.'
       },
       ru: {
         menu_toggle: 'Меню',
@@ -588,18 +592,18 @@
         hero_card1_title: 'Автоматизация процессов', hero_card1_text: 'Автоматизируем операции, CRM/ERP, поддержку и внутренние пайплайны разработки.',
         hero_card2_title: 'AI-агенты', hero_card2_text: 'Внедряем практичных AI-агентов для анализа, выполнения задач, мониторинга и роста эффективности команды.',
         hero_card3_title: 'Гарантия результата', hero_card3_text: 'Гарантируем качество и стабильность поставляемых продуктов с ответственным пострелизным сопровождением.',
-        metric1_title: '9+ лет', metric1_text: 'Практический опыт в разработке ПО и поставке IT-решений.',
+        metric1_title: '10+ лет', metric1_text: 'Практический опыт в разработке ПО и поставке IT-решений.',
         metric2_title: 'Под ключ', metric2_text: 'От MVP до high-load архитектуры, поддержки и постоянной оптимизации.',
         metric3_title: 'Консалтинг + Разработка', metric3_text: 'Одна команда для стратегии, внедрения и долгосрочного роста.',
-        projects_eyebrow: 'Проекты', projects_title: 'Реально реализованные продукты',
-        project1_title: 'Банковские системы', project1_text: 'Создавали безопасные и масштабируемые банковские решения с надежной архитектурой и стабильной обработкой критичных транзакций.',
-        project2_title: 'Криптоплатформы', project2_text: 'От отдельных модулей до полноценных платформ: высокопроизводительные решения с устойчивым backend и продуманным пользовательским опытом.',
-        project3_title: 'CRM-системы', project3_text: 'Разрабатывали кастомные CRM для автоматизации продаж и поддержки, централизации данных и ускорения работы команд.',
-        project4_title: 'Системы поддержки принятия решений', project4_text: 'Строили data-driven системы, превращающие сложные данные в понятные и практичные управленческие решения.',
-        project5_title: 'Маркетплейсы', project5_text: 'Запускали полнофункциональные маркетплейсы с мощной админкой, масштабируемым каталогом и процессной автоматизацией.',
-        project6_title: 'Delivery-приложения', project6_text: 'Разрабатывали сервисы доставки с трекингом в реальном времени, умными уведомлениями и оптимизированной логистикой.',
-        project7_title: 'Telegram-боты', project7_text: 'Создавали Telegram-ботов для автоматизации рутины, коммуникации с клиентами и внутренних процессов.',
-        project8_title: 'Мессенджер-приложения', project8_text: 'Разрабатывали мессенджеры с коммуникацией в реальном времени, масштабируемой архитектурой и удобным интерфейсом.',
+        projects_eyebrow: 'Проекты', projects_title: 'Реализованные продукты',
+        project1_title: 'Банковские системы', project1_text: 'Создаём безопасные и масштабируемые банковские решения с надежной архитектурой и стабильной обработкой критичных транзакций.',
+        project2_title: 'Криптоплатформы', project2_text: 'Создаём высокопроизводительные решения — от отдельных модулей до полноценных платформ — с устойчивым backend и продуманным пользовательским опытом.',
+        project3_title: 'CRM-системы', project3_text: 'Разрабатываем кастомные CRM для автоматизации продаж и поддержки, централизации данных и ускорения работы команд.',
+        project4_title: 'Системы поддержки принятия решений', project4_text: 'Создаём data-driven системы, превращающие сложные данные в понятные и практичные управленческие решения.',
+        project5_title: 'Маркетплейсы', project5_text: 'Разрабатываем полнофункциональные маркетплейсы с мощной админкой, масштабируемым каталогом и процессной автоматизацией.',
+        project6_title: 'Delivery-приложения', project6_text: 'Разрабатываем сервисы доставки с трекингом в реальном времени, умными уведомлениями и оптимизированной логистикой.',
+        project7_title: 'Telegram-боты', project7_text: 'Создаём Telegram-ботов для автоматизации рутины, коммуникации с клиентами и внутренних процессов.',
+        project8_title: 'Мессенджер-приложения', project8_text: 'Разрабатываем мессенджеры с коммуникацией в реальном времени, масштабируемой архитектурой и удобным интерфейсом.',
         portfolio_eyebrow: 'Портфолио', portfolio_title: 'Избранные проекты с подробностями',
         portfolio_lead: 'Откройте проект, чтобы увидеть историю, пользовательские сценарии и визуальные фрагменты интерфейса.',
         portfolio_card1_badge: 'Мобильное приложение',
@@ -699,7 +703,6 @@
         process_step3_text: 'Создаём решение для выбранного процесса и проверяем его в работе вашего бизнеса.',
         process_step4_title: 'Подтверждаем эффект и обсуждаем сотрудничество',
         process_step4_text: 'Сравниваем показатели до и после. Если результат подтверждён и вы готовы продолжать, заключаем контракт на дальнейшее внедрение и развитие.',
-        process_note: 'Диагностика и пилот не обязывают вас заключать контракт.'
       },
       ar: {
         menu_toggle: 'القائمة',
@@ -712,18 +715,18 @@
         hero_card1_title: 'أتمتة العمليات', hero_card1_text: 'نقوم بأتمتة العمليات التشغيلية وأنظمة CRM/ERP والدعم وسير العمل الداخلي.',
         hero_card2_title: 'وكلاء الذكاء الاصطناعي', hero_card2_text: 'ننفذ وكلاء ذكاء اصطناعي عمليين للتحليل والتنفيذ والمراقبة ورفع إنتاجية الفريق.',
         hero_card3_title: 'ضمان التسليم', hero_card3_text: 'نضمن جودة واستقرار المنتجات المسلمة مع دعم مسؤول بعد الإطلاق.',
-        metric1_title: '9+ سنوات', metric1_text: 'خبرة عملية في تطوير البرمجيات وتسليم المشاريع.',
+        metric1_title: '10+ سنوات', metric1_text: 'خبرة عملية في تطوير البرمجيات وتسليم المشاريع.',
         metric2_title: 'حلول متكاملة', metric2_text: 'من MVP إلى بنية عالية التحمل ثم الدعم والتحسين المستمر.',
         metric3_title: 'استشارات + تنفيذ', metric3_text: 'فريق واحد للاستراتيجية والتنفيذ والتوسع طويل المدى.',
-        projects_eyebrow: 'المشاريع', projects_title: 'منتجات حقيقية تم تسليمها',
-        project1_title: 'أنظمة مصرفية', project1_text: 'سلمنا حلولا مصرفية آمنة وقابلة للتوسع بهندسة قوية وتدفقات معاملات موثوقة.',
-        project2_title: 'منصات الكريبتو', project2_text: 'من وحدات متخصصة إلى منصات كاملة بنينا أنظمة عالية الأداء ببنية خلفية قوية وتجربة مستخدم واضحة.',
-        project3_title: 'أنظمة CRM', project3_text: 'أنشأنا أنظمة CRM مخصصة لأتمتة المبيعات والدعم وتوحيد البيانات وتسريع الأداء.',
-        project4_title: 'أنظمة دعم القرار', project4_text: 'بنينا حلولا تعتمد على البيانات لتحويل المدخلات المعقدة إلى قرارات عملية واضحة.',
-        project5_title: 'منصات Marketplace', project5_text: 'أطلقنا منصات سوق إلكتروني متكاملة مع لوحة تحكم قوية وهندسة قابلة للتوسع.',
-        project6_title: 'تطبيقات التوصيل', project6_text: 'طورنا تطبيقات توصيل بتتبع لحظي وإشعارات ذكية وتدفقات لوجستية أكثر كفاءة.',
-        project7_title: 'بوتات تيليجرام', project7_text: 'أنشأنا بوتات تيليجرام لأتمتة المهام المتكررة والتواصل مع العملاء والعمليات الداخلية.',
-        project8_title: 'تطبيقات المراسلة', project8_text: 'سلمنا تطبيقات مراسلة بتواصل فوري وهندسة قابلة للتوسع وتجربة استخدام سلسة.',
+        projects_eyebrow: 'المشاريع', projects_title: 'منتجات تم تنفيذها',
+        project1_title: 'أنظمة مصرفية', project1_text: 'نطوّر حلولًا مصرفية آمنة وقابلة للتوسع بهندسة قوية وتدفقات معاملات موثوقة.',
+        project2_title: 'منصات الكريبتو', project2_text: 'من وحدات متخصصة إلى منصات كاملة نبني أنظمة عالية الأداء ببنية خلفية قوية وتجربة مستخدم واضحة.',
+        project3_title: 'أنظمة CRM', project3_text: 'نطوّر أنظمة CRM مخصصة لأتمتة المبيعات والدعم وتوحيد البيانات وتسريع الأداء.',
+        project4_title: 'أنظمة دعم القرار', project4_text: 'نبني حلولًا تعتمد على البيانات لتحويل المدخلات المعقدة إلى قرارات عملية واضحة.',
+        project5_title: 'منصات Marketplace', project5_text: 'نطوّر منصات سوق إلكتروني متكاملة مع لوحة تحكم قوية وهندسة قابلة للتوسع.',
+        project6_title: 'تطبيقات التوصيل', project6_text: 'نطوّر تطبيقات توصيل بتتبع لحظي وإشعارات ذكية وتدفقات لوجستية أكثر كفاءة.',
+        project7_title: 'بوتات تيليجرام', project7_text: 'ننشئ بوتات تيليجرام لأتمتة المهام المتكررة والتواصل مع العملاء والعمليات الداخلية.',
+        project8_title: 'تطبيقات المراسلة', project8_text: 'نطوّر تطبيقات مراسلة بتواصل فوري وهندسة قابلة للتوسع وتجربة استخدام سلسة.',
         portfolio_eyebrow: 'أعمالنا', portfolio_title: 'منتجات مختارة يمكنك استكشافها',
         portfolio_lead: 'افتح أي مشروع للاطلاع على القصة ومسار المنتج ولمحات من الواجهة.',
         portfolio_card1_badge: 'تطبيق جوال',
@@ -823,7 +826,6 @@
         process_step3_text: 'نبني حلًا للعملية المختارة ونختبره ضمن أعمال شركتكم.',
         process_step4_title: 'نتحقق من الأثر ونناقش التعاون',
         process_step4_text: 'نقارن المؤشرات قبل التجربة وبعدها. إذا تأكدت النتائج ورغبتم في المتابعة، نبرم عقدًا لاستكمال التنفيذ والتطوير.',
-        process_note: 'تحليل العمليات والحل التجريبي لا يلزمانكم بإبرام عقد.'
       }
     };
 
@@ -875,7 +877,7 @@
       document.documentElement.dataset.theme = activeTheme;
       themeToggle.textContent = isLight ? '☾' : '☀';
       themeToggle.setAttribute('aria-label', nextLabel);
-      themeMeta.setAttribute('content', isLight ? '#f6f8fb' : '#060606');
+      themeMeta.setAttribute('content', isLight ? '#f4f5ef' : '#0c0f0d');
       localStorage.setItem('site_theme', activeTheme);
     }
 
@@ -893,16 +895,6 @@
       const nextTheme = currentTheme === 'light' ? 'dark' : 'light';
       applyTheme(nextTheme);
     });
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.16 });
-
-    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
 
     const urlLang = new URLSearchParams(window.location.search).get('lang');
     const savedLang = localStorage.getItem('site_lang') || 'en';

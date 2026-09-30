@@ -1,0 +1,54 @@
+.reveal {
+  opacity: 1;
+  transform: none;
+}
+
+.has-reveal .reveal:not(.visible) {
+  opacity: 0;
+  transform: translateY(22px);
+}
+
+.has-reveal .reveal {
+  transition: opacity var(--motion-slow) ease, transform var(--motion-slow) var(--ease-out);
+}
+
+:is(.card, .portfolio-card, .member-card, .hero-panel article) {
+  transition: transform var(--motion-fast) ease, border-color var(--motion-fast) ease;
+}
+
+.member-card img {
+  transition: filter var(--motion-slow) ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  :is(.card, .portfolio-card, .member-card, .hero-panel article):hover {
+    transform: translateY(-5px);
+    border-color: var(--guarantee-line);
+  }
+
+  .member-card:hover img {
+    filter: grayscale(0%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .has-reveal .reveal:not(.visible) {
+    opacity: 1;
+    transform: none;
+  }
+
+  :is(.card, .portfolio-card, .member-card, .hero-panel article, .btn):hover {
+    transform: none;
+  }
+}
