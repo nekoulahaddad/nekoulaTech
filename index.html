@@ -55,11 +55,12 @@
   <link rel="stylesheet" href="assets/css/how-we-work.css">
   <link rel="stylesheet" href="assets/css/how-we-work-motion.css">
   <link rel="stylesheet" href="assets/css/custom.css">
-  <script type="module" src="assets/js/site-reveal.js"></script>
-  <script type="module" src="assets/js/site-navigation.js"></script>
+  <link rel="stylesheet" href="assets/css/scroll-experience.css">
+  <script defer src="assets/js/site-effects.bundle.js"></script>
 </head>
 <body>
   <div class="bg-grid" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"></div>
 
   <header class="site-header">
     <a class="brand" href="#home">
@@ -176,6 +177,16 @@
       <div class="section-heading" data-section-index="02 /">
         <h2 id="how-we-work-title" data-i18n="process_title">How we work</h2>
         <p class="section-lead" data-i18n="process_lead">We have helped many companies optimize their business processes — our portfolio shows examples. This experience gives us confidence in the value of our solutions. We cover the cost of the assessment and pilot development, and propose a paid engagement after the results are confirmed.</p>
+        <div class="process-meter" aria-hidden="true">
+          <div class="process-dial">
+            <svg viewBox="0 0 100 100">
+              <circle class="process-dial-track" cx="50" cy="50" r="46" />
+              <circle class="process-dial-fill" cx="50" cy="50" r="46" pathLength="100" />
+            </svg>
+            <span class="process-count">01</span>
+          </div>
+          <span class="process-total">/ 04</span>
+        </div>
       </div>
       <ol class="process-steps" role="list">
         <li class="process-step reveal">

@@ -1,0 +1,79 @@
+.scroll-progress {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 110;
+  height: 3px;
+  opacity: 0;
+  pointer-events: none;
+  background: var(--accent);
+  transform: scaleX(var(--page-progress, 0));
+  transform-origin: left center;
+}
+
+.has-scroll-fx .scroll-progress {
+  opacity: 1;
+}
+
+html[dir="rtl"] .scroll-progress {
+  transform-origin: right center;
+}
+
+.is-scroll-scene .process-meter {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 32px;
+  color: var(--muted);
+}
+
+.process-dial {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 92px;
+  height: 92px;
+}
+
+.process-dial svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.process-dial-track,
+.process-dial-fill {
+  fill: none;
+  stroke-width: 2;
+}
+
+.process-dial-track {
+  stroke: var(--line);
+}
+
+.process-dial-fill {
+  stroke: var(--accent);
+  stroke-linecap: round;
+  stroke-dasharray: 100;
+  stroke-dashoffset: calc(100 - 100 * var(--scene-progress, 0));
+}
+
+.process-count {
+  color: var(--accent);
+  font-family: "Sora", sans-serif;
+  font-size: 1.5rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.process-total {
+  font-family: monospace;
+  font-size: 0.875rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-progress,
+  .is-scroll-scene .process-meter {
+    display: none;
+  }
+}

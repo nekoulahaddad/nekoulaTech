@@ -1,0 +1,40 @@
+@media (min-width: 900px) and (min-height: 560px) and (max-height: 759px) and (prefers-reduced-motion: no-preference) {
+  .is-scroll-scene .section-heading h2 {
+    font-size: 2rem;
+  }
+
+  .is-scroll-scene .section-lead {
+    font-size: 0.875rem;
+    line-height: 1.65;
+  }
+
+  .is-scroll-scene .process-meter {
+    margin-top: 20px;
+  }
+
+  .is-scroll-scene .process-dial {
+    width: 64px;
+    height: 64px;
+  }
+
+  .process.is-scroll-scene .process-card {
+    min-height: clamp(320px, 53svh, 460px);
+    gap: 24px;
+    padding: 24px;
+  }
+
+  .is-scroll-scene .process-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .is-scroll-scene .process-copy h3 {
+    font-size: 1.4rem;
+  }
+
+  .is-scroll-scene .process-copy p {
+    margin-top: 14px;
+    font-size: 0.9375rem;
+    line-height: 1.7;
+  }
+}

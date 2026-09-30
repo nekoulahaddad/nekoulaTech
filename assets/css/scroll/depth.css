@@ -1,0 +1,63 @@
+@media (prefers-reduced-motion: no-preference) {
+  .has-depth-fx .hero-copy {
+    translate: 0 var(--hero-copy-shift, 0px);
+  }
+
+  .has-depth-fx .hero-panel {
+    translate: 0 var(--hero-panel-shift, 0px);
+    rotate: var(--hero-panel-angle, 0deg);
+    transform-origin: center center;
+  }
+
+  .has-reveal .section-heading.visible h2 {
+    animation: heading-unfold 950ms var(--ease-out) both;
+  }
+
+  .has-reveal :is(.portfolio-card, .member-card, .card).reveal:not(.visible) {
+    transform: perspective(1200px) translateY(48px) rotateX(5deg) scale(0.98);
+    transform-origin: center top;
+  }
+
+  .has-reveal :is(.portfolio-card, .member-card, .card).reveal {
+    transition-duration: 900ms;
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+
+  :is(.portfolio-card, .member-card, .card):nth-child(3n + 2) {
+    --reveal-delay: 80ms;
+  }
+
+  :is(.portfolio-card, .member-card, .card):nth-child(3n + 3) {
+    --reveal-delay: 160ms;
+  }
+
+  .has-reveal :is(.portfolio-card, .member-card, .card).visible:hover {
+    transition-duration: var(--motion-fast);
+    transition-delay: 0ms;
+  }
+
+  @keyframes heading-unfold {
+    from {
+      clip-path: inset(0 0 100% 0);
+      transform: translateY(18px);
+    }
+    to {
+      clip-path: inset(0);
+      transform: translateY(0);
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .has-reveal :is(.portfolio-card, .member-card, .card).reveal {
+    transition-delay: 0ms;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-copy,
+  .hero-panel {
+    translate: none;
+    rotate: none;
+  }
+}
