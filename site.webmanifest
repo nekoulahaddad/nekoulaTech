@@ -3,8 +3,8 @@
   "short_name": "NMAX",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#060606",
-  "theme_color": "#060606",
+  "background_color": "#0d0d0d",
+  "theme_color": "#0d0d0d",
   "icons": [
     {
       "src": "/assets/img/favicon-192x192.png",

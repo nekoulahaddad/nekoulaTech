@@ -21,7 +21,7 @@
 
 .btn-primary {
   color: var(--primary-text);
-  background: var(--accent);
+  background: var(--brand);
 }
 
 .btn-outline {
@@ -85,6 +85,10 @@
 @media (hover: hover) and (pointer: fine) {
   .btn:hover {
     transform: translateY(-3px);
+  }
+
+  .btn-primary:hover {
+    background: var(--brand-hover);
   }
 
   .btn-outline:hover {

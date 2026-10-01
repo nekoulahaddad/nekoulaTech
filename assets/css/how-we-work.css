@@ -4,7 +4,7 @@
 }
 
 html[data-theme="light"] .process {
-  --process-number-color: #a1adbc;
+  --process-number-color: #a3a3a3;
 }
 
 .process .section-heading {

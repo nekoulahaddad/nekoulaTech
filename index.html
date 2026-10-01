@@ -10,7 +10,7 @@
   <meta name="author" content="NMAX Haddad">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-  <meta name="theme-color" content="#0c0f0d">
+  <meta name="theme-color" content="#0d0d0d">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
@@ -913,7 +913,7 @@
       document.documentElement.dataset.theme = activeTheme;
       themeToggle.textContent = isLight ? '☾' : '☀';
       themeToggle.setAttribute('aria-label', nextLabel);
-      themeMeta.setAttribute('content', isLight ? '#f4f5ef' : '#0c0f0d');
+      themeMeta.setAttribute('content', getComputedStyle(document.documentElement).getPropertyValue('--bg').trim());
       localStorage.setItem('site_theme', activeTheme);
     }
 
