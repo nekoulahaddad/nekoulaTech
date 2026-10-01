@@ -1,0 +1,95 @@
+.is-hero-scene .hero-orbit {
+  position: absolute;
+  inset: 0 -12px;
+  display: grid;
+  place-items: center;
+  opacity: var(--orbit-opacity, 1);
+  transform: scale(var(--orbit-scale, 1));
+  pointer-events: none;
+}
+
+.hero-orbit::before {
+  content: "";
+  position: absolute;
+  width: 90%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--portfolio-glow), transparent 68%);
+}
+
+.hero-orbit svg {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  color: var(--accent);
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 0.8;
+  transform: rotate(var(--orbit-rotation, 0deg));
+}
+
+.hero-orbit .orbit-shell {
+  opacity: 0.15;
+}
+
+.hero-orbit .orbit-path {
+  opacity: 0.45;
+}
+
+.hero-orbit .orbit-node {
+  fill: var(--accent);
+  stroke: none;
+}
+
+.hero-orbit .hero-emblem {
+  position: absolute;
+  width: 86px;
+  height: 86px;
+  border-radius: 20px;
+  box-shadow: 0 0 80px var(--portfolio-glow);
+}
+
+html[data-theme="light"] .hero-emblem {
+  filter: invert(1);
+}
+
+.is-hero-scene .hero-scroll-cue {
+  position: absolute;
+  inset-inline: 0;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  color: var(--muted);
+  opacity: var(--cue-opacity, 1);
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+  pointer-events: none;
+}
+
+.hero-scroll-track {
+  width: 96px;
+  height: 2px;
+  overflow: hidden;
+  background: var(--line);
+}
+
+.hero-scroll-track::after {
+  content: "";
+  display: block;
+  height: 100%;
+  background: var(--accent);
+  transform: scaleX(var(--hero-progress, 0));
+  transform-origin: left center;
+}
+
+html[dir="rtl"] .hero-scroll-track::after {
+  transform-origin: right center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-orbit,
+  .hero-scroll-cue {
+    display: none;
+  }
+}

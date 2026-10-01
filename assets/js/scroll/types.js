@@ -25,7 +25,6 @@
 /**
  * @typedef {Object} ViewportGeometry
  * @property {number} scrollRange
- * @property {number} heroHeight
  */
 
 /**
@@ -36,6 +35,7 @@
 
 /**
  * @typedef {Object} ScrollGeometry
+ * @property {import("../hero/types.js").HeroGeometry | null} hero
  * @property {ViewportGeometry} viewport
  * @property {SceneGeometry | null} scene
  */

@@ -1,14 +1,4 @@
 @media (prefers-reduced-motion: no-preference) {
-  .has-depth-fx .hero-copy {
-    translate: 0 var(--hero-copy-shift, 0px);
-  }
-
-  .has-depth-fx .hero-panel {
-    translate: 0 var(--hero-panel-shift, 0px);
-    rotate: var(--hero-panel-angle, 0deg);
-    transform-origin: center center;
-  }
-
   .has-reveal .section-heading.visible h2 {
     animation: heading-unfold 950ms var(--ease-out) both;
   }
@@ -51,13 +41,5 @@
 @media (max-width: 700px) {
   .has-reveal :is(.portfolio-card, .member-card, .card).reveal {
     transition-delay: 0ms;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .hero-copy,
-  .hero-panel {
-    translate: none;
-    rotate: none;
   }
 }

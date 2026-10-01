@@ -1,0 +1,58 @@
+@media (max-width: 700px) {
+  .hero-copy h1 {
+    font-size: clamp(1.6rem, 7.8vw, 2.5rem);
+    line-height: 1.18;
+  }
+}
+
+@media (min-width: 900px) and (min-height: 560px) and (max-height: 759px) and (prefers-reduced-motion: no-preference) {
+  .is-hero-scene .hero-stage {
+    padding-block: 24px 48px;
+    gap: 32px;
+  }
+
+  .is-hero-scene .hero-copy h1 {
+    font-size: clamp(2.1rem, 3.6vw, 3.25rem);
+    line-height: 1.15;
+  }
+
+  .is-hero-scene .hero-copy .eyebrow {
+    margin-bottom: 14px;
+    font-size: 0.65rem;
+  }
+
+  .is-hero-scene .hero-copy .lead {
+    margin-block: 18px 24px;
+    font-size: 0.9375rem;
+    line-height: 1.65;
+  }
+
+  .is-hero-scene .hero-panel article {
+    padding: 18px;
+    padding-inline-start: 56px;
+  }
+
+  .is-hero-scene .hero-panel article::before {
+    inset-inline-start: 18px;
+    top: 20px;
+  }
+
+  .is-hero-scene .hero-panel h3 {
+    font-size: 0.95rem;
+  }
+
+  .is-hero-scene .hero-panel p {
+    margin-top: 8px;
+    font-size: 0.8125rem;
+    line-height: 1.6;
+  }
+
+  .is-hero-scene .hero-scroll-cue {
+    bottom: 12px;
+  }
+
+  .is-hero-scene .hero-emblem {
+    width: 68px;
+    height: 68px;
+  }
+}

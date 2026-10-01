@@ -56,6 +56,7 @@
   <link rel="stylesheet" href="assets/css/how-we-work-motion.css">
   <link rel="stylesheet" href="assets/css/custom.css">
   <link rel="stylesheet" href="assets/css/scroll-experience.css">
+  <link rel="stylesheet" href="assets/css/hero-experience.css">
   <script defer src="assets/js/site-effects.bundle.js"></script>
 </head>
 <body>
@@ -92,28 +93,49 @@
 
   <main>
     <section id="home" class="hero section reveal">
-      <div class="hero-copy">
-        <p class="eyebrow" data-i18n="hero_eyebrow">Automation-First IT Team</p>
-        <h1 data-i18n="hero_title">We engineer intelligent systems that automate what matters.</h1>
-        <p class="lead" data-i18n="hero_lead">We design, build, and scale high-performance software. We also provide consulting and product delivery guarantee unlike many other companies.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#contact" data-i18n="hero_cta_primary">Start Your Project</a>
-          <a class="btn btn-outline" href="#services" data-i18n="hero_cta_secondary">Explore Services</a>
+      <div class="hero-stage">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="hero_eyebrow">Automation-First IT Team</p>
+          <h1 data-i18n="hero_title">We engineer intelligent systems that automate what matters.</h1>
+          <p class="lead" data-i18n="hero_lead">We design, build, and scale high-performance software. We also provide consulting and product delivery guarantee unlike many other companies.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact" data-i18n="hero_cta_primary">Start Your Project</a>
+            <a class="btn btn-outline" href="#services" data-i18n="hero_cta_secondary">Explore Services</a>
+          </div>
         </div>
-      </div>
-      <div class="hero-panel">
-        <article>
-          <h3 data-i18n="hero_card1_title">Automation Processes</h3>
-          <p data-i18n="hero_card1_text">We automate workflows across operations, CRM/ERP, support, and internal delivery pipelines.</p>
-        </article>
-        <article>
-          <h3 data-i18n="hero_card2_title">AI Agents</h3>
-          <p data-i18n="hero_card2_text">We implement practical AI agents for analysis, execution, monitoring, and team productivity.</p>
-        </article>
-        <article>
-          <h3 data-i18n="hero_card3_title">Guaranteed Delivery</h3>
-          <p data-i18n="hero_card3_text">We guarantee the quality and stability of delivered products with accountable post-launch support.</p>
-        </article>
+        <div class="hero-visual">
+          <div class="hero-orbit" aria-hidden="true">
+            <svg viewBox="0 0 480 480">
+              <circle class="orbit-shell" cx="240" cy="240" r="212" />
+              <ellipse class="orbit-path" cx="240" cy="240" rx="208" ry="90" transform="rotate(30 240 240)" />
+              <ellipse class="orbit-path" cx="240" cy="240" rx="208" ry="90" transform="rotate(90 240 240)" />
+              <ellipse class="orbit-path" cx="240" cy="240" rx="208" ry="90" transform="rotate(150 240 240)" />
+              <circle class="orbit-node" cx="240" cy="32" r="4" />
+              <circle class="orbit-node" cx="420" cy="344" r="4" />
+              <circle class="orbit-node" cx="60" cy="344" r="4" />
+            </svg>
+            <img class="hero-emblem" src="assets/img/logo-bw.svg" alt="" width="86" height="86">
+          </div>
+          <div class="hero-panel">
+            <article>
+              <h3 data-i18n="hero_card1_title">Automation Processes</h3>
+              <p data-i18n="hero_card1_text">We automate workflows across operations, CRM/ERP, support, and internal delivery pipelines.</p>
+            </article>
+            <article>
+              <h3 data-i18n="hero_card2_title">AI Agents</h3>
+              <p data-i18n="hero_card2_text">We implement practical AI agents for analysis, execution, monitoring, and team productivity.</p>
+            </article>
+            <article>
+              <h3 data-i18n="hero_card3_title">Guaranteed Delivery</h3>
+              <p data-i18n="hero_card3_text">We guarantee the quality and stability of delivered products with accountable post-launch support.</p>
+            </article>
+          </div>
+        </div>
+        <div class="hero-scroll-cue" aria-hidden="true">
+          <span class="hero-scroll-track"></span>
+          <span data-i18n="hero_scroll_hint">Scroll to explore</span>
+          <span>↓</span>
+        </div>
       </div>
     </section>
 
@@ -474,6 +496,7 @@
         nav_home: 'Home', nav_projects: 'Projects', nav_portfolio: 'Portfolio', nav_team: 'Team', nav_services: 'Services', nav_contact: 'Contact',
         nav_process: 'How we work',
         hero_eyebrow: 'Automation-First IT Team',
+        hero_scroll_hint: 'Scroll to explore',
         hero_title: 'We engineer intelligent systems that automate what matters.',
         hero_lead: 'We design, build, and scale high-performance software. We also provide consulting and product delivery guarantee unlike many other companies.',
         hero_cta_primary: 'Start Your Project', hero_cta_secondary: 'Explore Services',
@@ -597,6 +620,7 @@
         nav_home: 'Главная', nav_projects: 'Проекты', nav_portfolio: 'Портфолио', nav_team: 'Команда', nav_services: 'Услуги', nav_contact: 'Контакты',
         nav_process: 'Как мы работаем',
         hero_eyebrow: 'IT-команда с фокусом на автоматизацию',
+        hero_scroll_hint: 'Прокрутите, чтобы узнать больше',
         hero_title: 'Мы проектируем интеллектуальные системы, автоматизирующие самое важное.',
         hero_lead: 'Мы проектируем, разрабатываем и масштабируем высокопроизводительные продукты. Также предоставляем консалтинг и гарантию на результат, в отличие от многих компаний.',
         hero_cta_primary: 'Запустить проект', hero_cta_secondary: 'Смотреть услуги',
@@ -720,6 +744,7 @@
         nav_home: 'الرئيسية', nav_projects: 'المشاريع', nav_portfolio: 'أعمالنا', nav_team: 'الفريق', nav_services: 'الخدمات', nav_contact: 'التواصل',
         nav_process: 'كيف نعمل',
         hero_eyebrow: 'فريق تقني يعتمد الأتمتة أولا',
+        hero_scroll_hint: 'مرّر لاستكشاف المزيد',
         hero_title: 'نصمم أنظمة ذكية تؤتمت ما هو مهم.',
         hero_lead: 'نصمم ونبني ونوسع منتجات برمجية عالية الأداء. كما نقدم الاستشارات وضمانا على التسليم بخلاف كثير من الشركات.',
         hero_cta_primary: 'ابدأ مشروعك', hero_cta_secondary: 'استكشف الخدمات',

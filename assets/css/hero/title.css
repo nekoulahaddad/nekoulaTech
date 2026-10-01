@@ -1,0 +1,28 @@
+.hero-title-line {
+  display: block;
+  overflow: clip;
+  padding-block: 0.08em;
+  margin-block: -0.08em;
+}
+
+.hero-title-line-inner {
+  display: inline-block;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero-title-line-inner.is-entering {
+    animation: hero-title-arrive 850ms var(--ease-out) both;
+    animation-delay: var(--line-delay, 0ms);
+  }
+
+  @keyframes hero-title-arrive {
+    from {
+      opacity: 0;
+      transform: translateY(105%) rotate(2deg);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) rotate(0deg);
+    }
+  }
+}

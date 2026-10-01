@@ -9,7 +9,7 @@ function createHarness() {
   let renders = [];
   const measure = () => {
     measurements += 1;
-    return { viewport: { scrollRange: measurements * 100, heroHeight: 600 }, scene: null };
+    return { viewport: { scrollRange: measurements * 100 }, scene: null, hero: null };
   };
   const render = (geometry) => { renders = [...renders, geometry.viewport.scrollRange]; };
   const requestFrame = (callback) => {
