@@ -34,11 +34,11 @@
   }
 
   .is-scroll-scene .process-steps {
-    --scene-gap: clamp(140px, 24svh, 280px);
+    --scene-gap: clamp(80px, 14svh, 160px);
     position: relative;
     display: block;
     width: 100%;
-    padding-block: 16svh 0;
+    padding-block: clamp(24px, 5svh, 64px) 0;
   }
 
   .is-scroll-scene .process-step,
@@ -64,10 +64,9 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: space-between;
-    gap: 40px;
-    min-height: clamp(410px, 59svh, 660px);
-    padding: clamp(28px, 3vw, 48px);
+    justify-content: flex-start;
+    gap: 24px;
+    padding: clamp(24px, 2.5vw, 36px);
     background: var(--card);
     box-shadow: 0 24px 60px #00000018;
     transform-origin: center top;
@@ -84,7 +83,7 @@
     color: var(--accent);
     opacity: 0.16;
     font-family: "Sora", sans-serif;
-    font-size: clamp(5rem, 8vw, 8rem);
+    font-size: clamp(3.5rem, 6vw, 5rem);
     letter-spacing: -0.08em;
     line-height: 1;
   }
@@ -105,14 +104,14 @@
   }
 
   .is-scroll-scene .process-copy p {
-    margin-top: 20px;
+    margin-top: 14px;
     font-size: 1rem;
     line-height: 1.8;
   }
 
   .is-scroll-scene .process-icon {
-    width: 68px;
-    height: 68px;
+    width: 56px;
+    height: 56px;
   }
 
   .is-scroll-scene :is(.process-icon, .process-number) {

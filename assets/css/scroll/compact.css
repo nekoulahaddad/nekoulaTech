@@ -18,8 +18,7 @@
   }
 
   .process.is-scroll-scene .process-card {
-    min-height: clamp(320px, 53svh, 460px);
-    gap: 24px;
+    gap: 20px;
     padding: 24px;
   }
 

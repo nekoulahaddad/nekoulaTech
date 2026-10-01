@@ -38,8 +38,7 @@ export function createProcessScene() {
 function renderScene(nodes, geometry, scrollY) {
   const position = scrollY + geometry.stickyTop;
   const progress = getSceneProgress(geometry.anchors, position);
-  const activePosition = scrollY + geometry.viewportHeight * SCROLL_EFFECTS.activeThreshold;
-  const activeIndex = getActiveStep(geometry.anchors, activePosition);
+  const activeIndex = getActiveStep(geometry.anchors, position);
   const counter = String(activeIndex + 1).padStart(2, "0");
   nodes.section.style.setProperty("--scene-progress", String(progress));
   if (nodes.counter.textContent !== counter) nodes.counter.textContent = counter;
