@@ -11,6 +11,7 @@
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="theme-color" content="#0d0d0d">
+  <meta name="color-scheme" content="dark">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
@@ -57,6 +58,7 @@
   <link rel="stylesheet" href="assets/css/custom.css">
   <link rel="stylesheet" href="assets/css/scroll-experience.css">
   <link rel="stylesheet" href="assets/css/hero-experience.css">
+  <script src="assets/js/browser-theme.js"></script>
   <script defer src="assets/js/site-effects.bundle.js"></script>
 </head>
 <body>
@@ -472,7 +474,6 @@
     const mainNav = document.querySelector('.main-nav');
     const langButtons = document.querySelectorAll('.lang-switch button');
     const themeToggle = document.querySelector('[data-theme-toggle]');
-    const themeMeta = document.querySelector('meta[name="theme-color"]');
     const themeLabels = {
       dark: 'Switch to light theme',
       light: 'Switch to dark theme'
@@ -913,7 +914,6 @@
       document.documentElement.dataset.theme = activeTheme;
       themeToggle.textContent = isLight ? '☾' : '☀';
       themeToggle.setAttribute('aria-label', nextLabel);
-      themeMeta.setAttribute('content', getComputedStyle(document.documentElement).getPropertyValue('--bg').trim());
       localStorage.setItem('site_theme', activeTheme);
     }
 

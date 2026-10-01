@@ -5,7 +5,7 @@
   "scripts": {
     "build": "node scripts/build-site-effects.mjs",
     "test": "node --test tests/*.test.mjs",
-    "check": "tsc --allowJs --checkJs --noEmit --strict --lib ES2022,DOM --target ES2022 --module ES2022 assets/js/scroll/index.js"
+    "check": "tsc --allowJs --checkJs --noEmit --strict --lib ES2022,DOM --target ES2022 --module ES2022 assets/js/scroll/index.js assets/js/browser-theme.js assets/js/project-theme.js"
   },
   "devDependencies": {
     "esbuild": "0.28.2",

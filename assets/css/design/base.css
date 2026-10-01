@@ -3,11 +3,14 @@
 }
 
 html {
+  background-color: var(--bg);
   scroll-behavior: smooth;
   scroll-padding-top: 120px;
 }
 
 body {
+  /* Keep the negative-z-index grid above the body background. */
+  isolation: isolate;
   margin: 0;
   color: var(--text);
   background: var(--body-bg);
